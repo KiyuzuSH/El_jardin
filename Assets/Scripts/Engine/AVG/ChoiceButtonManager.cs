@@ -1,11 +1,13 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Game
 {
     public class ChoiceButtonManager : MonoBehaviour
     {
         public static ChoiceButtonManager Instance { get; private set; }
+        private readonly ScriptManager SMI = ScriptManager.Instance;
 
         private void Awake()
         {
@@ -17,25 +19,38 @@ namespace Game
             }
         }
 
-        private void Start()
-        {
-            gameObject.SetActive(false);
-        }
-
         private void OnDestroy()
         {
             Destroy(Instance);
         }
+
+        public Transform gridButton;
+        public GameObject buttonChoice;
         
-        public void ShowButton(string _text)
+        public void GenerateChoice()
         {
-            string[] content = _text.Split('|');
-            gameObject.transform.GetChild(0).GetComponent<TMP_Text>().text = content[0];
-            gameObject.transform.GetChild(1).GetComponent<TMP_Text>().text = content[1];
-            if (!gameObject.activeSelf) gameObject.SetActive(true);
-            Invoke(nameof(Inactive), 3);
+            if (SMI.GetCurrentSheet()[SMI.CurrentLine][1] == "&")
+            {
+                var btn = Instantiate(buttonChoice, gridButton);
+                var id = SMI.CurrentLine;
+                btn.GetComponentInChildren<TMP_Text>().text = SMI.GetCurrentSheet()[SMI.CurrentLine][6];
+                btn.GetComponent<Button>().onClick.AddListener
+                (
+                    delegate { OnChoiceClick(id); }
+                );
+                if (SMI.GetCurrentSheet()[SMI.CurrentLine + 1][1] == "&")
+                {
+                    SMI.CurrentLine++;
+                    GenerateChoice();
+                }
+            }
         }
         
-        public void Inactive() => gameObject.SetActive(false);
+        private void OnChoiceClick(int _id)
+        {
+            SMI.CurrentLine = int.Parse(SMI.GetCurrentSheet()[_id][2]);
+            DialogueManager.Instance.CheckCurrentLine();
+            for (int i = 0; i < gridButton.childCount; i++) Destroy(gridButton.GetChild(i).gameObject);
+        }
     }
 }

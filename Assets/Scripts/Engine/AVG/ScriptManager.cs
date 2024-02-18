@@ -17,50 +17,48 @@ namespace Game
                 Instance = this;
             }
         }
-
-        private void Start()
-        {
-            scripts = SetScriptList();
-            
-            ScriptIndex = 0;
-            if (scripts.Count > 0)
-                dialogueSheet = SetDialogueSheet(scripts[ScriptIndex]);
-            //TODO: Should can be determined by save data
-            
-            CurrentLine = DialogueManager.Instance.currentLine;
-            //TODO:Sync
-        }
-
+        
         private void OnDestroy()
         {
             Destroy(Instance);
         }
+
+        private void Start()
+        {
+            scripts = Resources.LoadAll<TextAsset>("StoryScripts").ToList();
+            
+            //TODO: Should can be determined by save data
+            ScriptIndex = 0;
+            
+            currentSheet = SetCurrentSheet(scripts[ScriptIndex]); 
+            
+            //TODO: Should can be determined by save data
+            CurrentLine = 0; 
+        }
         
         #region Text Asset List
 
-        [SerializeField] private List<TextAsset> scripts;
-        
-        private List<TextAsset> SetScriptList() => Resources.LoadAll<TextAsset>("StoryScripts").ToList();
-
-        private List<TextAsset> GetScriptList() => scripts;
-        
-        
-        private int _scriptIndex;
-        public int ScriptIndex { get; set; }
+        private static List<TextAsset> scripts;
+        private static int _scriptIndex;
+        private int ScriptIndex
+        {
+            get => _scriptIndex;
+            set => _scriptIndex = value;
+        }
 
         #endregion
 
         #region Dialog sheet
 
-        private List<string[]> dialogueSheet;
+        private List<string[]> currentSheet;
         
-        public List<string[]> GetDialogueSheet() => dialogueSheet;
+        public List<string[]> GetCurrentSheet() => currentSheet;
         
-        private List<string[]> SetDialogueSheet(TextAsset _tA)
+        private List<string[]> SetCurrentSheet(TextAsset _tA)
         {
             List<string[]> sheet = new();
             List<string> temp = _tA.text.Split('\n').ToList();
-            foreach (var line in temp)
+            foreach (var line in temp) 
                 sheet.Add(line.Split(','));
             Debug.Log("Succeed to read");
             return sheet;
@@ -71,8 +69,12 @@ namespace Game
             //TODO: Update Content in the Sheet
         }
 
-
-        public int CurrentLine { get; set; }
+        private int _currentLine;
+        public int CurrentLine
+        {
+            get => _currentLine;
+            set => _currentLine = value;
+        }
 
         #endregion
     }

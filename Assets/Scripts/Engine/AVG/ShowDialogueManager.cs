@@ -34,7 +34,12 @@ namespace Game
             Destroy(Instance);
         }
 
-        private bool textJumpFinished;
+        private bool _textJumpFinished;
+        public bool TextJumpFinished
+        {
+            get => _textJumpFinished;
+            set => _textJumpFinished = value;
+        }
 
         [Range(0, 1)] public float timeTextJump = 0.025f;
         public Button buttonStop;
@@ -48,7 +53,7 @@ namespace Game
 
         private void SetJumpState(bool _state)
         {
-            textJumpFinished = _state;
+            TextJumpFinished = _state;
             DialogueManager.Instance.SetJumpState(_state);
         }
 
@@ -58,7 +63,7 @@ namespace Game
             SetJumpState(false);
             foreach (var c in _text)
             {
-                if (textJumpFinished == false)
+                if (TextJumpFinished == false)
                 {
                     textDialogue.text += c;
                     if (timeTextJump < 0f)
@@ -75,7 +80,7 @@ namespace Game
 
         private void OnStopJumping()
         {
-            if (!textJumpFinished)
+            if (!TextJumpFinished)
             {
                 StopCoroutine(TextJump());
                 textDialogue.text = textPassedIn;

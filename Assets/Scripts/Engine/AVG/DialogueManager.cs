@@ -10,27 +10,7 @@ namespace Game
     public class DialogueManager : MonoBehaviour
     {
         public static DialogueManager Instance { get; private set; }
-
-        private GameObject dialoguePanel;
-        
-        /// <summary> 对话表 </summary>
-        private List<string[]> dialogueSheet;
-        /// <summary> 当前行index </summary>
-        public int currentLine;
-        
-        [Header("UI组件")]
-        // TODO: 立绘
-        public Image tachie;
-        
-        [Tooltip("下一条的按钮")] public Button buttonContinue;
-
-        [Tooltip("选项按钮组")] public Transform gridButton;
-        [Tooltip("选项按钮预制件")] public GameObject buttonChoice;
-
-        [SerializeField] private Dictionary<string, Sprite> imageDic = new Dictionary<string, Sprite>();
-        
-        private bool textJumpFinished;
-        public void SetJumpState(bool _state) => textJumpFinished = _state;
+        private readonly ScriptManager SMI = ScriptManager.Instance;
         
         private void Awake()
         {
@@ -44,11 +24,8 @@ namespace Game
         
         private void Start()
         {
-            textJumpFinished = true;
-            dialogueSheet = ScriptManager.Instance.GetDialogueSheet();//TODO: Choose time to update
-            currentLine = 0;//TODO: who takes control?
-            dialoguePanel = transform.GetChild(0).gameObject;
-            dialoguePanel.SetActive(true);
+            ShowDialogueManager.Instance.TextJumpFinished = true;
+            gameObject.SetActive(true);
             buttonContinue.GetComponent<Button>().onClick.AddListener(OnContinueDialogue);
             OnContinueDialogue();
         }
@@ -59,25 +36,29 @@ namespace Game
             Destroy(Instance);
         }
         
-        private void CheckCurrentLine()
+        public Button buttonContinue;
+        
+        public void SetJumpState(bool _state) => ShowDialogueManager.Instance.TextJumpFinished = _state;
+        
+        public void CheckCurrentLine()
         {
-            switch (dialogueSheet[currentLine][1])
+            switch (SMI.GetCurrentSheet()[SMI.CurrentLine][1])
             {
                 case "&":
                     buttonContinue.gameObject.SetActive(false); 
-                    dialoguePanel.SetActive(false);
+                    gameObject.SetActive(false);
                     GenerateChoice();
                     break;
                 case "!":
-                    dialoguePanel.SetActive(false);
-                    ShowTitle(dialogueSheet[currentLine][6]);
-                    var next = int.Parse(dialogueSheet[currentLine][2]);
-                    currentLine = next;
+                    gameObject.SetActive(false);
+                    ShowTitle(SMI.GetCurrentSheet()[SMI.CurrentLine][6]);
+                    var next = int.Parse(SMI.GetCurrentSheet()[SMI.CurrentLine][2]);
+                    SMI.CurrentLine = next;
                     CheckCurrentLine();
                     break;
                 case "":
-                    dialoguePanel.SetActive(true);
-                    UpdateText(dialogueSheet[currentLine][3],dialogueSheet[currentLine][6]);
+                    gameObject.SetActive(true);
+                    UpdateText(SMI.GetCurrentSheet()[SMI.CurrentLine][3],SMI.GetCurrentSheet()[SMI.CurrentLine][6]);
                     // TODO: 立绘
                     // UpdateImage(dialogueSheet[currentLine][3],dialogueSheet[currentLine][4]);
                     buttonContinue.gameObject.SetActive(true);
@@ -87,14 +68,14 @@ namespace Game
         
         private void OnContinueDialogue()
         {
-            if (dialoguePanel.activeInHierarchy)
+            if (gameObject.activeInHierarchy)
             {
-                if (textJumpFinished)
+                if (ShowDialogueManager.Instance.TextJumpFinished)
                 {
-                    var next = int.Parse(dialogueSheet[currentLine][2]);
-                    currentLine = next;
-                    if (currentLine == dialogueSheet.Count || dialogueSheet[currentLine][0] == "")
-                        dialoguePanel.SetActive(false);
+                    var next = int.Parse(SMI.GetCurrentSheet()[SMI.CurrentLine][2]);
+                    SMI.CurrentLine = next;
+                    if (SMI.CurrentLine == SMI.GetCurrentSheet().Count || SMI.GetCurrentSheet()[SMI.CurrentLine][0] == "")
+                        gameObject.SetActive(false);
                     CheckCurrentLine();
                 }
             }
@@ -106,28 +87,7 @@ namespace Game
 
         private void GenerateChoice()
         {
-            if (dialogueSheet[currentLine][1] == "&")
-            {
-                var btn = Instantiate(buttonChoice, gridButton);
-                btn.GetComponentInChildren<TMP_Text>().text = dialogueSheet[currentLine][6];
-                var id = currentLine;
-                btn.GetComponent<Button>().onClick.AddListener
-                (
-                    delegate { OnChoiceClick(id); }
-                );
-                if (dialogueSheet[currentLine + 1][1] == "&")
-                {
-                    currentLine++;
-                    GenerateChoice();
-                }
-            }
-        }
-        
-        private void OnChoiceClick(int _id)
-        {
-            currentLine = int.Parse(dialogueSheet[_id][2]);
-            CheckCurrentLine();
-            for (var i = 0; i < gridButton.childCount; i++) Destroy(gridButton.GetChild(i).gameObject);
+            ChoiceButtonManager.Instance.GenerateChoice();
         }
     }
 }
