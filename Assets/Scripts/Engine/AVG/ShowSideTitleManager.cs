@@ -15,10 +15,7 @@ namespace Game
                 Destroy(gameObject);
                 Instance = this;
             }
-        }
-
-        private void Start()
-        {
+            
             gameObject.SetActive(false);
         }
 

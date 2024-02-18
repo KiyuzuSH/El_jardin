@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +6,7 @@ namespace Game
     public class DialogueManager : MonoBehaviour
     {
         public static DialogueManager Instance { get; private set; }
-        private readonly ScriptManager SMI = ScriptManager.Instance;
+        private ScriptManager SMI { get; set; }
         
         private void Awake()
         {
@@ -24,41 +20,38 @@ namespace Game
         
         private void Start()
         {
-            ShowDialogueManager.Instance.TextJumpFinished = true;
+            SMI = ScriptManager.Instance;
             gameObject.SetActive(true);
-            buttonContinue.GetComponent<Button>().onClick.AddListener(OnContinueDialogue);
+            buttonContinue.onClick.AddListener(OnContinueDialogue);
             OnContinueDialogue();
         }
         
         private void OnDestroy()
         {
-            buttonContinue.GetComponent<Button>().onClick.RemoveAllListeners();
+            buttonContinue.onClick.RemoveListener(OnContinueDialogue);
             Destroy(Instance);
         }
         
         public Button buttonContinue;
-        
-        public void SetJumpState(bool _state) => ShowDialogueManager.Instance.TextJumpFinished = _state;
-        
+
         public void CheckCurrentLine()
         {
-            switch (SMI.GetCurrentSheet()[SMI.CurrentLine][1])
+            switch (SMI.GetCurrentLine(SMI.CurrentLine)[1])
             {
                 case "&":
-                    buttonContinue.gameObject.SetActive(false); 
+                    buttonContinue.gameObject.SetActive(false);
                     gameObject.SetActive(false);
                     GenerateChoice();
                     break;
                 case "!":
                     gameObject.SetActive(false);
-                    ShowTitle(SMI.GetCurrentSheet()[SMI.CurrentLine][6]);
-                    var next = int.Parse(SMI.GetCurrentSheet()[SMI.CurrentLine][2]);
-                    SMI.CurrentLine = next;
+                    ShowTitle(SMI.GetCurrentLine(SMI.CurrentLine)[6]);
+                    SMI.CurrentLine = int.Parse(SMI.GetCurrentLine(SMI.CurrentLine)[2]);
                     CheckCurrentLine();
                     break;
                 case "":
                     gameObject.SetActive(true);
-                    UpdateText(SMI.GetCurrentSheet()[SMI.CurrentLine][3],SMI.GetCurrentSheet()[SMI.CurrentLine][6]);
+                    UpdateText(SMI.GetCurrentLine(SMI.CurrentLine)[3], SMI.GetCurrentLine(SMI.CurrentLine)[6]);
                     // TODO: 立绘
                     // UpdateImage(dialogueSheet[currentLine][3],dialogueSheet[currentLine][4]);
                     buttonContinue.gameObject.SetActive(true);
@@ -70,14 +63,15 @@ namespace Game
         {
             if (gameObject.activeInHierarchy)
             {
-                if (ShowDialogueManager.Instance.TextJumpFinished)
+                if (!ShowDialogueManager.Instance.TextJumpFinished)
                 {
-                    var next = int.Parse(SMI.GetCurrentSheet()[SMI.CurrentLine][2]);
-                    SMI.CurrentLine = next;
-                    if (SMI.CurrentLine == SMI.GetCurrentSheet().Count || SMI.GetCurrentSheet()[SMI.CurrentLine][0] == "")
-                        gameObject.SetActive(false);
-                    CheckCurrentLine();
+                    ShowDialogueManager.Instance.StopJumping();
+                    return;
                 }
+                SMI.CurrentLine = int.Parse(SMI.GetCurrentLine(SMI.CurrentLine)[2]);
+                if (SMI.IsLastLine() || SMI.GetCurrentLine(SMI.CurrentLine)[0] == "")
+                    gameObject.SetActive(false);
+                CheckCurrentLine();
             }
         }
         
@@ -85,9 +79,6 @@ namespace Game
 
         private void ShowTitle(string _text) => ShowSideTitleManager.Instance.ShowTitle(_text);
 
-        private void GenerateChoice()
-        {
-            ChoiceButtonManager.Instance.GenerateChoice();
-        }
+        private void GenerateChoice() => ChoiceButtonManager.Instance.GenerateChoice();
     }
 }

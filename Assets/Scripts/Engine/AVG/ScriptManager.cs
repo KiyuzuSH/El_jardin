@@ -51,8 +51,8 @@ namespace Game
         #region Dialog sheet
 
         private List<string[]> currentSheet;
-        
-        public List<string[]> GetCurrentSheet() => currentSheet;
+
+        public string[] GetCurrentLine(int _id) => currentSheet[_id];
         
         private List<string[]> SetCurrentSheet(TextAsset _tA)
         {
@@ -60,15 +60,9 @@ namespace Game
             List<string> temp = _tA.text.Split('\n').ToList();
             foreach (var line in temp) 
                 sheet.Add(line.Split(','));
-            Debug.Log("Succeed to read");
             return sheet;
         }
         
-        public void UpdateSheet()
-        {
-            //TODO: Update Content in the Sheet
-        }
-
         private int _currentLine;
         public int CurrentLine
         {
@@ -76,6 +70,13 @@ namespace Game
             set => _currentLine = value;
         }
 
+        public bool IsLastLine() => CurrentLine == currentSheet.Count;
+        
+        public void UpdateSheet()
+        {
+            //TODO: Update Content in the Sheet
+        }
+        
         #endregion
     }
 }

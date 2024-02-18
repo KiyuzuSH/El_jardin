@@ -7,7 +7,7 @@ namespace Game
     public class ChoiceButtonManager : MonoBehaviour
     {
         public static ChoiceButtonManager Instance { get; private set; }
-        private readonly ScriptManager SMI = ScriptManager.Instance;
+        private ScriptManager SMI { get; set; }
 
         private void Awake()
         {
@@ -17,6 +17,11 @@ namespace Game
                 Destroy(gameObject);
                 Instance = this;
             }
+        }
+
+        private void Start()
+        {
+            SMI = ScriptManager.Instance;
         }
 
         private void OnDestroy()
@@ -29,16 +34,16 @@ namespace Game
         
         public void GenerateChoice()
         {
-            if (SMI.GetCurrentSheet()[SMI.CurrentLine][1] == "&")
+            if (SMI.GetCurrentLine(SMI.CurrentLine)[1] == "&")
             {
                 var btn = Instantiate(buttonChoice, gridButton);
                 var id = SMI.CurrentLine;
-                btn.GetComponentInChildren<TMP_Text>().text = SMI.GetCurrentSheet()[SMI.CurrentLine][6];
+                btn.GetComponentInChildren<TMP_Text>().text = SMI.GetCurrentLine(SMI.CurrentLine)[6];
                 btn.GetComponent<Button>().onClick.AddListener
                 (
                     delegate { OnChoiceClick(id); }
                 );
-                if (SMI.GetCurrentSheet()[SMI.CurrentLine + 1][1] == "&")
+                if (SMI.GetCurrentLine(SMI.CurrentLine + 1)[1] == "&")
                 {
                     SMI.CurrentLine++;
                     GenerateChoice();
@@ -48,7 +53,7 @@ namespace Game
         
         private void OnChoiceClick(int _id)
         {
-            SMI.CurrentLine = int.Parse(SMI.GetCurrentSheet()[_id][2]);
+            SMI.CurrentLine = int.Parse(SMI.GetCurrentLine(_id)[2]);
             DialogueManager.Instance.CheckCurrentLine();
             for (int i = 0; i < gridButton.childCount; i++) Destroy(gridButton.GetChild(i).gameObject);
         }

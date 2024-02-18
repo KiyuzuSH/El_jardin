@@ -264,7 +264,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'WHERE
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a2e7fb4182e71fb48a65a37365658c5a, type: 2}
   m_sharedMaterial: {fileID: 6791170919899986559, guid: a2e7fb4182e71fb48a65a37365658c5a, type: 2}
@@ -536,7 +538,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: DayXX
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a2e7fb4182e71fb48a65a37365658c5a, type: 2}
   m_sharedMaterial: {fileID: 6791170919899986559, guid: a2e7fb4182e71fb48a65a37365658c5a, type: 2}
@@ -1047,7 +1049,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e98ddb532ad84f5cbc74cef05ccb5253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scripts: []
 --- !u!1 &650720104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,7 +1106,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u6211\u662F\u5982\u6B64\u5BB3\u6015\u5728\u73B0\u5B9E\u65E5\u590D\u4E00\u65E5\u7684\u78E8\u706D\u4E2D\u7EC8\u6709\u4E00\u5929\u5C06\u8FD9\u4E2A\u82B1\u56ED\u5FD8\u8BB0\u3002\u56E0\u6B64\u6211\u51B3\u5B9A\u2014\u2014\u8D81\u6211\u7684\u5FC3\u8FD8\u5E74\u8F7B\u7684\u65F6\u5019\u5931\u53BB\u5B83\uFF0C\u4EE5\u6B64\u6C38\u8FDC\u5730\u4FDD\u7559\u6211\u8FD9\u4E94\u767E\u5E74\u7684\u56DE\u5FC6\u3002\n"
+  m_text: CONTENT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a2e7fb4182e71fb48a65a37365658c5a, type: 2}
   m_sharedMaterial: {fileID: 6791170919899986559, guid: a2e7fb4182e71fb48a65a37365658c5a, type: 2}
@@ -1200,7 +1201,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &698791727
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2341,7 +2342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782eb145306a2fa47ba488cc4af1298f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonContinue: {fileID: 0}
+  buttonContinue: {fileID: 1513408609}
 --- !u!1 &1820728783
 GameObject:
   m_ObjectHideFlags: 0

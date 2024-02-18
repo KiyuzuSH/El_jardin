@@ -21,16 +21,16 @@ namespace Game
 
         private void Start()
         {
-            SetJumpState(true);
+            TextJumpFinished = true;
             gameObject.SetActive(true);
-            buttonStop.onClick.AddListener(OnStopJumping);
             textName = NameGO.gameObject.GetComponentInChildren<TMP_Text>();
             textDialogue = DialogueGO.gameObject.GetComponentInChildren<TMP_Text>();
+            if (timeTextJump < 0f)
+                timeTextJump = 0.1f;
         }
 
         private void OnDestroy()
         {
-            buttonStop.onClick.RemoveAllListeners();
             Destroy(Instance);
         }
 
@@ -41,7 +41,7 @@ namespace Game
             set => _textJumpFinished = value;
         }
 
-        [Range(0, 1)] public float timeTextJump = 0.025f;
+        [Range(0, 1)] public float timeTextJump = 0.075f;
         public Button buttonStop;
 
         public CanvasGroup NameGO;
@@ -51,41 +51,27 @@ namespace Game
 
         private string textPassedIn;
 
-        private void SetJumpState(bool _state)
-        {
-            TextJumpFinished = _state;
-            DialogueManager.Instance.SetJumpState(_state);
-        }
-
         private IEnumerator TextJump(string _text = "")
         {
             textDialogue.text = "";
-            SetJumpState(false);
+            TextJumpFinished = false;
             foreach (var c in _text)
             {
                 if (TextJumpFinished == false)
                 {
                     textDialogue.text += c;
-                    if (timeTextJump < 0f)
-                    {
-                        timeTextJump = 0.1f;
-                    }
-
                     yield return new WaitForSeconds(timeTextJump);
                 }
             }
-
-            SetJumpState(true);
+            TextJumpFinished = true;
         }
 
-        private void OnStopJumping()
+        public void StopJumping()
         {
-            if (!TextJumpFinished)
-            {
-                StopCoroutine(TextJump());
-                textDialogue.text = textPassedIn;
-                SetJumpState(true);
-            }
+            if (TextJumpFinished) return;
+            StopCoroutine(TextJump());
+            TextJumpFinished = true;
+            textDialogue.text = textPassedIn;
         }
 
         public void UpdateText(string _name, string _text)
