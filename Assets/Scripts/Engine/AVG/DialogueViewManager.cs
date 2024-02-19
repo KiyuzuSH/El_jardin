@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 namespace Game
 {
-    public class ShowDialogueManager : MonoBehaviour
+    public class DialogueViewManager : MonoBehaviour
     {
-        public static ShowDialogueManager Instance { get; private set; }
+        public static DialogueViewManager Instance { get; private set; }
 
         private void Awake()
         {

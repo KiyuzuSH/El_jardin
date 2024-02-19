@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace Game
 {
-    public class ShowSideTitleManager : MonoBehaviour
+    public class SideTitleViewManager : MonoBehaviour
     {
-        public static ShowSideTitleManager Instance { get; private set; }
+        public static SideTitleViewManager Instance { get; private set; }
 
         private void Awake()
         {

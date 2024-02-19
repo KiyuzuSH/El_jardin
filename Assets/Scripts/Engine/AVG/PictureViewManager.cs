@@ -1,12 +1,18 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Game
 {
-    public class PictureUpdateManager : MonoBehaviour
+    public class Picture
     {
-        public static PictureUpdateManager Instance { get; private set; }
+        public string Name { get; set; }
+        public Sprite Pic { get; set; }
+        public Transform Pos { get; set; }
+    }
+    
+    public class PictureViewManager : MonoBehaviour
+    {
+        public static PictureViewManager Instance { get; private set; }
 
         private void Awake()
         {
@@ -28,7 +34,15 @@ namespace Game
             Destroy(Instance);
         }
 
-        public Image tachie;
         public Dictionary<string, Sprite> imageDic = new Dictionary<string, Sprite>();
+        public Transform leftAnchor;
+        public Transform centerAnchor;
+        public Transform rightAnchor;
+
+        public Sprite background;
+        
+        public List<Picture> PicList;
+        
+        
     }
 }

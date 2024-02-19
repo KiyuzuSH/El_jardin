@@ -57,27 +57,27 @@ namespace Game
                     buttonContinue.gameObject.SetActive(true);
                     break;
             }
+            
         }
         
         private void OnContinueDialogue()
         {
             if (gameObject.activeInHierarchy)
             {
-                if (!ShowDialogueManager.Instance.TextJumpFinished)
+                if (!DialogueViewManager.Instance.TextJumpFinished)
                 {
-                    ShowDialogueManager.Instance.StopJumping();
+                    DialogueViewManager.Instance.StopJumping();
                     return;
                 }
-                SMI.CurrentLine = int.Parse(SMI.GetCurrentLine(SMI.CurrentLine)[2]);
                 if (SMI.IsLastLine() || SMI.GetCurrentLine(SMI.CurrentLine)[0] == "")
                     gameObject.SetActive(false);
                 CheckCurrentLine();
             }
         }
         
-        private void UpdateText(string _name,string _text) => ShowDialogueManager.Instance.UpdateText(_name, _text);
+        private void UpdateText(string _name,string _text) => DialogueViewManager.Instance.UpdateText(_name, _text);
 
-        private void ShowTitle(string _text) => ShowSideTitleManager.Instance.ShowTitle(_text);
+        private void ShowTitle(string _text) => SideTitleViewManager.Instance.ShowTitle(_text);
 
         private void GenerateChoice() => ChoiceButtonManager.Instance.GenerateChoice();
     }
