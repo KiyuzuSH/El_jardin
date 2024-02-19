@@ -69,8 +69,6 @@ namespace Game
             get => _currentLine;
             set => _currentLine = value;
         }
-
-        public bool IsLastLine() => CurrentLine == currentSheet.Count;
         
         public void UpdateSheet()
         {

@@ -45,34 +45,39 @@ namespace Game
                     break;
                 case "!":
                     gameObject.SetActive(false);
-                    ShowTitle(SMI.GetCurrentLine(SMI.CurrentLine)[6]);
+                    ShowTitle(SMI.GetCurrentLine(SMI.CurrentLine)[4]);
                     SMI.CurrentLine = int.Parse(SMI.GetCurrentLine(SMI.CurrentLine)[2]);
                     CheckCurrentLine();
                     break;
                 case "":
                     gameObject.SetActive(true);
-                    UpdateText(SMI.GetCurrentLine(SMI.CurrentLine)[3], SMI.GetCurrentLine(SMI.CurrentLine)[6]);
-                    // TODO: 立绘
-                    // UpdateImage(dialogueSheet[currentLine][3],dialogueSheet[currentLine][4]);
+                    UpdateText(
+                        SMI.GetCurrentLine(SMI.CurrentLine)[3], 
+                        SMI.GetCurrentLine(SMI.CurrentLine)[4]
+                        );
+                    PictureViewManager.Instance.
+                        UpdateManPic(
+                            SMI.GetCurrentLine(SMI.CurrentLine)[7],
+                            SMI.GetCurrentLine(SMI.CurrentLine)[8]
+                            );
                     buttonContinue.gameObject.SetActive(true);
                     break;
             }
-            
         }
         
         private void OnContinueDialogue()
         {
-            if (gameObject.activeInHierarchy)
+            if (!DialogueViewManager.Instance.TextJumpFinished)
             {
-                if (!DialogueViewManager.Instance.TextJumpFinished)
-                {
-                    DialogueViewManager.Instance.StopJumping();
-                    return;
-                }
-                if (SMI.IsLastLine() || SMI.GetCurrentLine(SMI.CurrentLine)[0] == "")
-                    gameObject.SetActive(false);
-                CheckCurrentLine();
+                DialogueViewManager.Instance.StopJumping();
+                return;
             }
+            if (SMI.GetCurrentLine(SMI.CurrentLine)[1] == "END")
+            {
+                gameObject.SetActive(false);
+            }
+            CheckCurrentLine();
+            SMI.CurrentLine = int.Parse(SMI.GetCurrentLine(SMI.CurrentLine)[2]);
         }
         
         private void UpdateText(string _name,string _text) => DialogueViewManager.Instance.UpdateText(_name, _text);

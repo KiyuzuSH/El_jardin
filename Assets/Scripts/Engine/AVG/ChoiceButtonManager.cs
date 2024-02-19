@@ -38,7 +38,7 @@ namespace Game
             {
                 var btn = Instantiate(buttonChoice, gridButton);
                 var id = SMI.CurrentLine;
-                btn.GetComponentInChildren<TMP_Text>().text = SMI.GetCurrentLine(SMI.CurrentLine)[6];
+                btn.GetComponentInChildren<TMP_Text>().text = SMI.GetCurrentLine(SMI.CurrentLine)[4];
                 btn.GetComponent<Button>().onClick.AddListener
                 (
                     delegate { OnChoiceClick(id); }

@@ -26,7 +26,12 @@ namespace Game
 
         private void Start()
         {
-            gameObject.SetActive(false);
+            leftAnchor.GetComponent<SpriteRenderer>().sprite = null;
+            centerAnchor.GetComponent<SpriteRenderer>().sprite = null;
+            rightAnchor.GetComponent<SpriteRenderer>().sprite = null;
+            imageDic.Add("Person",Resources.Load<Sprite>("Sprites/Characters/Person"));
+            imageDic.Add("Person2",Resources.Load<Sprite>("Sprites/Characters/Person2"));
+            imageDic.Add("Person3",Resources.Load<Sprite>("Sprites/Characters/Person3"));
         }
 
         private void OnDestroy()
@@ -34,15 +39,42 @@ namespace Game
             Destroy(Instance);
         }
 
-        public Dictionary<string, Sprite> imageDic = new Dictionary<string, Sprite>();
-        public Transform leftAnchor;
-        public Transform centerAnchor;
-        public Transform rightAnchor;
+        [SerializeField]
+        public Dictionary<string, Sprite> imageDic = new();
+        
+        public GameObject leftAnchor;
+        public GameObject centerAnchor;
+        public GameObject rightAnchor;
 
-        public Sprite background;
+        public SpriteRenderer background;
         
+        [SerializeField]
         public List<Picture> PicList;
-        
-        
+
+        public void UpdateManPic(string _name, string _pos)
+        {
+            if (_name == "Clear")
+            {
+                leftAnchor.GetComponent<SpriteRenderer>().sprite = null;
+                centerAnchor.GetComponent<SpriteRenderer>().sprite = null;
+                rightAnchor.GetComponent<SpriteRenderer>().sprite = null;
+            }
+            else
+            {
+                var pos = _pos.Replace("\r", "");
+                switch (pos)
+                {
+                    case "Left":
+                        leftAnchor.GetComponent<SpriteRenderer>().sprite = imageDic[_name];
+                        break;
+                    case "Center":
+                        centerAnchor.GetComponent<SpriteRenderer>().sprite = imageDic[_name];
+                        break;
+                    case "Right":
+                        rightAnchor.GetComponent<SpriteRenderer>().sprite = imageDic[_name];
+                        break;
+                }
+            }
+        }
     }
 }
