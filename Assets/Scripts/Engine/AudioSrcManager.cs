@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace Game
@@ -18,7 +17,6 @@ namespace Game
                 Destroy(gameObject);
                 Instance = this;
             }
-            DontDestroyOnLoad(gameObject);
         }
 
         /// <summary> 播放音效，只播放一次 </summary>

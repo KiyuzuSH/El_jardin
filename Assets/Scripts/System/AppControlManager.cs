@@ -2,9 +2,9 @@ using UnityEngine;
 
 namespace Game
 {
-    public class BartendingManager : MonoBehaviour
+    public class AppControlManager : MonoBehaviour
     {
-        public static BartendingManager Instance { get; private set; }
+        public static AppControlManager Instance { get; private set; }
         
         private void Awake()
         {
