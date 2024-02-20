@@ -39,16 +39,20 @@ namespace Game
             switch (SMI.GetCurrentLine(SMI.CurrentLine)[1])
             {
                 case "&":
+                    GetComponent<CanvasGroup>().alpha = 0;
                     buttonContinue.gameObject.SetActive(false);
-                    gameObject.SetActive(false);
                     GenerateChoice();
                     break;
                 case "!":
-                    gameObject.SetActive(false);
+                    GetComponent<CanvasGroup>().alpha = 0;
+                    buttonContinue.gameObject.SetActive(true);
                     ShowTitle(SMI.GetCurrentLine(SMI.CurrentLine)[4]);
-                    SMI.CurrentLine = int.Parse(SMI.GetCurrentLine(SMI.CurrentLine)[2]);
-                    CheckCurrentLine();
                     break;
+                case "END":
+                    gameObject.SetActive(false);
+                    buttonContinue.gameObject.SetActive(false);
+                    Debug.Log("All Content Done");
+                    return;//TODO: Can Return to other
                 case "":
                     gameObject.SetActive(true);
                     UpdateText(
@@ -57,12 +61,15 @@ namespace Game
                         );
                     PictureViewManager.Instance.
                         UpdateManPic(
-                            SMI.GetCurrentLine(SMI.CurrentLine)[7],
-                            SMI.GetCurrentLine(SMI.CurrentLine)[8]
+                            SMI.GetCurrentLine(SMI.CurrentLine)[8],
+                            SMI.GetCurrentLine(SMI.CurrentLine)[9],
+                            SMI.GetCurrentLine(SMI.CurrentLine)[10],
+                            SMI.GetCurrentLine(SMI.CurrentLine)[11]
                             );
                     buttonContinue.gameObject.SetActive(true);
                     break;
             }
+            SMI.CurrentLine = int.Parse(SMI.GetCurrentLine(SMI.CurrentLine)[2]);
         }
         
         private void OnContinueDialogue()
@@ -77,7 +84,6 @@ namespace Game
                 gameObject.SetActive(false);
             }
             CheckCurrentLine();
-            SMI.CurrentLine = int.Parse(SMI.GetCurrentLine(SMI.CurrentLine)[2]);
         }
         
         private void UpdateText(string _name,string _text) => DialogueViewManager.Instance.UpdateText(_name, _text);

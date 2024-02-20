@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -51,30 +52,39 @@ namespace Game
         [SerializeField]
         public List<Picture> PicList;
 
-        public void UpdateManPic(string _name, string _pos)
+        public void UpdateManPic(string type, string _name, string _style, string _pos)
         {
-            if (_name == "Clear")
+            bool setbool;
+            if (type == "TRUE")
             {
-                leftAnchor.GetComponent<SpriteRenderer>().sprite = null;
-                centerAnchor.GetComponent<SpriteRenderer>().sprite = null;
-                rightAnchor.GetComponent<SpriteRenderer>().sprite = null;
-            }
-            else
-            {
-                var pos = _pos.Replace("\r", "");
-                switch (pos)
+                if (_name == "Clear")
                 {
-                    case "Left":
-                        leftAnchor.GetComponent<SpriteRenderer>().sprite = imageDic[_name];
-                        break;
-                    case "Center":
-                        centerAnchor.GetComponent<SpriteRenderer>().sprite = imageDic[_name];
-                        break;
-                    case "Right":
-                        rightAnchor.GetComponent<SpriteRenderer>().sprite = imageDic[_name];
-                        break;
+                    leftAnchor.GetComponent<SpriteRenderer>().sprite = null;
+                    centerAnchor.GetComponent<SpriteRenderer>().sprite = null;
+                    rightAnchor.GetComponent<SpriteRenderer>().sprite = null;
+                }
+                else
+                {
+                    var pos = _pos.Replace("\r", "");
+                    switch (pos)
+                    {
+                        case "Left":
+                            leftAnchor.GetComponent<SpriteRenderer>().sprite = imageDic[_name];
+                            break;
+                        case "Center":
+                            centerAnchor.GetComponent<SpriteRenderer>().sprite = imageDic[_name];
+                            break;
+                        case "Right":
+                            rightAnchor.GetComponent<SpriteRenderer>().sprite = imageDic[_name];
+                            break;
+                    }
                 }
             }
+            else if (type == "FALSE")
+            {
+                
+            }
+            else Debug.LogWarning("Type Error");
         }
     }
 }
