@@ -38,6 +38,11 @@ namespace Game
         {
             switch (SMI.GetCurrentLine(SMI.CurrentLine)[1])
             {
+                case "END":
+                    gameObject.SetActive(false);
+                    buttonContinue.gameObject.SetActive(false);
+                    Debug.Log("All Content Done");
+                    return;//TODO: Can turn to other place
                 case "&":
                     GetComponent<CanvasGroup>().alpha = 0;
                     buttonContinue.gameObject.SetActive(false);
@@ -47,25 +52,25 @@ namespace Game
                     GetComponent<CanvasGroup>().alpha = 0;
                     buttonContinue.gameObject.SetActive(true);
                     ShowTitle(SMI.GetCurrentLine(SMI.CurrentLine)[4]);
+                    SMI.CurrentLine++;
+                    CheckCurrentLine();
                     break;
-                case "END":
-                    gameObject.SetActive(false);
-                    buttonContinue.gameObject.SetActive(false);
-                    Debug.Log("All Content Done");
-                    return;//TODO: Can Return to other
+                // case "^":
+                //     
+                //     break;
                 case "":
-                    gameObject.SetActive(true);
+                    GetComponent<CanvasGroup>().alpha = 1;
                     UpdateText(
                         SMI.GetCurrentLine(SMI.CurrentLine)[3], 
                         SMI.GetCurrentLine(SMI.CurrentLine)[4]
                         );
-                    PictureViewManager.Instance.
-                        UpdateManPic(
-                            SMI.GetCurrentLine(SMI.CurrentLine)[8],
-                            SMI.GetCurrentLine(SMI.CurrentLine)[9],
-                            SMI.GetCurrentLine(SMI.CurrentLine)[10],
-                            SMI.GetCurrentLine(SMI.CurrentLine)[11]
-                            );
+                    // PictureViewManager.Instance.
+                    //     UpdateManPic(
+                    //         SMI.GetCurrentLine(SMI.CurrentLine)[8],
+                    //         SMI.GetCurrentLine(SMI.CurrentLine)[9],
+                    //         SMI.GetCurrentLine(SMI.CurrentLine)[10],
+                    //         SMI.GetCurrentLine(SMI.CurrentLine)[11]
+                    //         );
                     buttonContinue.gameObject.SetActive(true);
                     break;
             }
@@ -78,10 +83,6 @@ namespace Game
             {
                 DialogueViewManager.Instance.StopJumping();
                 return;
-            }
-            if (SMI.GetCurrentLine(SMI.CurrentLine)[1] == "END")
-            {
-                gameObject.SetActive(false);
             }
             CheckCurrentLine();
         }
