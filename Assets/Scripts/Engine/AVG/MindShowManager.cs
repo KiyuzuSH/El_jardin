@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -39,9 +38,10 @@ namespace Game
         public void ShowLines(string _text)
         {
             Lines.text = _text;
-            // if (!gameObject.activeSelf) gameObject.SetActive(true);
         }
+
+        public Button minimalize;
         
-        // public void Inactive() => gameObject.SetActive(false);
+        
     }
 }

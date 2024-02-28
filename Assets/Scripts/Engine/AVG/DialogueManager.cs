@@ -55,22 +55,23 @@ namespace Game
                     SMI.CurrentLine++;
                     CheckCurrentLine();
                     break;
-                // case "^":
-                //     
-                //     break;
+                case "^":
+                    buttonContinue.gameObject.SetActive(false);
+                    GetComponent<CanvasGroup>().alpha = 0;
+                    ShowLines(SMI.GetCurrentLine(SMI.CurrentLine)[4]);
+                    break;
                 case "":
                     GetComponent<CanvasGroup>().alpha = 1;
                     UpdateText(
                         SMI.GetCurrentLine(SMI.CurrentLine)[3], 
                         SMI.GetCurrentLine(SMI.CurrentLine)[4]
                         );
-                    // PictureViewManager.Instance.
-                    //     UpdateManPic(
-                    //         SMI.GetCurrentLine(SMI.CurrentLine)[8],
-                    //         SMI.GetCurrentLine(SMI.CurrentLine)[9],
-                    //         SMI.GetCurrentLine(SMI.CurrentLine)[10],
-                    //         SMI.GetCurrentLine(SMI.CurrentLine)[11]
-                    //         );
+                    // UpdateManPic(
+                    //     SMI.GetCurrentLine(SMI.CurrentLine)[8],
+                    //     SMI.GetCurrentLine(SMI.CurrentLine)[9],
+                    //     SMI.GetCurrentLine(SMI.CurrentLine)[10],
+                    //     SMI.GetCurrentLine(SMI.CurrentLine)[11]
+                    //     );
                     buttonContinue.gameObject.SetActive(true);
                     break;
             }
@@ -92,5 +93,10 @@ namespace Game
         private void ShowTitle(string _text) => SideTitleViewManager.Instance.ShowTitle(_text);
 
         private void GenerateChoice() => ChoiceButtonManager.Instance.GenerateChoice();
+
+        private void UpdateManPic(string _type, string _name, string _style, string _pos) =>
+            PictureViewManager.Instance.UpdateManPic(_type, _name, _style, _pos);
+
+        private void ShowLines(string _text) => MindShowManager.Instance.ShowLines(_text);
     }
 }
