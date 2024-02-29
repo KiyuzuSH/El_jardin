@@ -56,9 +56,14 @@ namespace Game
                     CheckCurrentLine();
                     break;
                 case "^":
-                    buttonContinue.gameObject.SetActive(false);
                     GetComponent<CanvasGroup>().alpha = 0;
+                    buttonContinue.gameObject.SetActive(true);
                     ShowLines(SMI.GetCurrentLine(SMI.CurrentLine)[4]);
+                    if (SMI.GetCurrentLine(SMI.CurrentLine + 1)[1] == "")
+                    {
+                        SMI.CurrentLine++;
+                        CheckCurrentLine();
+                    }
                     break;
                 case "":
                     GetComponent<CanvasGroup>().alpha = 1;
@@ -80,9 +85,14 @@ namespace Game
         
         private void OnContinueDialogue()
         {
-            if (!DialogueViewManager.Instance.TextJumpFinished)
+            if (!AVGConsts.DialogueTextNotJumping)
             {
                 DialogueViewManager.Instance.StopJumping();
+                return;
+            }
+            if (!AVGConsts.MindTextNotJumping)
+            {
+                MindShowManager.Instance.StopJumping();
                 return;
             }
             CheckCurrentLine();

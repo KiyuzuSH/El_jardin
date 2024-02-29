@@ -21,27 +21,16 @@ namespace Game
 
         private void Start()
         {
-            TextJumpFinished = true;
             gameObject.SetActive(true);
             textName = NameGO.gameObject.GetComponentInChildren<TMP_Text>();
             textDialogue = DialogueGO.gameObject.GetComponentInChildren<TMP_Text>();
-            if (timeTextJump < 0f)
-                timeTextJump = 0.1f;
         }
 
         private void OnDestroy()
         {
             Destroy(Instance);
         }
-
-        private bool _textJumpFinished;
-        public bool TextJumpFinished
-        {
-            get => _textJumpFinished;
-            set => _textJumpFinished = value;
-        }
-
-        [Range(0, 1)] public float timeTextJump = 0.075f;
+        
         public Button buttonStop;
 
         public CanvasGroup NameGO;
@@ -54,23 +43,23 @@ namespace Game
         private IEnumerator TextJump(string _text = "")
         {
             textDialogue.text = "";
-            TextJumpFinished = false;
+            AVGConsts.DialogueTextNotJumping = false;
             foreach (var c in _text)
             {
-                if (TextJumpFinished == false)
+                if (AVGConsts.DialogueTextNotJumping == false)
                 {
                     textDialogue.text += c;
-                    yield return new WaitForSeconds(timeTextJump);
+                    yield return new WaitForSeconds(AVGConsts.DialogueTextJumpTime);
                 }
             }
-            TextJumpFinished = true;
+            AVGConsts.DialogueTextNotJumping = true;
         }
 
         public void StopJumping()
         {
-            if (TextJumpFinished) return;
+            if (AVGConsts.DialogueTextNotJumping) return;
             StopCoroutine(TextJump());
-            TextJumpFinished = true;
+            AVGConsts.DialogueTextNotJumping = true;
             textDialogue.text = textPassedIn;
         }
 

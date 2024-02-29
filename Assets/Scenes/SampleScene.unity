@@ -467,6 +467,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &202397041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 202397042}
+  m_Layer: 0
+  m_Name: AVGConsts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &202397042
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202397041}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 923439745}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &244993784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1630,6 +1661,7 @@ Transform:
   m_Children:
   - {fileID: 531483661}
   - {fileID: 1683288587}
+  - {fileID: 202397042}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &923439746
@@ -1933,7 +1965,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1340173965}
-  m_Father: {fileID: 2026662554}
+  m_Father: {fileID: 1518290687}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2111,6 +2143,7 @@ GameObject:
   - component: {fileID: 1364758009}
   - component: {fileID: 1364758008}
   - component: {fileID: 1364758007}
+  - component: {fileID: 1364758010}
   m_Layer: 5
   m_Name: Button_Minimalize
   m_TagString: Untagged
@@ -2125,13 +2158,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1364758005}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1094633185}
-  m_Father: {fileID: 2026662554}
+  m_Father: {fileID: 1518290687}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2220,6 +2253,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1364758005}
   m_CullTransparentMesh: 1
+--- !u!225 &1364758010
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364758005}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1512990588
 GameObject:
   m_ObjectHideFlags: 0
@@ -2428,6 +2473,7 @@ GameObject:
   - component: {fileID: 1518290688}
   - component: {fileID: 1518290691}
   - component: {fileID: 1518290690}
+  - component: {fileID: 1518290692}
   m_Layer: 5
   m_Name: MindPanel
   m_TagString: Untagged
@@ -2448,12 +2494,14 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1140891489}
+  - {fileID: 1166650220}
+  - {fileID: 1364758006}
   m_Father: {fileID: 2026662554}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 300, y: 0}
+  m_SizeDelta: {x: 300, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1518290688
 MonoBehaviour:
@@ -2536,6 +2584,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!114 &1518290692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518290686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb907575be08cdf4d845c428b0ba7173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minimalize: {fileID: 1364758007}
+  btnMin: {fileID: 1364758010}
+  txtBoxTransform: {fileID: 1140891489}
 --- !u!1 &1554027624
 GameObject:
   m_ObjectHideFlags: 0
@@ -2982,7 +3045,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63d80e8b663b6804cb896fa1c5241ce8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeTextJump: 0.025
   buttonStop: {fileID: 1513408609}
   NameGO: {fileID: 2025676304}
   textName: {fileID: 1928544854}
@@ -3521,8 +3583,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1518290687}
-  - {fileID: 1166650220}
-  - {fileID: 1364758006}
   m_Father: {fileID: 161409903}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
