@@ -92,7 +92,7 @@ namespace Game
         //TODO: Animation
         private void MoveRight()
         {
-            gameObject.transform.localPosition += new Vector3(300, 0, 0);
+            gameObject.transform.parent.localPosition += new Vector3(300, 0, 0);
             AtRight = true;
         }
         
@@ -100,7 +100,7 @@ namespace Game
 
         private void MoveLeft()
         {
-            gameObject.transform.localPosition += new Vector3(-300, 0, 0);
+            gameObject.transform.parent.localPosition += new Vector3(-300, 0, 0);
             AtRight = false;
         }
         

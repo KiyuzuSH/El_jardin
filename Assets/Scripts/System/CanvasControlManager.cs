@@ -20,5 +20,10 @@ namespace Game
         {
             Destroy(Instance);
         }
+
+        public GameObject AVGPanel;
+        public GameObject BartendingPanel;
+        
+        
     }
 }

@@ -39,10 +39,10 @@ namespace Game
             switch (SMI.GetCurrentLine(SMI.CurrentLine)[1])
             {
                 case "END":
-                    gameObject.SetActive(false);
-                    buttonContinue.gameObject.SetActive(false);
-                    Debug.Log("All Content Done");
-                    return;//TODO: Can turn to other place
+                    // gameObject.SetActive(false);
+                    // buttonContinue.gameObject.SetActive(false);
+                    // Debug.Log("All Content Done");
+                    // return;//TODO: Can turn to other place
                 case "&":
                     GetComponent<CanvasGroup>().alpha = 0;
                     buttonContinue.gameObject.SetActive(false);
