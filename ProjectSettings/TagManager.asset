@@ -3,26 +3,37 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Gin
+  - Whisky
+  - Tequila
+  - Rum
+  - Vodka
+  - Ice
+  - Honey
+  - Spice
+  - Salt
+  - Rose
+  - Citrus
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Particle
   - Water
   - UI
   - Scene
   - Character
   - Bartend
   - Fluid
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Gin
+  - Whisky
+  - Tequila
+  - Rum
+  - Vodka
+  - Honey
+  - Rose
+  - Citrus
   - 
   - 
   - 

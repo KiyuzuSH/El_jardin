@@ -50,4 +50,21 @@ namespace Game
         Center = 0,
         Right = 1,
     }
+
+    public enum IngrType
+    {
+        Gin = 0,
+        Whisky = 1,
+        Tequila = 2,
+        Rum = 3,
+        Vodka = 4,
+        Ice = -1,
+        Lemon = -2,//??
+        Honey = 5,
+        Berry = -3,//??
+        Spice = 16,
+        Salt = 17,
+        RoseOil = 6,
+        CitrusOil = 7,
+    }
 }

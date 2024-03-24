@@ -108,6 +108,6 @@ namespace Game
         private ScrollRect textBox;
         private Scrollbar scrollbar;
         
-
+        
     }
 }

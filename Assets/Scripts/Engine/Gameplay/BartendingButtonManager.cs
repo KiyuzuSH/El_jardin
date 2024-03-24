@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,19 +21,20 @@ namespace Game
         private void Start()
         {
             btnList.GetComponent<Button>().onClick.AddListener(OnListButtonClick);
-            btnGin.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick("Gin"); });
-            btnWhisky.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick("Whisky"); });
-            btnTequila.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick("Tequila"); });
-            btnRum.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick("Rum"); });
-            btnVodka.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick("Vodka"); });
-            btnIce.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick("Ice"); });
-            btnLemon.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick("Lemon"); });
-            btnHoney.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick("Honey"); });
-            btnBerry.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick("Berry"); });
-            btnSult.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick("Sult"); });
-            btnRosesult.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick("RoseSult"); });
-            btnRoseessence.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick("RoseEssence"); });
-            btnFloweressence.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick("FlowerEssence"); });
+            AtLeft = true;
+            btnGin.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Gin); });
+            btnWhisky.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Whisky); });
+            btnTequila.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Tequila); });
+            btnRum.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Rum); });
+            btnVodka.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Vodka); });
+            btnIce.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Ice); });
+            btnLemon.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Lemon); });
+            btnHoney.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Honey); });
+            btnBerry.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Berry); });
+            btnSpice.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Spice); });
+            btnSalt.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Salt); });
+            btnRoseEssentialOil.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.RoseOil); });
+            btnCitrusEssentialOil.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.CitrusOil); });
         }
         
         private void OnDestroy()
@@ -41,6 +43,12 @@ namespace Game
         }
 
         public GameObject btnList;
+        public Transform wineList;
+        private bool AtLeft { get; set; }
+
+        public GameObject winePrefab;
+        public Transform wineSpawnPoint;
+        
         public GameObject btnGin;
         public GameObject btnWhisky;
         public GameObject btnTequila;
@@ -50,19 +58,33 @@ namespace Game
         public GameObject btnLemon;
         public GameObject btnHoney;
         public GameObject btnBerry;
-        public GameObject btnSult;
-        public GameObject btnRosesult;
-        public GameObject btnRoseessence;
-        public GameObject btnFloweressence;
+        public GameObject btnSpice;
+        public GameObject btnSalt;
+        public GameObject btnRoseEssentialOil;
+        public GameObject btnCitrusEssentialOil;
 
         private void OnListButtonClick()
         {
-            
+            if (AtLeft) MoveRight();
+            else MoveLeft();
         }
 
-        private void OnIngredientClick(string _name)
+        // Animation
+        private void MoveRight()
         {
-            
+            wineList.localPosition += new Vector3(1000, 0, 0);
+            AtLeft = false;
+        }
+
+        private void MoveLeft()
+        {
+            wineList.localPosition += new Vector3(-1000, 0, 0);
+            AtLeft = true;
+        }
+
+        private void OnIngredientClick(IngrType _type)
+        {
+            Instantiate(winePrefab, wineSpawnPoint);
         }
     }
 }
