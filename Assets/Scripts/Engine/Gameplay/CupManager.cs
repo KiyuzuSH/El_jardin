@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Game
@@ -15,12 +16,17 @@ namespace Game
                 Instance = this;
             }
         }
+
+        private void Start()
+        {
+            CupInit();
+        }
         
         private void OnDestroy()
         {
             Destroy(Instance);
         }
-
+        
         private GameObject[] lstGin;
         private GameObject[] lstWhisky;
         private GameObject[] lstTequila;
@@ -30,8 +36,8 @@ namespace Game
         private GameObject[] lstHoney;
         private GameObject[] lstSpice;
         private GameObject[] lstSalt;
-        private GameObject[] lstRoseOil;
-        private GameObject[] lstCitrusOil;
+        private GameObject[] lstRose;
+        private GameObject[] lstCitrus;
 
         private void RefreshWholeList()
         {
@@ -44,8 +50,8 @@ namespace Game
             lstHoney = GameObject.FindGameObjectsWithTag("Honey");
             lstSpice = GameObject.FindGameObjectsWithTag("Spice");
             lstSalt = GameObject.FindGameObjectsWithTag("Salt");
-            lstRoseOil = GameObject.FindGameObjectsWithTag("RoseOil");
-            lstCitrusOil = GameObject.FindGameObjectsWithTag("CitrusOil");
+            lstRose = GameObject.FindGameObjectsWithTag("Rose");
+            lstCitrus = GameObject.FindGameObjectsWithTag("Citrus");
         }
 
         private void ClearAllItem()
@@ -59,14 +65,53 @@ namespace Game
             foreach (GameObject _item in lstHoney) Destroy(_item);
             foreach (GameObject _item in lstSpice) Destroy(_item);
             foreach (GameObject _item in lstSalt) Destroy(_item);
-            foreach (GameObject _item in lstRoseOil) Destroy(_item);
-            foreach (GameObject _item in lstCitrusOil) Destroy(_item);
+            foreach (GameObject _item in lstRose) Destroy(_item);
+            foreach (GameObject _item in lstCitrus) Destroy(_item);
         }
 
         private void CupInit()
         {
-            RefreshWholeList();
             ClearAllItem();
+        }
+
+        public void AddType(IngrType _type)
+        {
+            switch (_type)
+            {
+                case IngrType.Gin:
+                    lstGin = GameObject.FindGameObjectsWithTag("Gin");
+                    break;
+                case IngrType.Whisky:
+                    lstWhisky = GameObject.FindGameObjectsWithTag("Whisky");
+                    break;
+                case IngrType.Tequila:
+                    lstTequila = GameObject.FindGameObjectsWithTag("Tequila");
+                    break;
+                case IngrType.Rum:
+                    lstRum = GameObject.FindGameObjectsWithTag("Rum");
+                    break;
+                case IngrType.Vodka:
+                    lstVodka = GameObject.FindGameObjectsWithTag("Vodka");
+                    break;
+                case IngrType.Ice:
+                    lstIce = GameObject.FindGameObjectsWithTag("Ice");
+                    break;
+                case IngrType.Honey:
+                    foreach (GameObject _item in lstHoney) Destroy(_item);
+                    break;
+                case IngrType.Spice:
+                    lstSpice = GameObject.FindGameObjectsWithTag("Spice");
+                    break;
+                case IngrType.Salt:
+                    lstSalt = GameObject.FindGameObjectsWithTag("Salt");
+                    break;
+                case IngrType.Rose:
+                    lstRose = GameObject.FindGameObjectsWithTag("Rose");
+                    break;
+                case IngrType.Citrus:
+                    lstCitrus = GameObject.FindGameObjectsWithTag("Citrus");
+                    break;
+            }
         }
     }
 }

@@ -64,7 +64,7 @@ namespace Game
         Berry = -3,//??
         Spice = 16,
         Salt = 17,
-        RoseOil = 6,
-        CitrusOil = 7,
+        Rose = 6,
+        Citrus = 7,
     }
 }
