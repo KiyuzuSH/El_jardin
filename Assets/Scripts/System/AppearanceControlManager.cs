@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Game
@@ -19,6 +20,17 @@ namespace Game
         private void OnDestroy()
         {
             Destroy(Instance);
+        }
+
+        public SpriteRenderer interior;
+        public SpriteRenderer outside;
+        public SpriteRenderer jalousie;
+        public bool JalousieShutdown { get; set; }
+
+        private void Start()
+        {
+            JalousieShutdown = false;
+            
         }
 
         public GameObject AVGPanel;
