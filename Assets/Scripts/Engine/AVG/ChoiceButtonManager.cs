@@ -34,16 +34,16 @@ namespace Game
         
         public void GenerateChoice()
         {
-            if (SMI.GetCurrentLine(SMI.CurrentLine)[1] == "&")
+            if (SMI.GetLine(SMI.CurrentLine)[1] == "&")
             {
                 var btn = Instantiate(buttonChoice, gridButton);
                 var id = SMI.CurrentLine;
-                btn.GetComponentInChildren<TMP_Text>().text = SMI.GetCurrentLine(SMI.CurrentLine)[4];
+                btn.GetComponentInChildren<TMP_Text>().text = SMI.GetLine(SMI.CurrentLine)[4];
                 btn.GetComponent<Button>().onClick.AddListener
                 (
                     delegate { OnChoiceClick(id); }
                 );
-                if (SMI.GetCurrentLine(SMI.CurrentLine + 1)[1] == "&")
+                if (SMI.GetLine(SMI.CurrentLine + 1)[1] == "&")
                 {
                     SMI.CurrentLine++;
                     GenerateChoice();
@@ -53,7 +53,7 @@ namespace Game
         
         private void OnChoiceClick(int _id)
         {
-            SMI.CurrentLine = int.Parse(SMI.GetCurrentLine(_id)[2]);
+            SMI.CurrentLine = int.Parse(SMI.GetLine(_id)[2]);
             DialogueManager.Instance.CheckCurrentLine();
             for (int i = 0; i < gridButton.childCount; i++) Destroy(gridButton.GetChild(i).gameObject);
         }

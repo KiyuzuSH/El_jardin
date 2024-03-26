@@ -36,7 +36,7 @@ namespace Game
 
         public void CheckCurrentLine()
         {
-            switch (SMI.GetCurrentLine(SMI.CurrentLine)[1])
+            switch (SMI.GetLine(SMI.CurrentLine)[1])
             {
                 case "END":
                     // gameObject.SetActive(false);
@@ -51,15 +51,15 @@ namespace Game
                 case "!":
                     GetComponent<CanvasGroup>().alpha = 0;
                     buttonContinue.gameObject.SetActive(true);
-                    ShowTitle(SMI.GetCurrentLine(SMI.CurrentLine)[4]);
+                    ShowTitle(SMI.GetLine(SMI.CurrentLine)[4]);
                     SMI.CurrentLine++;
                     CheckCurrentLine();
                     break;
                 case "^":
                     GetComponent<CanvasGroup>().alpha = 0;
                     buttonContinue.gameObject.SetActive(true);
-                    ShowLines(SMI.GetCurrentLine(SMI.CurrentLine)[4]);
-                    if (SMI.GetCurrentLine(SMI.CurrentLine + 1)[1] == "")
+                    ShowLines(SMI.GetLine(SMI.CurrentLine)[4]);
+                    if (SMI.GetLine(SMI.CurrentLine + 1)[1] == "")
                     {
                         SMI.CurrentLine++;
                         CheckCurrentLine();
@@ -68,8 +68,8 @@ namespace Game
                 case "":
                     GetComponent<CanvasGroup>().alpha = 1;
                     UpdateText(
-                        SMI.GetCurrentLine(SMI.CurrentLine)[3], 
-                        SMI.GetCurrentLine(SMI.CurrentLine)[4]
+                        SMI.GetLine(SMI.CurrentLine)[3], 
+                        SMI.GetLine(SMI.CurrentLine)[4]
                         );
                     // UpdateManPic(
                     //     SMI.GetCurrentLine(SMI.CurrentLine)[8],
@@ -80,7 +80,7 @@ namespace Game
                     buttonContinue.gameObject.SetActive(true);
                     break;
             }
-            SMI.CurrentLine = int.Parse(SMI.GetCurrentLine(SMI.CurrentLine)[2]);
+            SMI.CurrentLine = int.Parse(SMI.GetLine(SMI.CurrentLine)[2]);
         }
         
         private void OnContinueDialogue()

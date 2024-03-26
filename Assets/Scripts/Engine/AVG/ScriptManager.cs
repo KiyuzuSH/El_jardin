@@ -52,7 +52,7 @@ namespace Game
 
         private List<string[]> currentSheet;
 
-        public string[] GetCurrentLine(int _id) => currentSheet[_id];
+        public string[] GetLine(int _id) => currentSheet[_id];
         
         private List<string[]> SetCurrentSheet(TextAsset _tA)
         {
@@ -63,12 +63,7 @@ namespace Game
             return sheet;
         }
         
-        private int _currentLine;
-        public int CurrentLine
-        {
-            get => _currentLine;
-            set => _currentLine = value;
-        }
+        public int CurrentLine { get; set; }
         
         public void UpdateSheet()
         {
