@@ -22,7 +22,12 @@ namespace Game
         {
             Destroy(Instance);
         }
+        
+        #region Text Asset List
 
+        private static List<TextAsset> scripts;
+        private int ScriptIndex { get; set; }
+        
         private void Start()
         {
             scripts = Resources.LoadAll<TextAsset>("StoryScripts").ToList();
@@ -34,16 +39,6 @@ namespace Game
             
             //TODO: Should can be determined by save data
             CurrentLine = 0; 
-        }
-        
-        #region Text Asset List
-
-        private static List<TextAsset> scripts;
-        private static int _scriptIndex;
-        private int ScriptIndex
-        {
-            get => _scriptIndex;
-            set => _scriptIndex = value;
         }
 
         #endregion

@@ -51,6 +51,23 @@ namespace Game
         Right = 1,
     }
 
+    public struct WineIngr
+    {
+        public GameObject[] lstGin;
+        public GameObject[] lstWhisky;
+        public GameObject[] lstTequila;
+        public GameObject[] lstRum;
+        public GameObject[] lstVodka;
+        public GameObject iceGO;
+        public GameObject[] lstHoney;
+        public GameObject[] lstSpice;
+        public GameObject[] lstSalt;
+        public GameObject[] lstRose;
+        public GameObject[] lstCitrus;
+        public bool lemonAdded;
+        public bool berryAdded;
+    }
+
     public enum IngrType
     {
         Gin = 0,
@@ -66,5 +83,12 @@ namespace Game
         Salt = 17,
         Rose = 6,
         Citrus = 7,
+    }
+
+    public enum WorldStyle
+    {
+        Modern = 1,
+        RPG = 2,
+        Utopia = 3,
     }
 }

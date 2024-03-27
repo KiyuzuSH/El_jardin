@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Game
 {
@@ -20,5 +21,6 @@ namespace Game
         {
             Destroy(Instance);
         }
+
     }
 }

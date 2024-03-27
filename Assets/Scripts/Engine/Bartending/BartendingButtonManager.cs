@@ -19,6 +19,8 @@ namespace Game
 
         private void Start()
         {
+            btnSubmit.onClick.AddListener(OnSubmit);
+        
             btnList.GetComponent<Button>().onClick.AddListener(OnListButtonClick);
             AtLeft = true;
             btnGin.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Gin); });
@@ -26,31 +28,32 @@ namespace Game
             btnTequila.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Tequila); });
             btnRum.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Rum); });
             btnVodka.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Vodka); });
-            btnIce.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Ice); });
-            // btnLemon.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Lemon); });
+            btnIce.GetComponent<Button>().onClick.AddListener(OnIceAdded);
+            btnLemon.GetComponent<Button>().onClick.AddListener(delegate { OnAfterAdded(IngrType.Lemon); });
             btnHoney.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Honey); });
-            // btnBerry.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Berry); });
+            btnBerry.GetComponent<Button>().onClick.AddListener(delegate { OnAfterAdded(IngrType.Berry); });
             btnSpice.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Spice); });
             btnSalt.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Salt); });
-            btnRoseEssentialOil.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Rose); });
-            btnCitrusEssentialOil.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Citrus); });
+            btnRoseOil.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Rose); });
+            btnCitrusOil.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Citrus); });
         }
         
         private void OnDestroy()
         {
+            btnSubmit.onClick.RemoveAllListeners();
             btnGin.GetComponent<Button>().onClick.RemoveAllListeners();
             btnWhisky.GetComponent<Button>().onClick.RemoveAllListeners();
             btnTequila.GetComponent<Button>().onClick.RemoveAllListeners();
             btnRum.GetComponent<Button>().onClick.RemoveAllListeners();
             btnVodka.GetComponent<Button>().onClick.RemoveAllListeners();
             btnIce.GetComponent<Button>().onClick.RemoveAllListeners();
-            // btnLemon.GetComponent<Button>().onClick.RemoveAllListeners();
+            btnLemon.GetComponent<Button>().onClick.RemoveAllListeners();
             btnHoney.GetComponent<Button>().onClick.RemoveAllListeners();
-            // btnBerry.GetComponent<Button>().onClick.RemoveAllListeners();
+            btnBerry.GetComponent<Button>().onClick.RemoveAllListeners();
             btnSpice.GetComponent<Button>().onClick.RemoveAllListeners();
             btnSalt.GetComponent<Button>().onClick.RemoveAllListeners();
-            btnRoseEssentialOil.GetComponent<Button>().onClick.RemoveAllListeners();
-            btnCitrusEssentialOil.GetComponent<Button>().onClick.RemoveAllListeners();
+            btnRoseOil.GetComponent<Button>().onClick.RemoveAllListeners();
+            btnCitrusOil.GetComponent<Button>().onClick.RemoveAllListeners();
             Destroy(Instance);
         }
 
@@ -71,8 +74,8 @@ namespace Game
         public GameObject btnBerry;
         public GameObject btnSpice;
         public GameObject btnSalt;
-        public GameObject btnRoseEssentialOil;
-        public GameObject btnCitrusEssentialOil;
+        public GameObject btnRoseOil;
+        public GameObject btnCitrusOil;
 
         private void OnListButtonClick()
         {
@@ -98,6 +101,17 @@ namespace Game
             GameObject item = Resources.Load<GameObject>("Prefabs/WineIngredients/" + _type.ToString());
             Instantiate(item, wineSpawnPoint);
             CupManager.Instance.AddType(_type);
+        }
+
+        private void OnIceAdded() => CupManager.Instance.AddType(IngrType.Ice);
+
+        private void OnAfterAdded(IngrType _type) => CupManager.Instance.AddType(_type);
+        
+        public Button btnSubmit;
+
+        private void OnSubmit()
+        {
+            
         }
     }
 }

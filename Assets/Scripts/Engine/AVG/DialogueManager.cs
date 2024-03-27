@@ -18,21 +18,24 @@ namespace Game
             }
         }
         
+        public Button buttonDialogueContinue;
+        public Button buttonMindContinue;
+        
         private void Start()
         {
             SMI = ScriptManager.Instance;
             gameObject.SetActive(true);
-            buttonContinue.onClick.AddListener(OnContinueDialogue);
+            buttonDialogueContinue.onClick.AddListener(OnContinueDialogue);
+            buttonMindContinue.onClick.AddListener(OnContinueDialogue);
             OnContinueDialogue();
         }
         
         private void OnDestroy()
         {
-            buttonContinue.onClick.RemoveListener(OnContinueDialogue);
+            buttonDialogueContinue.onClick.RemoveAllListeners();
+            buttonMindContinue.onClick.RemoveAllListeners();
             Destroy(Instance);
         }
-        
-        public Button buttonContinue;
 
         public void CheckCurrentLine()
         {
@@ -40,24 +43,27 @@ namespace Game
             {
                 case "END":
                     // gameObject.SetActive(false);
-                    // buttonContinue.gameObject.SetActive(false);
+                    // buttonDialogueContinue.gameObject.SetActive(false);
                     // Debug.Log("All Content Done");
                     // return;//TODO: Can turn to other place
                 case "&":
                     GetComponent<CanvasGroup>().alpha = 0;
-                    buttonContinue.gameObject.SetActive(false);
+                    buttonDialogueContinue.gameObject.SetActive(false);
+                    buttonMindContinue.gameObject.SetActive(false);
                     GenerateChoice();
                     break;
                 case "!":
                     GetComponent<CanvasGroup>().alpha = 0;
-                    buttonContinue.gameObject.SetActive(true);
+                    buttonDialogueContinue.gameObject.SetActive(true);
+                    buttonMindContinue.gameObject.SetActive(true);
                     ShowTitle(SMI.GetLine(SMI.CurrentLine)[4]);
                     SMI.CurrentLine++;
                     CheckCurrentLine();
                     break;
                 case "^":
                     GetComponent<CanvasGroup>().alpha = 0;
-                    buttonContinue.gameObject.SetActive(true);
+                    buttonDialogueContinue.gameObject.SetActive(true);
+                    buttonMindContinue.gameObject.SetActive(true);
                     ShowLines(SMI.GetLine(SMI.CurrentLine)[4]);
                     if (SMI.GetLine(SMI.CurrentLine + 1)[1] == "")
                     {
@@ -77,7 +83,8 @@ namespace Game
                     //     SMI.GetCurrentLine(SMI.CurrentLine)[10],
                     //     SMI.GetCurrentLine(SMI.CurrentLine)[11]
                     //     );
-                    buttonContinue.gameObject.SetActive(true);
+                    buttonDialogueContinue.gameObject.SetActive(true);
+                    buttonMindContinue.gameObject.SetActive(true);
                     break;
             }
             SMI.CurrentLine = int.Parse(SMI.GetLine(SMI.CurrentLine)[2]);

@@ -46,8 +46,6 @@ namespace Game
         public GameObject centerAnchor;
         public GameObject rightAnchor;
 
-        public SpriteRenderer background;
-        
         [SerializeField]
         public List<Picture> PicList;
 
