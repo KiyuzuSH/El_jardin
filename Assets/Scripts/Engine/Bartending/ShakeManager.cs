@@ -35,14 +35,15 @@ namespace Game
 
         public Image fill;
         public GameObject btnPourOut;
+        public GameObject box;
         
         private void Start()
         {
             timePerPress = 1.0f / expectedTimes;
             btnPourOut.GetComponent<Button>().onClick.AddListener(ShakeComplete);
             btnPourOut.SetActive(false);
+            box.SetActive(false);
             shakeCup.sprite = Resources.Load<Sprite>("Sprites/Items/Shaker/shaker_close");
-            
         }
 
         private void Update()
@@ -50,28 +51,34 @@ namespace Game
             if (progress.value > 0.99f)
             {
                 btnPourOut.SetActive(true);
+                fill.color = Color.green;
             }
-            else
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+                if (!LeftPressing)
+                {
+                    LeftPressing = true;
+                    shakeCup.rectTransform.rotation = Quaternion.Euler(0,0,15);
+                    progress.value += timePerPress;
+                }
+
+            if (Input.GetKeyUp(KeyCode.LeftArrow))
             {
-                if (Input.GetKeyDown(KeyCode.LeftArrow))
-                    if (!LeftPressing)
-                    {
-                        LeftPressing = true;
-                        progress.value += timePerPress;
-                    }
+                shakeCup.rectTransform.rotation = Quaternion.Euler(0,0,0);
+                LeftPressing = false;
+            }
 
-                if (Input.GetKeyUp(KeyCode.LeftArrow))
-                    LeftPressing = false;
-
-                if (Input.GetKeyDown(KeyCode.RightArrow))
-                    if (!RightPressing)
-                    {
-                        RightPressing = true;
-                        progress.value += timePerPress;
-                    }
-            
-                if (Input.GetKeyUp(KeyCode.RightArrow))
-                    RightPressing = false;
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+                if (!RightPressing)
+                {
+                    RightPressing = true;
+                    shakeCup.rectTransform.rotation = Quaternion.Euler(0,0,-15);
+                    progress.value += timePerPress;
+                }
+        
+            if (Input.GetKeyUp(KeyCode.RightArrow))
+            {
+                shakeCup.rectTransform.rotation = Quaternion.Euler(0,0,0);
+                RightPressing = false;
             }
         }
 
@@ -82,14 +89,24 @@ namespace Game
             shakeCup.SetNativeSize();
             var x = 2 * shakeCup.rectTransform.rect.size;
             shakeCup.rectTransform.sizeDelta = x;
-            Invoke(nameof(TmpChangePic), 3);
+            Invoke(nameof(TmpChangePic), 1);
         }
 
         private void TmpChangePic()
         {
-            // TODO: A New Wine Pic
-            // shakeCup.sprite = Resources.Load<Sprite>("Sprites/Items/Shaker/shaker_open");
-            // TODO: Move Next
+            btnPourOut.SetActive(false);
+            shakeCup.sprite = Resources.Load<Sprite>("Sprites/Wine/LinBieZengYan");
+            box.SetActive(true);
+            shakeCup.SetNativeSize();
+            Invoke(nameof(MoveNext),3);
+        }
+
+        private void MoveNext()
+        {
+            //TODO: wine data
+            ScriptManager.Instance.CurrentLine = 50;
+            SystemSwitchManager.Instance.AVGMode();
+            DialogueManager.Instance.CheckCurrentLine();
         }
     }
 }

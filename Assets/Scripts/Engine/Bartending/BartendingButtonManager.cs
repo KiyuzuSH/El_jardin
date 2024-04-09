@@ -61,7 +61,6 @@ namespace Game
         public Transform wineList;
         private bool AtLeft { get; set; }
 
-        public Transform wineSpawnPoint;
         
         public GameObject btnGin;
         public GameObject btnWhisky;
@@ -96,22 +95,19 @@ namespace Game
             AtLeft = true;
         }
 
-        private void OnIngredientClick(IngrType _type)
-        {
-            GameObject item = Resources.Load<GameObject>("Prefabs/WineIngredients/" + _type.ToString());
-            Instantiate(item, wineSpawnPoint);
-            CupManager.Instance.AddType(_type);
-        }
+        private void OnIngredientClick(IngrType _type) => WineManager.Instance.AddType(_type);
+        
 
-        private void OnIceAdded() => CupManager.Instance.AddType(IngrType.Ice);
+        private void OnIceAdded() => WineManager.Instance.AddType(IngrType.Ice);
 
-        private void OnAfterAdded(IngrType _type) => CupManager.Instance.AddType(_type);
+        private void OnAfterAdded(IngrType _type) => WineManager.Instance.AddType(_type);
         
         public Button btnSubmit;
 
         private void OnSubmit()
         {
-            
+            //TODO: wine data
+            SystemSwitchManager.Instance.ShakeMode();
         }
     }
 }

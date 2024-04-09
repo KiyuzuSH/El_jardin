@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -38,9 +39,10 @@ namespace Game
 
         private void Start()
         {
+            collection.SetActive(false);
             JalousieShutdown = false;
             WorldStyle = WorldStyle.Modern;
-            SetStyle(WorldStyle.Modern);
+            SetStyle(WorldStyle.Utopia);
             modernChangeButton.onClick.AddListener(
                 delegate { SetStyle(WorldStyle.Modern); });
             rpgChangeButton.onClick.AddListener(
@@ -57,6 +59,7 @@ namespace Game
             {
                 case WorldStyle.Modern:
                     interior.sprite = Resources.Load<Sprite>("Sprites/Stylized/modern/modern_bg_in_static");
+                    interior.color = Color.white;
                     outside.sprite = Resources.Load<Sprite>("Sprites/Stylized/modern/modern_bg_out_static");
                     if(!JalousieShutdown) 
                         jalousie.sprite = Resources.Load<Sprite>("Sprites/Stylized/modern/modern_jalousie");
@@ -68,6 +71,7 @@ namespace Game
                     break;
                 case WorldStyle.RPG:
                     interior.sprite = Resources.Load<Sprite>("Sprites/Stylized/rpg/rpg_bg_in_static");
+                    interior.color = Color.white;
                     outside.sprite = Resources.Load<Sprite>("Sprites/Stylized/rpg/rpg_bg_out_static");
                     if(!JalousieShutdown) 
                         jalousie.sprite = Resources.Load<Sprite>("Sprites/Stylized/rpg/rpg_jalousie");
@@ -79,6 +83,7 @@ namespace Game
                     break;
                 case WorldStyle.Utopia:
                     interior.sprite = Resources.Load<Sprite>("Sprites/Stylized/utopia/utopia_bg_in_static");
+                    interior.color = Color.white;
                     outside.sprite = Resources.Load<Sprite>("Sprites/Stylized/utopia/utopia_bg_out_static");
                     if(!JalousieShutdown) 
                         jalousie.sprite = Resources.Load<Sprite>("Sprites/Stylized/utopia/utopia_jalousie");
@@ -94,6 +99,15 @@ namespace Game
         public void SetAloneBackgroundPic(Sprite _picture)
         {
             interior.sprite = _picture;
+            interior.color = Color.white;
+            outside.sprite = null;
+            jalousie.sprite = null;
+        }
+
+        public void SetClear()
+        {
+            // interior.sprite = null;
+            interior.color = Color.black;
             outside.sprite = null;
             jalousie.sprite = null;
         }
@@ -103,9 +117,39 @@ namespace Game
             
         }
 
-        public GameObject AVGPanel;
-        public GameObject BartendingPanel;
+        // public GameObject AVGPanel;
+        // public GameObject BartendingPanel;
+
+        public IEnumerator IShake(GameObject mover,float duration, float magnitude)
+        {
+            Vector3 originalPos = mover.transform.localPosition;
+            float elapsed = 0.0f;
+            while (elapsed < duration)
+            {
+                float x = Random.Range(-1f, 1f) * magnitude;
+                float y = Random.Range(-1f, 1f) * magnitude;
+                transform.localPosition = new Vector3(x, y, originalPos.z);
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
+
+            transform.localPosition = originalPos;
+        }
+
+        public void Shake()
+        {
+            StartCoroutine(IShake(interior.gameObject,1f, .6f));
+            StartCoroutine(IShake(outside.gameObject,1f, .6f));
+            StartCoroutine(IShake(jalousie.gameObject,1f, .6f));
+            StartCoroutine(IShake(CharacterViewManager.Instance.gameObject,1f, .6f));
+            
+        }
+
+        public GameObject collection;
         
-        
+        public void Collection()
+        {
+            collection.SetActive(true);
+        }
     }
 }

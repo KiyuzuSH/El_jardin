@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Game
@@ -22,6 +23,21 @@ namespace Game
             Destroy(Instance);
         }
 
-        private static List<TextAsset> winelist;
+        private static TextAsset winelistasset;
+        private static List<string[]> winelist;
+        
+        private int WineIndex { get; set; }
+        
+        private void Start()
+        {
+            winelistasset = Resources.Load<TextAsset>("winelist");
+            winelist = new List<string[]>();
+            WineIndex = 0;
+            List<string> temp = winelistasset.text.Split('\n').ToList();
+            foreach (var line in temp) 
+                winelist.Add(line.Split(','));
+        }
+
+        public string[] CheckWine(int _index) => winelist[WineIndex];
     }
 }
