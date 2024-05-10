@@ -66,12 +66,12 @@ namespace Game
                     buttonDialogueContinue.gameObject.SetActive(true);
                     buttonMindContinue.gameObject.SetActive(true);
                     ShowLines(SMI.GetLine(SMI.CurrentLine)[4]);
-                    if (SMI.GetLine(SMI.CurrentLine + 1)[1] == "")
-                    {
-                        SMI.CurrentLine++;
-                        CheckCurrentLine();
-                        return;
-                    }
+                    // if (SMI.GetLine(SMI.CurrentLine + 1)[1] == "")
+                    // {
+                    //     SMI.CurrentLine++;
+                    //     CheckCurrentLine();
+                    //     return;
+                    // }
                     if (SMI.GetLine(SMI.CurrentLine + 1)[1] == "^&")
                     {
                         SMI.CurrentLine++;

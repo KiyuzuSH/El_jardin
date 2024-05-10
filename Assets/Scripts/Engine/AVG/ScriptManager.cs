@@ -23,9 +23,7 @@ namespace Game
             Destroy(Instance);
         }
         
-        #region Text Asset List
-
-        private static List<TextAsset> scripts;
+        private List<TextAsset> scripts;
         private int ScriptIndex { get; set; }
         
         private void Start()
@@ -40,8 +38,6 @@ namespace Game
             //TODO: Should can be determined by save data
             CurrentLine = 0; 
         }
-
-        #endregion
 
         #region Dialog sheet
 

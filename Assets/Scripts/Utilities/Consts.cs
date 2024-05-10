@@ -91,4 +91,32 @@ namespace Game
         RPG = 2,
         Utopia = 3,
     }
+    
+    public enum EnumDialogueLineType
+    {
+        NarrationLine,
+        PersonLine,
+        MindLine,
+        ChooseLine,
+        CGLine,
+        GameLine,
+        BoxLine,
+    }
+    
+    /// <summary> 角色立绘在屏幕上的位置 </summary>
+    public enum EnumCharacterPos
+    {
+        Left = -1,
+        Center = 0,
+        Right = 1,
+    }
+
+    /// <summary> 对话线触发事件的类型 </summary>
+    public enum EnumDialogueEventType
+    {
+        end = -1,
+        next = 0,
+        choose = 1,
+        jump = 2,
+    }
 }

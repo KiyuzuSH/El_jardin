@@ -42,7 +42,7 @@ namespace Game
             collection.SetActive(false);
             JalousieShutdown = false;
             WorldStyle = WorldStyle.Modern;
-            SetStyle(WorldStyle.Utopia);
+            // SetStyle(WorldStyle.Utopia);
             modernChangeButton.onClick.AddListener(
                 delegate { SetStyle(WorldStyle.Modern); });
             rpgChangeButton.onClick.AddListener(
