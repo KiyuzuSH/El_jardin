@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI;
 
-namespace Game
+namespace KiyuzuDev.ITGWDO
 {
     public class BartendingManager : MonoBehaviour
     {

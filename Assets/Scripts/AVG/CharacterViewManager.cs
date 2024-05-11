@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace Game
+namespace KiyuzuDev.ITGWDO.AVGEngine
 {
     public class CharacterViewManager : MonoBehaviour
     {

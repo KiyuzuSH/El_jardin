@@ -1,8 +1,7 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Game
+namespace KiyuzuDev.ITGWDO
 {
     public class ShakeManager : MonoBehaviour
     {
@@ -104,9 +103,9 @@ namespace Game
         private void MoveNext()
         {
             //TODO: wine data
-            ScriptManager.Instance.CurrentLine = 50;
+            AVGEngine.ScriptManager.Instance.CurrentLine = 50;
             SystemSwitchManager.Instance.AVGMode();
-            DialogueManager.Instance.CheckCurrentLine();
+            AVGEngine.DialogueManager.Instance.CheckCurrentLine();
         }
     }
 }

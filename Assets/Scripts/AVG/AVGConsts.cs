@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Game
+namespace KiyuzuDev.ITGWDO.AVGEngine
 {
     public class AVGConsts : MonoBehaviour
     {

@@ -1,9 +1,8 @@
 using System;
-using System.Linq;
 using UnityEngine;
 using UnityEditor;
 
-namespace Game
+namespace KiyuzuDev.ITGWDO.StoryData
 {
     [Serializable]
     public class DialogueLineRaw

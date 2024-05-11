@@ -1,7 +1,6 @@
-using TMPro;
 using UnityEngine;
 
-namespace Game
+namespace KiyuzuDev.ITGWDO
 {
     public class WineManager : MonoBehaviour
     {

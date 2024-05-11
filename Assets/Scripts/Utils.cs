@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Game
+namespace KiyuzuDev.ITGWDO.Utils
 {
     public class Utils : MonoBehaviour
     {

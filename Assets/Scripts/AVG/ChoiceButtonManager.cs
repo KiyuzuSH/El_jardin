@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Game
+namespace KiyuzuDev.ITGWDO.AVGEngine
 {
     public class ChoiceButtonManager : MonoBehaviour
     {

@@ -1,8 +1,7 @@
-using System;
 using TMPro;
 using UnityEngine;
 
-namespace Game
+namespace KiyuzuDev.ITGWDO
 {
     public class CheckerManager : MonoBehaviour
     {

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game
+namespace KiyuzuDev.ITGWDO.StoryData
 {
     [CreateAssetMenu(fileName = "StoryLine_",menuName = "StoryLine",order = 2)]
     public class StoryLines : ScriptableObject

@@ -1,10 +1,9 @@
-using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Game
+namespace KiyuzuDev.ITGWDO.AVGEngine
 {
     public class MindShowManager : MonoBehaviour
     {

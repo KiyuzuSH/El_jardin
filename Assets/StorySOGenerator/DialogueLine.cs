@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game
+namespace KiyuzuDev.ITGWDO.StoryData
 {
     public enum EnumDialogueLineType
     {
