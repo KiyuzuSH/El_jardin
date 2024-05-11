@@ -22,18 +22,21 @@ namespace Game
         {
             Destroy(Instance);
         }
+
+        private List<TextAsset> scriptAssets;
+
+        private int _scriptIndex;
         
-        private List<TextAsset> scripts;
-        private int ScriptIndex { get; set; }
+        
+        public int CurrentLine { get; set; }
         
         private void Start()
         {
-            scripts = Resources.LoadAll<TextAsset>("StoryScripts").ToList();
+            scriptAssets = Resources.LoadAll<TextAsset>("StoryScripts").ToList();
             
-            //TODO: Should can be determined by save data
-            ScriptIndex = 0;
+            _scriptIndex = 0;
             
-            currentSheet = SetCurrentSheet(scripts[ScriptIndex]); 
+            currentSheet = SetCurrentSheet(scriptAssets[_scriptIndex]); 
             
             //TODO: Should can be determined by save data
             CurrentLine = 0; 
@@ -54,12 +57,6 @@ namespace Game
             return sheet;
         }
         
-        public int CurrentLine { get; set; }
-        
-        public void UpdateSheet()
-        {
-            //TODO: Update Content in the Sheet
-        }
         
         #endregion
     }
