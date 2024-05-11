@@ -71,5 +71,17 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
-/[Aa]ssets/Resources/Audio/BGM/*.wav
+# My Definition
 
+/.idea/.idea.El_jardin/.idea/dictionaries/wz.xml
+
+/[Aa]ssets/TextMesh Pro/Documentation/
+/[Aa]ssets/TextMesh Pro/Shaders/
+/[Aa]ssets/TextMesh Pro/Resources/
+/[Aa]ssets/TextMesh Pro/Sprites/
+
+/[Aa]ssets/Resources/Audio/BGM
+/[Aa]ssets/Resources/Audio/SFXs
+
+/[Aa]ssets/Plugins/NaughtyAttributes/
+/[Aa]ssets/Plugins/CSVSerializer/
