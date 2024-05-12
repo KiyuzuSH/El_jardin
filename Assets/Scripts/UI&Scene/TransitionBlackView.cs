@@ -10,7 +10,7 @@ namespace KiyuzuDev.ITGWDO.UI
 
         private VisualElement transitionBlackImg;
 
-        private WaitUntil waitUnitlSceneLoaded;
+        private WaitUntil waitUntilSceneLoaded;
 
         public static event System.Action ShowLoadingScreen;
 
@@ -18,27 +18,31 @@ namespace KiyuzuDev.ITGWDO.UI
         {
             transitionBlackImg = GetComponent<UIDocument>()
                 .rootVisualElement.Q("BlackImage");
-            waitUnitlSceneLoaded = new WaitUntil(() => Core.SceneLoader.IsSceneLoaded);
+            waitUntilSceneLoaded = new WaitUntil(() => Core.SceneLoader.IsSceneLoaded);
 
-            Core.SceneLoader.LoadingStarted += () =>
-            {
-                transitionBlackImg.AddToClassList(UssFade);
-                transitionBlackImg.RegisterCallback<TransitionEndEvent>(OnFadeOutEnd);
-            };
-            Core.SceneLoader.LoadingCompleted += () =>
-            {
-                transitionBlackImg.RemoveFromClassList(UssFade);
-            };
-            
+            Core.SceneLoader.LoadingStarted += FadeOut;
+            Core.SceneLoader.LoadingAccomplished += FadeIn;
+        }
+
+        void FadeOut()
+        {
+            transitionBlackImg.AddToClassList(UssFade);
+            transitionBlackImg.RegisterCallback<TransitionEndEvent>(OnFadeOutEnd);
+        }
+
+        void FadeIn()
+        {
+            transitionBlackImg.RemoveFromClassList(UssFade);
         }
 
         IEnumerator ActivateLoadedSceneCoroutine()
         {
-            yield return waitUnitlSceneLoaded;
+            yield return waitUntilSceneLoaded;
+            
             Core.SceneLoader.ActivateLoadedScene();
         }
 
-        private void OnFadeOutEnd(TransitionEndEvent e)
+        private void OnFadeOutEnd(TransitionEndEvent evt)
         {
             transitionBlackImg.UnregisterCallback<TransitionEndEvent>(OnFadeOutEnd);
             if (Core.SceneLoader.ShowLoadingScreen)

@@ -1,4 +1,4 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/ViewDocument/UIStylesheet/TransitionBlackView.uss?fileID=7433441132597879392&amp;guid=ccc021ea936050241a9c91b4feb4411d&amp;type=3#TransitionBlackView" />
-    <ui:VisualElement name="BlackImage" picking-mode="Ignore" class="black-image" />
+    <Style src="project://database/Assets/ViewDocument/TransitionBlackView.uss?fileID=7433441132597879392&amp;guid=ccc021ea936050241a9c91b4feb4411d&amp;type=3#TransitionBlackView" />
+    <ui:VisualElement name="BlackImage" picking-mode="Ignore" class="black-image" style="transition-delay: 0s; transition-timing-function: ease-in-circ;" />
 </ui:UXML>

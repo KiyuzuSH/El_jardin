@@ -1,4 +1,3 @@
-using KiyuzuDev.ITGWDO.Core;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.UIElements;
@@ -34,7 +33,7 @@ namespace KiyuzuDev.ITGWDO.UI
             // TODO: disable all player's input
             if (debugMode)
             {
-                Core.SceneLoader.LoadAddressableScene(SceneLoader.TestSceneKey);
+                Core.SceneLoader.LoadAddressableScene(Core.SceneLoader.TestSceneKey);
             }
             else
             {

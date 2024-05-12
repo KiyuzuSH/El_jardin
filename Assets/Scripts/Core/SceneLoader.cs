@@ -64,12 +64,12 @@ namespace KiyuzuDev.ITGWDO.Core
 
             if (activateOnLoad)
             {
-                LoadingCompleted?.Invoke();
+                LoadingAccomplished?.Invoke();
                 
                 yield break;
             }
             
-            LoadingAccomplished?.Invoke();
+            LoadingCompleted?.Invoke();
             IsSceneLoaded = true;
             loadedSceneInstance = asyncOperationHandle.Result;
         }

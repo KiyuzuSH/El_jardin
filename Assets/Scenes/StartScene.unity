@@ -185,11 +185,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameMainScene:
-    m_AssetGUID: 2cda990e2423bbf4892e6590ba056729
+    m_AssetGUID: 56512652a78e26b4e932590f59e04426
     m_SubObjectName: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  debugMode: 1
+    m_EditorAssetChanged: 1
+  debugMode: 0
 --- !u!1 &1565626651
 GameObject:
   m_ObjectHideFlags: 0
