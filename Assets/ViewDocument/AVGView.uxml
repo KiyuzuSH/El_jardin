@@ -1,3 +1,15 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/ViewDocument/UIStylesheet/AVGView.uss?fileID=7433441132597879392&amp;guid=bb70f38f2fa2ccb4a9d2f03ab5e3df00&amp;type=3#AVGView" />
+    <Style src="project://database/Assets/ViewDocument/AVGView.uss?fileID=7433441132597879392&amp;guid=bb70f38f2fa2ccb4a9d2f03ab5e3df00&amp;type=3#AVGView" />
+    <ui:VisualElement name="ThemeContainer" style="flex-grow: 1; flex-direction: row; width: 100%; height: 100px;">
+        <ui:VisualElement name="OutsideContainer" style="position: absolute; width: 333px; height: 524px; top: 177px; left: 99px;">
+            <ui:VisualElement name="OutsidePic" style="flex-grow: 1; background-image: resource(&apos;Sprites/Theme/utopia/utopia_out&apos;);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="InteriorContainer" style="flex-grow: 1;">
+            <ui:VisualElement name="InteriorPic" style="flex-grow: 1; background-image: resource(&apos;Sprites/Theme/utopia/utopia_in&apos;);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="JalousieContainer" style="flex-grow: 0; width: 334px; height: 456px; flex-basis: 465px; position: absolute; top: 243px; left: 97px;">
+            <ui:VisualElement name="JalousiePic" style="flex-grow: 1; left: auto; top: auto; position: relative;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="UIContainer" style="flex-grow: 1; width: 100%; height: 100%; position: absolute;" />
 </ui:UXML>
