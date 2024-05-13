@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
@@ -8,34 +9,32 @@ namespace KiyuzuDev.ITGWDO.StoryData
     public class DialogueLineRaw
     {
         public int lineId = -1;
-        public string dialogueLineType = "Narration";
-        public string personName = "名字";
-        public string content = "显示内容";
-        public string events = "";
-        public string personImg = "";
-        public string position = "";
-        public string atMindBox = "";
-        public string spriteType = "";
-        public string image = "";
+        public string dialogueLineType;
+        public string personName;
+        public string content;
+        public string eventNames;
+        public string eventArgs;
+        public string choiceAtMindBox;
     }
     
     public class SOGen : MonoBehaviour
     {
         // Asset文件保存路径
         private const string pathSO = "Assets/Resources/StorySO/";
-        private const string pathPersonImgResource = "Sprites/Characters/";
+        private const string pathScripts = "Assets/Resources/StoryScripts/";
         
         public DialogueLineRaw[] dialogueRaws;
 
         private void Start()
         {
-            CreateTestAsset();
+            CreateStoryAsset("PV0514");
         }
 
-        private void CreateTestAsset()
+        private void CreateStoryAsset(string scriptFileName)
         {
-            TextAsset tA = AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/Resources/StoryScripts/TestChapterNew.csv");
+            TextAsset tA = AssetDatabase.LoadAssetAtPath<TextAsset>(pathScripts + scriptFileName + ".csv");
             dialogueRaws = CSVSerializer.Deserialize<DialogueLineRaw>(tA.text);
+            List<DialogueLine> lineList = new List<DialogueLine>();
             foreach (var lineRaw in dialogueRaws)
             {
                 DialogueLine line = ScriptableObject.CreateInstance<DialogueLine>();
@@ -43,22 +42,30 @@ namespace KiyuzuDev.ITGWDO.StoryData
                 Enum.TryParse(lineRaw.dialogueLineType + "Line",out line.DialogueLineType);
                 line.personName = lineRaw.personName;
                 line.content = lineRaw.content;
-                // TODO: 定义事件加载逻辑
-                // line.events = ;
-                // TODO: 注意加载路径
-                line.personImg = Resources.Load<Sprite>(pathPersonImgResource
-                                                        + lineRaw.personName + "/"
-                                                        + lineRaw.personImg);
-                Enum.TryParse(lineRaw.position,out line.position);
-                bool.TryParse(lineRaw.atMindBox,out line.atMindBox);
-                Enum.TryParse(lineRaw.spriteType,out line.spriteType);
-                // TODO: 定义图片命名规范
-                // line.image = Resources.Load<Sprite>("Sprites/"+?);
-                AssetDatabase.CreateAsset(line, 
-                    "Assets/Resources/StorySO/TestChapter/" + line.lineId + ".asset");
+                line.events = LoadEventListFromAsset(lineRaw.eventNames, lineRaw.eventArgs);
+                bool.TryParse(lineRaw.choiceAtMindBox,out line.choiceAtMindBox);
+                AssetDatabase.CreateAsset(line, pathSO + scriptFileName + "/" + line.lineId + ".asset");
+                lineList.Add(line);
                 EditorUtility.SetDirty(line);
             }
+            StorySheet story = ScriptableObject.CreateInstance<StorySheet>();
+            story.storyId = 99;
+            story.dialogueLines = lineList;
+            AssetDatabase.CreateAsset(story, pathSO + scriptFileName + ".asset");
+            EditorUtility.SetDirty(story);
             AssetDatabase.SaveAssets();
+        }
+
+        private List<DialogueEventModel> LoadEventListFromAsset(string eventNames, string eventArgs)
+        {
+            var res = new List<DialogueEventModel>();
+            var dialogueEvent = new DialogueEventModel();
+            Enum.TryParse(eventNames, out dialogueEvent.eventType);
+            string[] arg = new string[1];
+            arg[0] = eventArgs;
+            dialogueEvent.args = arg;
+            res.Add(dialogueEvent);
+            return res;
         }
     }
 }

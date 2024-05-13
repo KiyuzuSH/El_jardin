@@ -107,7 +107,7 @@ namespace KiyuzuDev.ITGWDO
         private void OnSubmit()
         {
             //TODO: wine data
-            SystemSwitchManager.Instance.ShakeMode();
+            // SystemSwitchManager.Instance.ShakeMode();
         }
     }
 }

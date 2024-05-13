@@ -1,13 +1,10 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
-namespace KiyuzuDev.ITGWDO.AVGEngine
+namespace KiyuzuDev.ITGWDO.AVG
 {
     public class ChoiceButtonManager : MonoBehaviour
     {
         public static ChoiceButtonManager Instance { get; private set; }
-        private ScriptManager SMI { get; set; }
 
         private void Awake()
         {
@@ -18,44 +15,11 @@ namespace KiyuzuDev.ITGWDO.AVGEngine
                 Instance = this;
             }
         }
-
-        private void Start()
-        {
-            SMI = ScriptManager.Instance;
-        }
+        
 
         private void OnDestroy()
         {
             Destroy(Instance);
-        }
-
-        public Transform gridButton;
-        public GameObject buttonChoice;
-        
-        public void GenerateChoice()
-        {
-            if (SMI.GetLine(SMI.CurrentLine)[1] == "&")
-            {
-                var btn = Instantiate(buttonChoice, gridButton);
-                var id = SMI.CurrentLine;
-                btn.GetComponentInChildren<TMP_Text>().text = SMI.GetLine(SMI.CurrentLine)[4];
-                btn.GetComponent<Button>().onClick.AddListener
-                (
-                    delegate { OnChoiceClick(id); }
-                );
-                if (SMI.GetLine(SMI.CurrentLine + 1)[1] == "&")
-                {
-                    SMI.CurrentLine++;
-                    GenerateChoice();
-                }
-            }
-        }
-        
-        private void OnChoiceClick(int _id)
-        {
-            SMI.CurrentLine = int.Parse(SMI.GetLine(_id)[2]);
-            DialogueManager.Instance.CheckCurrentLine();
-            for (int i = 0; i < gridButton.childCount; i++) Destroy(gridButton.GetChild(i).gameObject);
         }
     }
 }

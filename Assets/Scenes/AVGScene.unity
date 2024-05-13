@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 118413898}
   - component: {fileID: 118413897}
   - component: {fileID: 118413899}
+  - component: {fileID: 118413900}
   m_Layer: 5
   m_Name: AVGView
   m_TagString: Untagged
@@ -184,6 +185,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64173f029291b9c428dad0b63c2b5b33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &118413900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118413896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d48c1bb394dff74e9016a5a67e60f34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueRaws: []
 --- !u!1 &1848129332
 GameObject:
   m_ObjectHideFlags: 0

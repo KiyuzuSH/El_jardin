@@ -5,10 +5,9 @@ namespace KiyuzuDev.ITGWDO.Core
 {
     public class GameManager : MonoBehaviour
     {
-        public const string ThisPrefabKey = "GameManager";
+        const string ThisPrefabKey = "GameManager";
         private void Awake() => DontDestroyOnLoad(this);
         
-
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void InstantiateThis()
         {

@@ -3,73 +3,31 @@ using UnityEngine;
 
 namespace KiyuzuDev.ITGWDO.StoryData
 {
+    /// <summary> 这一句是什么类型 </summary>
     public enum EnumDialogueLineType
     {
         TitleLine,
         NarrationLine,
-        PersonLine,
         MindLine,
         ChooseLine,
-        CGLine,
         ControlLine,
-        // GameLine,
-        // BoxLine,
+        GameLine,
+        CollectionLine,
     }
     
-    /// <summary> 角色立绘在屏幕上的位置 </summary>
-    public enum EnumCharacterPos
-    {
-        Left3,
-        Center3,
-        Right3,
-        Left2,
-        Right2,
-    }
-
-    /// <summary> 对话线触发事件的类型 </summary>
-    public enum EnumDialogueEventType
-    {
-        End = -1,
-        Next = 0,
-        Choose = 1,
-        Jump = 2,
-    }
-
-    public enum EnumSpriteType
-    {
-        CLEAR,
-        StandaloneBGP,
-        FullScreenFrontPic,
-        SmallPic,
-    }
-    
-    public class DialogueEventModel
-    {
-        public EnumDialogueEventType eventType;
-        public string args;
-    }
-
-    [CreateAssetMenu(fileName = "DialogueLine_",menuName = "DialogueLine",order = 1)]
+    /// <summary> 一句对白，any kind ok </summary>
     public class DialogueLine : ScriptableObject
     {
         public int lineId;
         /// <summary> 本行类型 </summary>
-        public EnumDialogueLineType DialogueLineType = EnumDialogueLineType.NarrationLine;
+        public EnumDialogueLineType DialogueLineType;
         /// <summary> 说话人名字 </summary>
-        public string personName = "名字";
+        public string personName;
         [TextArea]
-        public string content = "显示内容";
+        public string content;
         /// <summary> 触发事件列表 </summary>
-        public List<DialogueEventModel> events = null;
-        /// <summary> 人物立绘 </summary>
-        public Sprite personImg;
-        /// <summary> 人物立绘位置 </summary>
-        public EnumCharacterPos position = EnumCharacterPos.Center3;
+        public List<DialogueEventModel> events;
         /// <summary> 选项是否在想法框 </summary>
-        public bool atMindBox;
-        /// <summary> 图片类型 </summary>
-        public EnumSpriteType spriteType = EnumSpriteType.StandaloneBGP;
-        /// <summary> 要显示的图片 </summary>
-        public Sprite image;
+        public bool choiceAtMindBox;
     }
 }

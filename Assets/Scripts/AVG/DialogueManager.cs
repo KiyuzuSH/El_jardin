@@ -1,12 +1,13 @@
+using KiyuzuDev.ITGWDO.StoryData;
 using UnityEngine;
-using UnityEngine.UI;
 
-namespace KiyuzuDev.ITGWDO.AVGEngine
+namespace KiyuzuDev.ITGWDO.AVG
 {
     public class DialogueManager : MonoBehaviour
     {
+        #region Singleton
+
         public static DialogueManager Instance { get; private set; }
-        private ScriptManager SMI { get; set; }
         
         private void Awake()
         {
@@ -18,132 +19,60 @@ namespace KiyuzuDev.ITGWDO.AVGEngine
             }
         }
         
-        public Button buttonDialogueContinue;
-        public Button buttonMindContinue;
+        private void OnDestroy()
+        {
+            Destroy(Instance);
+        }
+        
+        #endregion
+        
+        public int CurrentStory { get; private set; }
+        public int CurrentLine { get; private set; }
         
         private void Start()
         {
-            SMI = ScriptManager.Instance;
-            gameObject.SetActive(true);
-            buttonDialogueContinue.onClick.AddListener(OnContinueDialogue);
-            buttonMindContinue.onClick.AddListener(OnContinueDialogue);
-            OnContinueDialogue();
+            // can delete
+            CurrentStory = 99;
+            // also can delete
+            CurrentLine = 99001;
+            ProcessLine(CurrentLine);
         }
         
-        private void OnDestroy()
-        {
-            buttonDialogueContinue.onClick.RemoveAllListeners();
-            buttonMindContinue.onClick.RemoveAllListeners();
-            Destroy(Instance);
-        }
+        /// TODO: int CurrentStory & int CurrentLine
+        /// Can be defined by SaveData Loading
+        /// Write Method when SaveLoad written
 
-        public void CheckCurrentLine()
+        public static DialogueLine PresentLine { get; private set; }
+        
+        public void ProcessLine(int lineId)
         {
-            switch (SMI.GetLine(SMI.CurrentLine)[1])
+            PresentLine = ScriptManager.Instance.LoadSpecificLine(lineId);
+            switch (PresentLine.DialogueLineType)
             {
-                case "END":
-                    // gameObject.SetActive(false);
-                    // buttonDialogueContinue.gameObject.SetActive(false);
-                    // Debug.Log("All Content Done");
-                    // return;
-                    // TODO: Can turn to other place
-                case "&":
-                    GetComponent<CanvasGroup>().alpha = 0;
-                    buttonDialogueContinue.gameObject.SetActive(false);
-                    buttonMindContinue.gameObject.SetActive(false);
-                    GenerateChoice();
+                case EnumDialogueLineType.TitleLine:
+                    // UpdateTitle
                     break;
-                case "!":
-                    GetComponent<CanvasGroup>().alpha = 0;
-                    buttonDialogueContinue.gameObject.SetActive(true);
-                    buttonMindContinue.gameObject.SetActive(true);
-                    ShowTitle(SMI.GetLine(SMI.CurrentLine)[4]);
-                    SMI.CurrentLine++;
-                    CheckCurrentLine();
-                    return;
-                case "^":
-                    GetComponent<CanvasGroup>().alpha = 0;
-                    buttonDialogueContinue.gameObject.SetActive(true);
-                    buttonMindContinue.gameObject.SetActive(true);
-                    ShowLines(SMI.GetLine(SMI.CurrentLine)[4]);
-                    // if (SMI.GetLine(SMI.CurrentLine + 1)[1] == "")
-                    // {
-                    //     SMI.CurrentLine++;
-                    //     CheckCurrentLine();
-                    //     return;
-                    // }
-                    if (SMI.GetLine(SMI.CurrentLine + 1)[1] == "^&")
-                    {
-                        SMI.CurrentLine++;
-                        CheckCurrentLine();
-                        return;
-                    }
+                case EnumDialogueLineType.NarrationLine:
+                    // UpdateText
                     break;
-                case "^&":
-                    buttonDialogueContinue.gameObject.SetActive(false);
-                    buttonMindContinue.gameObject.SetActive(false);
-                    GenerateMindChoice();
+                case EnumDialogueLineType.MindLine:
+                    // UpdateMind
                     break;
-                case "PLAY":
-                    SystemSwitchManager.Instance.BarTendMode();
-                    return;
-                case "":
-                    GetComponent<CanvasGroup>().alpha = 1;
-                    UpdateText(
-                        SMI.GetLine(SMI.CurrentLine)[3], 
-                        SMI.GetLine(SMI.CurrentLine)[4]
-                        );
-                    // UpdateManPic(
-                    //     SMI.GetCurrentLine(SMI.CurrentLine)[8],
-                    //     SMI.GetCurrentLine(SMI.CurrentLine)[9],
-                    //     SMI.GetCurrentLine(SMI.CurrentLine)[10],
-                    //     SMI.GetCurrentLine(SMI.CurrentLine)[11]
-                    //     );
-                    if (SMI.CurrentLine == 1)
-                        AppearanceControlManager.Instance.SetAloneBackgroundPic
-                            (Resources.Load<Sprite>("Sprites/Background/train_bg"));
-                    if (SMI.CurrentLine == 11)
-                        AppearanceControlManager.Instance.SetClear();
-                    if (SMI.CurrentLine == 15)
-                    {
-                        CharacterViewManager.Instance.SetPolicePic();
-                        AppearanceControlManager.Instance.SetStyle(WorldStyle.Utopia);
-                    }
-                    if (SMI.CurrentLine == 55)
-                        CharacterViewManager.Instance.Clear();
-                    if (SMI.CurrentLine == 56)
-                        CharacterViewManager.Instance.GetWuTi();
-                    if (SMI.CurrentLine == 60)
-                        CharacterViewManager.Instance.Clear();
-                    if (SMI.CurrentLine == 61)
-                    {
-                        AppearanceControlManager.Instance.SetStyle(WorldStyle.Modern);
-                        CharacterViewManager.Instance.SecondSet();
-                    }
-                    if (SMI.CurrentLine == 65)
-                        CharacterViewManager.Instance.MoveD();
-                    if (SMI.CurrentLine == 69)
-                        AppearanceControlManager.Instance.Shake();
-                    if (SMI.CurrentLine == 77)
-                        CharacterViewManager.Instance.Clear();
-                    if (SMI.CurrentLine == 78)
-                    {
-                        AppearanceControlManager.Instance.SetStyle(WorldStyle.RPG);
-                        CharacterViewManager.Instance.GetDaydream();
-                    }
-                    if (SMI.CurrentLine == 81)
-                        CharacterViewManager.Instance.SetCup();
-                    if (SMI.CurrentLine == 85)
-                    {
-                        CharacterViewManager.Instance.Clear();
-                        GetComponent<CanvasGroup>().alpha = 0;
-                        AppearanceControlManager.Instance.Collection();
-                    }
-                    buttonDialogueContinue.gameObject.SetActive(true);
-                    buttonMindContinue.gameObject.SetActive(true);
+                case EnumDialogueLineType.ChooseLine:
+                    // ProcessChoice
+                    break;
+                case EnumDialogueLineType.ControlLine:
+                    // First, take after command and process
+                    // Then proceed next line
+                    break;// return?
+                case EnumDialogueLineType.GameLine:
+                    // Save Data
+                    // Turn to Game Scene
+                    break;
+                case EnumDialogueLineType.CollectionLine:
+                    // Update Collection
                     break;
             }
-            SMI.CurrentLine = int.Parse(SMI.GetLine(SMI.CurrentLine)[2]);
         }
         
         private void OnContinueDialogue()

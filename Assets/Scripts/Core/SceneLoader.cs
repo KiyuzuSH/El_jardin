@@ -33,6 +33,7 @@ namespace KiyuzuDev.ITGWDO.Core
         public const string StartSceneKey = "StartScene";
         public const string TestSceneKey = "TestScene";
         public const string AVGSceneKey = "AVGScene";
+        public const string CocktailSceneKey = "CocktailScene";
 
         public static event System.Action LoadingStarted;//S
         public static event System.Action<float> LoadingProcess;//P
@@ -51,24 +52,18 @@ namespace KiyuzuDev.ITGWDO.Core
                     LoadSceneMode.Additive 
                     : LoadSceneMode.Single;
             var asyncOperationHandle = Addressables.LoadSceneAsync(sceneKey, loadSceneMode, activateOnLoad);
-            
             LoadingStarted?.Invoke();
             ShowLoadingScreen = showLoadingScreen;
-            
             while(asyncOperationHandle.Status != AsyncOperationStatus.Succeeded)
             {
                 LoadingProcess?.Invoke(asyncOperationHandle.PercentComplete);
-
                 yield return null;
             }
-
             if (activateOnLoad)
             {
                 LoadingAccomplished?.Invoke();
-                
                 yield break;
             }
-            
             LoadingCompleted?.Invoke();
             IsSceneLoaded = true;
             loadedSceneInstance = asyncOperationHandle.Result;

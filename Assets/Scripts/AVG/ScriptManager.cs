@@ -1,12 +1,15 @@
 using System.Collections.Generic;
 using System.Linq;
+using KiyuzuDev.ITGWDO.StoryData;
 using UnityEngine;
 
-namespace KiyuzuDev.ITGWDO.AVGEngine
+namespace KiyuzuDev.ITGWDO.AVG
 {
     public class ScriptManager : MonoBehaviour
     {
         public static ScriptManager Instance { get; private set; }
+        
+        private List<StorySheet> storyList;
         
         private void Awake()
         {
@@ -16,48 +19,39 @@ namespace KiyuzuDev.ITGWDO.AVGEngine
                 Destroy(gameObject);
                 Instance = this;
             }
+            
+            storyList = Resources.LoadAll<StorySheet>("StorySO").ToList();
         }
         
         private void OnDestroy()
         {
             Destroy(Instance);
         }
+        
+        public int StoryListSize() => storyList.Count;
 
-        private List<TextAsset> scriptAssets;
-
-        private int _scriptIndex;
-        
-        
-        public int CurrentLine { get; set; }
-        
-        private void Start()
+        public List<int> StoryIndexList()
         {
-            scriptAssets = Resources.LoadAll<TextAsset>("StoryScripts").ToList();
-            
-            _scriptIndex = 0;
-            
-            currentSheet = SetCurrentSheet(scriptAssets[_scriptIndex]); 
-            
-            //TODO: Should can be determined by save data
-            CurrentLine = 0; 
+            List<int> res = new List<int>();
+            foreach (StorySheet storySheet in storyList) res.Add(storySheet.storyId);
+            return res;
         }
 
-        #region Dialog sheet
-
-        private List<string[]> currentSheet;
-
-        public string[] GetLine(int _id) => currentSheet[_id];
-        
-        private List<string[]> SetCurrentSheet(TextAsset _tA)
+        public StorySheet LoadStorySheetById(int id)
         {
-            List<string[]> sheet = new();
-            List<string> temp = _tA.text.Split('\n').ToList();
-            foreach (var line in temp) 
-                sheet.Add(line.Split(','));
-            return sheet;
+            foreach (StorySheet storySheet in storyList)
+                if (storySheet.storyId == id)
+                    return storySheet;
+            return null;
         }
         
-        
-        #endregion
+        public DialogueLine LoadSpecificLine(int storyId, int lineId) 
+            => LoadStorySheetById(storyId).GetSpecificLineById(lineId);
+
+        public DialogueLine LoadSpecificLine(int lineId)
+            => LoadSpecificLine(int.Parse(lineId.ToString().Substring(0, 2)), lineId);
+
+
+
     }
 }
