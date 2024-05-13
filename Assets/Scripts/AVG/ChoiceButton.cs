@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace KiyuzuDev.ITGWDO.UI
+namespace KiyuzuDev.ITGWDO.AVG
 {
     public class ChoiceButton : VisualElement
     {

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using KiyuzuDev.ITGWDO.StoryData;
 using UnityEngine;
 
@@ -50,57 +51,47 @@ namespace KiyuzuDev.ITGWDO.AVG
             switch (PresentLine.DialogueLineType)
             {
                 case EnumDialogueLineType.TitleLine:
-                    // UpdateTitle
+                    AVGView.Instance.UpdateAnnouncementTitle(PresentLine.content);
+                    ToChoiceOnlyDealer(PresentLine.events);
                     break;
                 case EnumDialogueLineType.NarrationLine:
-                    // UpdateText
+                    AVGView.Instance.UpdateText(PresentLine.personName,PresentLine.content);
+                    ToChoiceOnlyDealer(PresentLine.events);
                     break;
                 case EnumDialogueLineType.MindLine:
-                    // UpdateMind
+                    AVGView.Instance.UpdateMind(PresentLine.content);
+                    ToChoiceOnlyDealer(PresentLine.events);
                     break;
                 case EnumDialogueLineType.ChooseLine:
-                    // ProcessChoice
+                    AVGView.Instance.GenerateChoices(PresentLine.choiceAtMindBox, PresentLine.content);
+                    ToChoiceOnlyDealer(PresentLine.events);
                     break;
                 case EnumDialogueLineType.ControlLine:
-                    // First, take after command and process
-                    // Then proceed next line
+                    
+                    // TODO: First, take after command and process
+                    
+                    // TODO: Then proceed next line
+                    
                     break;// return?
+                
                 case EnumDialogueLineType.GameLine:
-                    // Save Data
-                    // Turn to Game Scene
+                    
+                    // TODO: Save Data
+                    
+                    // TODO: Turn to Game Scene
+                    
                     break;
                 case EnumDialogueLineType.CollectionLine:
-                    // Update Collection
+                    
+                    // TODO: Update Collection
+                    
                     break;
             }
         }
-        
-        private void OnContinueDialogue()
+
+        public void ToChoiceOnlyDealer(List<DialogueEventModel> events)
         {
-            if (!AVGConsts.DialogueTextNotJumping)
-            {
-                DialogueViewManager.Instance.StopJumping();
-                return;
-            }
-            if (!AVGConsts.MindTextNotJumping)
-            {
-                MindShowManager.Instance.StopJumping();
-                return;
-            }
-            CheckCurrentLine();
+            
         }
-        
-        private void UpdateText(string _name,string _text) => DialogueViewManager.Instance.UpdateText(_name, _text);
-
-        private void ShowTitle(string _text) => SideTitleViewManager.Instance.ShowTitle(_text);
-
-        private void GenerateChoice() => ChoiceButtonManager.Instance.GenerateChoice();
-
-        private void GenerateMindChoice() => MindChoiceManager.Instance.GenerateChoice();
-
-        // private void UpdateManPic(string _type, string _name, string _style, string _pos) =>
-            // PictureViewManager.Instance.UpdateManPic(_type, _name, _style, _pos);
-
-        private void ShowLines(string _text) => MindShowManager.Instance.ShowLines(_text);
     }
 }

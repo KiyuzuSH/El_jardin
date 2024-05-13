@@ -103,9 +103,9 @@ namespace KiyuzuDev.ITGWDO
         private void MoveNext()
         {
             //TODO: wine data
-            ScriptManager.Instance.CurrentLine = 50;
+            // AVG.ScriptManager.Instance.CurrentLine = 50;
             // SystemSwitchManager.Instance.AVGMode();
-            AVGEngine.DialogueManager.Instance.CheckCurrentLine();
+            // AVGEngine.DialogueManager.Instance.CheckCurrentLine();
         }
     }
 }

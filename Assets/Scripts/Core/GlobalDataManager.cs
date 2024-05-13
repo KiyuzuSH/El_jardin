@@ -4,21 +4,57 @@ namespace KiyuzuDev.ITGWDO
 {
     public class GlobalDataManager : MonoBehaviour
     {
-        #region 控制当前酒馆主题风格
-
         public WorldStyle PresentWorldStyle { get; private set; }
         public bool JalousieShutDown { get; set; }
         
         private void Start()
         {
+            JalousieShutDown = true;
             SetStyle(WorldStyle.Utopia);
         }
 
         public void SetStyle(WorldStyle _style)
         {
-            
+            switch (_style)
+            {
+                case WorldStyle.Modern:
+                    // interior.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_in");
+                    // interior.color = Color.white;
+                    // outside.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_out");
+                    // if(JalousieShutDown) 
+                    //     jalousie.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_jalousie_shutten");
+                    // else
+                    //     jalousie.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_jalousie_fullopen");
+                    // shelf.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_shelf");
+                    // wineListImg.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_winelist");
+                    // wineListBtn.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_wineui");
+                    break;
+                case WorldStyle.RPG:
+                    // interior.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_in");
+                    // interior.color = Color.white;
+                    // outside.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_out");
+                    // if(JalousieShutDown) 
+                    //     jalousie.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_jalousie_shutten");
+                    // else
+                    //     jalousie.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_jalousie_fullopen");
+                    // shelf.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_shelf");
+                    // wineListImg.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_winelist");
+                    // wineListBtn.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_wineui");
+                    break;
+                case WorldStyle.Utopia:
+                    // interior.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_in");
+                    // interior.color = Color.white;
+                    // outside.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_out");
+                    // if(JalousieShutDown) 
+                    //     jalousie.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_jalousie_shutten");
+                    // else
+                    //     jalousie.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_jalousie_fullopen");
+                    // shelf.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_shelf");
+                    // wineListImg.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_winelist");
+                    // wineListBtn.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_wineui");
+                    break;
+            }
+            PresentWorldStyle = _style;
         }
-
-        #endregion
     }
 }

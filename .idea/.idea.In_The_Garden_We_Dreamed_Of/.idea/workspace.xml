@@ -4,565 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d194d226-ba54-45bc-be24-de0cd9395214" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ChoiceBox.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ChoiceBox.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/DayAnnouncerBox.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/DayAnnouncerBox.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/DialogueBox.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/DialogueBox.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ItemPlate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ItemPlate.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/MindBox.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/MindBox.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/1桂花酒.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/1桂花酒.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/2酒吧-阴暗.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/2酒吧-阴暗.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/3精灵.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/3精灵.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/4无底海.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/4无底海.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/5花海.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/5花海.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/6朦胧2-花.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/6朦胧2-花.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/7人偶.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/7人偶.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/Coronation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/Coronation.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/wuticg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/wuticg.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/玻璃杯.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/玻璃杯.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Augur占卜师_不安.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Augur占卜师_不安.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Augur占卜师_专注1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Augur占卜师_专注1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Augur占卜师_专注2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Augur占卜师_专注2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Augur占卜师_呃唔.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Augur占卜师_呃唔.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Augur占卜师_喜.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Augur占卜师_喜.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/C尝_n_使坏.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/C尝_n_使坏.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/C尝_n_悲伤.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/C尝_n_悲伤.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/C尝_n_笑.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/C尝_n_笑.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/C尝_n_绝望.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/C尝_n_绝望.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dog_idle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dog_idle.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dog_吐舌1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dog_吐舌1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dog_吐舌2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dog_吐舌2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dog_失落.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dog_失落.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dog_摇尾巴.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dog_摇尾巴.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dog_明知故犯轻微心虚_.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dog_明知故犯轻微心虚_.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dog_笑1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dog_笑1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dog_跳.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dog_跳.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dorothy多萝西_微笑.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dorothy多萝西_微笑.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dorothy多萝西_悲伤.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dorothy多萝西_悲伤.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dorothy多萝西_惊讶.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dorothy多萝西_惊讶.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dorothy多萝西_抱怨.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dorothy多萝西_抱怨.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Princess王储_平和.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Princess王储_平和.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Princess王储_笑.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Princess王储_笑.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Princess王储_诧异.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Princess王储_诧异.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/WuTi乌啼.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/WuTi乌啼.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/WuTi乌啼_从容自若.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/WuTi乌啼_从容自若.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/WuTi乌啼_大笑.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/WuTi乌啼_大笑.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/WuTi乌啼_茫然.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/WuTi乌啼_茫然.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/WuTi乌啼_警觉.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/WuTi乌啼_警觉.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Z政治家_平静.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Z政治家_平静.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Z政治家_微笑.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Z政治家_微笑.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Z政治家_思考1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Z政治家_思考1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Z政治家_思考2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Z政治家_思考2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Z政治家_恍惚.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Z政治家_恍惚.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Z政治家_轻微惊讶.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Z政治家_轻微惊讶.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/书本.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/书本.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/啤酒瓶盖.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/啤酒瓶盖.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/断剑-木刻.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/断剑-木刻.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/断剑-金属.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/断剑-金属.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/水晶挂坠.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/水晶挂坠.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/水晶球.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/水晶球.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/眼睛.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/眼睛.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/石碑.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/石碑.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/衔尾蛇.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/衔尾蛇.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/证件.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/证件.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99001.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99001.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99002.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99002.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99003.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99003.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99004.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99004.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99005.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99005.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99006.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99006.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99007.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99007.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99008.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99008.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99009.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99009.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99010.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99010.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99011.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99011.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99012.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99012.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99013.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99013.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99014.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99014.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99015.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99015.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99016.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99016.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99017.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99017.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99018.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99018.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99019.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99019.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99020.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99020.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99021.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99021.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99022.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99022.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99023.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99023.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99024.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99024.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99025.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99025.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99026.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99026.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99027.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99027.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99028.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99028.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99029.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99029.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99030.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99030.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99031.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99031.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99032.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99032.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99033.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99033.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99034.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99034.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99035.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99035.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99036.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99036.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99037.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99037.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99038.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99038.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99039.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99039.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99040.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99040.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99041.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99041.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99042.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99042.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99043.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99043.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99044.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99044.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99045.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99045.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99046.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99046.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99047.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99047.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99048.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99048.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99049.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99049.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99050.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99050.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99051.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99051.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99052.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99052.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99053.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99053.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99054.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99054.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99055.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99055.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99056.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99056.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99057.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99057.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99058.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99058.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99059.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99059.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99060.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99060.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99061.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99061.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99062.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99062.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99063.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99063.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99064.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99064.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99065.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99065.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99066.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99066.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99067.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99067.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99068.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99068.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99069.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99069.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99070.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99070.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99071.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99071.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99072.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99072.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99073.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99073.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99074.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99074.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99075.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99075.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99076.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99076.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99077.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99077.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99078.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99078.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99079.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99079.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99080.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99080.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99081.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99081.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99082.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99082.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99083.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99083.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99084.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99084.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99085.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99085.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99086.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99086.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99087.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99087.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99088.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99088.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99089.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99089.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99090.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99090.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99091.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99091.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99092.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99092.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99093.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99093.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99094.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99094.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99095.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99095.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StoryScripts/PV0514.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StoryScripts/PV0514.csv.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uss.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uxml.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/ChoiceButton.uxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/ChoiceButton.uxml.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/GameStartView.uxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/GameStartView.uxml.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/TransitionBlackView.uss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/TransitionBlackView.uss.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/TransitionBlackView.uxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/TransitionBlackView.uxml.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/UnityDefaultRuntimeTheme.tss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/UnityDefaultRuntimeTheme.tss.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/CocktailScene.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/CocktailScene.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GlobalDataManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GlobalDataManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI&amp;Scene/ChoiceButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI&amp;Scene/ChoiceButton.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StorySOGenerator/DialogueEventModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StorySOGenerator/DialogueEventModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StorySOGenerator/SOGen.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StorySOGenerator/SOGen.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StorySOGenerator/StorySheet.cs" afterDir="false" />
+    <list default="true" id="d194d226-ba54-45bc-be24-de0cd9395214" name="更改" comment="制作中">
+      <change afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/StorySO_BundledAssetGroupSchema.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/StorySO_BundledAssetGroupSchema.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/StorySO_ContentUpdateGroupSchema.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/StorySO_ContentUpdateGroupSchema.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/StorySO.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/StorySO.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/shape_triangle_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/shape_triangle_down.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/shape_triangle_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/shape_triangle_right.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.In_The_Garden_We_Dreamed_Of/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.In_The_Garden_We_Dreamed_Of/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Scenes.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Scenes.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUINew.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUINew/ChoiceBox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUINew/ChoiceBox.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUINew/DayAnnouncerBox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUINew/DayAnnouncerBox.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUINew/DialogueBox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUINew/DialogueBox.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUINew/ItemPlate.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUINew/ItemPlate.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUINew/MindBox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUINew/MindBox.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/加冕.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/加冕.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/无底之海.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/无底之海.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/朦胧1-粉色.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/朦胧1-粉色.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/朦胧2-花.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/朦胧2-花.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/朦胧3-绿色.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/朦胧3-绿色.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/桂花酒.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/桂花酒.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/眼睛.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/眼睛.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/花海.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/花海.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/酒吧-光明.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/酒吧-光明.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/酒吧-阴暗.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/酒吧-阴暗.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Augur.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Augur.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Augur_eyeshutting.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Augur_eyeshutting.gif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Daydream_eyeshutting.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Daydream_eyeshutting.gif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dorothy_eyeshutting.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/Dorothy_eyeshutting.gif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/尝_无角.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/尝_无角.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/尝_无角_眨眼.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/尝_无角_眨眼.gif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/尝_有角.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/尝_有角.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/尝_有角_眨眼.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/尝_有角_眨眼.gif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/政治家.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/政治家.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/政治家_眨眼.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/政治家_眨眼.gif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/王储.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/王储.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/DialogueUI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/DialogueUI/ChoiceButtonBox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/DialogueUI/ChoiceButtonBox.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/DialogueUI/DialogueBox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/DialogueUI/DialogueBox.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/DialogueUI/DialogueBox_Touming.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/DialogueUI/DialogueBox_Touming.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/DialogueUI/MindBox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/DialogueUI/MindBox.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/DialogueUI/NameBox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/DialogueUI/NameBox.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/DialogueUI/TitleBox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/DialogueUI/TitleBox.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StorySO.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Story_Test.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Story_Test.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10001.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10001.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10002.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10002.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10003.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10003.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10004.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10004.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10005.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10005.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10006.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10006.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10007.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10007.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10008.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10008.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10009.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10009.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10010.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10010.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10011.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10011.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10012.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10012.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10013.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10013.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10014.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10014.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10015.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10015.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10016.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10016.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10017.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10017.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10018.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10018.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10019.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10019.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10020.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10020.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10021.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10021.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10022.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10022.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10023.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10023.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10024.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10024.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10025.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10025.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10026.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10026.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10027.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10027.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10028.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10028.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10029.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10029.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10030.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10030.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10031.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10031.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10032.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10032.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10033.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10033.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10034.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10034.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10035.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10035.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10036.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10036.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10037.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10037.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10038.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10038.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10039.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10039.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10040.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10040.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10041.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10041.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10042.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10042.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10043.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10043.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10044.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10044.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10045.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10045.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10046.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10046.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10047.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10047.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10048.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10048.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10049.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10049.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10050.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10050.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10051.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10051.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10052.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10052.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10053.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10053.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10054.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10054.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10055.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10055.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10056.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Test/10056.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AVGScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AVGScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/AVGConsts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AVG/AVGConsts.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/CharacterViewManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AVG/CharacterViewManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/ChoiceButtonManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AVG/ChoiceButtonManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/AVGConsts.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/AVGConsts.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/AVGView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AVG/AVGView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/AppearanceControlManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/AppearanceControlManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/ChoiceButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AVG/ChoiceButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AVG/DialogueManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/ScriptManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AVG/ScriptManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bartending/BartendingButtonManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bartending/BartendingButtonManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/DialogueViewManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/DialogueViewManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/MindShowManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/MindShowManager.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bartending/ShakeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bartending/ShakeManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/SceneLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SystemSwitchManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SystemSwitchManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI&amp;Scene/AVGView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI&amp;Scene/AVGView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/DialogueLine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StorySOGenerator/DialogueLine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/DialogueLine.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StorySOGenerator/DialogueLine.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/SOGen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StorySOGenerator/SOGen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/StoryLines.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/StoryLines.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StorySOGenerator/StorySheet.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/zpix SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/zpix SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityDefaultRuntimeTheme.tss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityDefaultRuntimeTheme.tss.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ViewDocument.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ViewDocument/AVGView.uss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ViewDocument/AVGView.uss.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ViewDocument/AVGView.uxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ViewDocument/AVGView.uxml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ViewDocument/GameStartView.uxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ViewDocument/GameStartView.uxml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ViewDocument/TransitionBlackView.uss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ViewDocument/TransitionBlackView.uss.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ViewDocument/TransitionBlackView.uxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ViewDocument/TransitionBlackView.uxml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GlobalDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GlobalDataManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -605,17 +72,20 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17d9ce77f27a4bd2afb5ba32c9bea97646ac00/36/60b340ae/Int32.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17d9ce77f27a4bd2afb5ba32c9bea97646ac00/ba/c8982a8d/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17d9ce77f27a4bd2afb5ba32c9bea97646ac00/ef/ae258369/ReadOnlySpan`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/383db090fd544f24b368fd389016a28f176200/18/7350d486/IManipulator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/383db090fd544f24b368fd389016a28f176200/1c/e1ac723b/Manipulator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/383db090fd544f24b368fd389016a28f176200/e2/608f741e/UIDocument.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/41914444499f4996a3e6af79cf6c1fdb574b98/fd/ce230bee/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/92/a8eded2c/Void.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a05f37d7a0a34fad9547811820ecb7447c00/31/9741973b/Input.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AVG/AVGView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AVG/ChoiceButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioSrcManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Consts.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/GlobalDataManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI&amp;Scene/AVGView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI&amp;Scene/ChoiceButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI&amp;Scene/GameStartView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI&amp;Scene/TransitionBlackView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/GameStartView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/TransitionBlackView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/StorySOGenerator/DialogueLine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.8/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../TheGarden/Assets/Scripts/AVG/DialogueManager.cs" root0="SKIP_HIGHLIGHTING" />
@@ -773,7 +243,8 @@
       <workItem from="1715416617670" duration="8097000" />
       <workItem from="1715433919111" duration="26683000" />
       <workItem from="1715579031690" duration="14404000" />
-      <workItem from="1715618525498" duration="11556000" />
+      <workItem from="1715618525498" duration="15296000" />
+      <workItem from="1715635903582" duration="1809000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <option name="closed" value="true" />
@@ -1111,7 +582,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715548778216</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="制作中">
+      <option name="closed" value="true" />
+      <created>1715631980478</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1715631980478</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1146,7 +625,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="第二文本框，即（脑海中想法）框可以正确显示消失。需要做：动画效果、可调大小。" />
     <MESSAGE value="Changed System\App-&gt;CanvasControlManager" />
     <MESSAGE value="Test Change" />
     <MESSAGE value="Remade CanvasControlManager" />
@@ -1171,7 +649,8 @@
     <MESSAGE value="SceneLoader Completed, doing Scene Tearing" />
     <MESSAGE value="AVG UI Phase I" />
     <MESSAGE value="AVG Scene builded, scripting (Phase II). Fixed bug on Switching Scenes." />
-    <option name="LAST_COMMIT_MESSAGE" value="AVG Scene builded, scripting (Phase II). Fixed bug on Switching Scenes." />
+    <MESSAGE value="制作中" />
+    <option name="LAST_COMMIT_MESSAGE" value="制作中" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

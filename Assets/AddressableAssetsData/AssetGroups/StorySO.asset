@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: StorySO
+  m_EditorClassIdentifier: 
+  m_GroupName: StorySO
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 22cf1838dbf12764d891929a56ca3f48
+  m_SerializeEntries: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: cf80074cd333068428ce51a20a913c97, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 1ea1e663b1be6db4287f6b9c820048f9, type: 2}
+    - {fileID: 11400000, guid: dce85641e3b41de45986b2667aa04725, type: 2}
