@@ -1,4 +1,11 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/ViewDocument/TransitionBlackView.uss?fileID=7433441132597879392&amp;guid=ccc021ea936050241a9c91b4feb4411d&amp;type=3#TransitionBlackView" />
-    <ui:VisualElement name="BlackImage" picking-mode="Ignore" class="black-image" style="transition-delay: 0s; transition-timing-function: ease-in-circ;" />
+    <Style src="project://database/Assets/Resources/ViewDocument/TransitionBlackView.uss?fileID=7433441132597879392&amp;guid=ccc021ea936050241a9c91b4feb4411d&amp;type=3#TransitionBlackView" />
+    <ui:VisualElement name="BlackImage" picking-mode="Ignore" class="black-image" style="transition-delay: 0s; transition-timing-function: ease-in-circ;">
+        <ui:VisualElement name="CollectionContainer" picking-mode="Ignore" focusable="true" style="flex-grow: 1; position: absolute; width: 1091px; height: 654px; top: 18%; left: 24%;">
+            <ui:VisualElement name="CollectionPic" focusable="true" class="opaqueCollection transparent" />
+            <ui:VisualElement name="CollectionGetContainer" class="opaqueCollection easedtrans" style="flex-grow: 1; position: absolute; width: 100%; height: 100%;">
+                <ui:VisualElement name="ItemPic" style="flex-grow: 1; background-image: resource(&apos;Sprites/Collections/Dannkenn_KI&apos;); -unity-background-scale-mode: scale-to-fit;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
 </ui:UXML>

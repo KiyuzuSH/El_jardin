@@ -1,9 +1,38 @@
+using System;
 using UnityEngine;
 
 namespace KiyuzuDev.ITGWDO
 {
+    public enum WorldStyle
+    {
+        Modern = 1,
+        RPG = 2,
+        Utopia = 3,
+    }
+    
     public class GlobalDataManager : MonoBehaviour
     {
+        #region Singleton
+
+        public static GlobalDataManager Instance { get; private set; }
+
+        private void Awake()
+        {
+            if (Instance == null) Instance = this;
+            else if (Instance != this)
+            {
+                Destroy(gameObject);
+                Instance = this;
+            }
+        }
+
+        private void OnDestroy()
+        {
+            Destroy(Instance);
+        }
+
+        #endregion
+        
         public WorldStyle PresentWorldStyle { get; private set; }
         public bool JalousieShutDown { get; set; }
         

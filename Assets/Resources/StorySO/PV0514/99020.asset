@@ -17,7 +17,7 @@ MonoBehaviour:
   personName: 
   content: "\u4F60\u628A\u96EA\u514B\u676F\u4E2D\u7684\u9152\u6DB2\u5BFC\u5165\u676F\u5B50\uFF0C\\n\u5C31\u50CF\u4E00\u4E2A\u9B54\u672F\uFF0C\u9152\u6DB2\u5728\u4F60\u7684\u773C\u76AE\u5B50\u5E95\u4E0B\u6D88\u5931\u4E86\u3002"
   events:
-  - eventType: 1
+  - eventType: 0
     args:
     - 99021
   choiceAtMindBox: 0

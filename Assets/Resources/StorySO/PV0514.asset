@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6935cf741b27b1041807ece064c65808, type: 3}
   m_Name: PV0514
   m_EditorClassIdentifier: 
-  chapterId: 99
+  storyId: 99
   dialogueLines:
   - {fileID: 11400000, guid: 87b4874ee11335943805f329894ef356, type: 2}
   - {fileID: 11400000, guid: 0867d29b34effce4e927511b6ae61fd4, type: 2}

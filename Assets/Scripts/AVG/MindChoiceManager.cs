@@ -7,7 +7,6 @@ namespace KiyuzuDev.ITGWDO.AVGEngine
     public class MindChoiceManager : MonoBehaviour
     {
         public static MindChoiceManager Instance { get; private set; }
-        private ScriptManager SMI { get; set; }
 
         private void Awake()
         {
@@ -17,11 +16,6 @@ namespace KiyuzuDev.ITGWDO.AVGEngine
                 Destroy(gameObject);
                 Instance = this;
             }
-        }
-
-        private void Start()
-        {
-            SMI = ScriptManager.Instance;
         }
 
         private void OnDestroy()
@@ -34,22 +28,22 @@ namespace KiyuzuDev.ITGWDO.AVGEngine
         
         public void GenerateChoice()
         {
-            if (SMI.GetLine(SMI.CurrentLine)[1] == "^&")
-            {
-                var btn = Instantiate(buttonMindChoice, gridButton);
-                btn.GetComponentInChildren<TMP_Text>().text = SMI.GetLine(SMI.CurrentLine)[4];
-                btn.GetComponent<Button>().onClick.AddListener(OnChoiceClick);
-                if (SMI.GetLine(SMI.CurrentLine + 1)[1] == "^&")
-                {
-                    SMI.CurrentLine++;
-                    GenerateChoice();
-                }
-            }
+            // if (SMI.GetLine(SMI.CurrentLine)[1] == "^&")
+            // {
+            //     var btn = Instantiate(buttonMindChoice, gridButton);
+            //     btn.GetComponentInChildren<TMP_Text>().text = SMI.GetLine(SMI.CurrentLine)[4];
+            //     btn.GetComponent<Button>().onClick.AddListener(OnChoiceClick);
+            //     if (SMI.GetLine(SMI.CurrentLine + 1)[1] == "^&")
+            //     {
+            //         SMI.CurrentLine++;
+            //         GenerateChoice();
+            //     }
+            // }
         }
         
         private void OnChoiceClick()
         {
-            DialogueManager.Instance.CheckCurrentLine();
+            // DialogueManager.Instance.CheckCurrentLine();
             for (int i = 0; i < gridButton.childCount; i++) Destroy(gridButton.GetChild(i).gameObject);
         }
     }

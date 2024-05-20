@@ -17,8 +17,7 @@ MonoBehaviour:
   personName: 
   content: "\u4E00\u67C4\u6728\u523B\u7684\u5251\uFF0C\u4E0D\u4EC5\u7C97\u7CD9\uFF0C\u8FD8\u6B8B\u7834\u4E0D\u582A\uFF0C\u50CF\u662F\u7ECF\u5386\u4E86\u6FC0\u70C8\u7684\u6253\u6597\u3002"
   events:
-  - eventType: 1
+  - eventType: 0
     args:
     - 99045
-    - 99046
   choiceAtMindBox: 0

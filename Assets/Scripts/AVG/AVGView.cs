@@ -31,10 +31,12 @@ namespace KiyuzuDev.ITGWDO.AVG
         private Image continuePic;
         private Button continueButton;
 
+        private VisualElement mindContainer;
         private Label mindContentLabel;
         private Button saveInButton;
         private VisualElement mindChoiceContainer;
 
+        private VisualElement announcerContainer;
         private Label titleLabel;
         private Label dayLabel;
 
@@ -65,23 +67,65 @@ namespace KiyuzuDev.ITGWDO.AVG
             continueButton = rootVE.Q<Button>("DialogueContinueButton");
             continueButton.RegisterCallback<MouseDownEvent>(OnContinue);
 
+            mindContainer = rootVE.Q<VisualElement>("MindContainer");
             mindContentLabel = rootVE.Q<Label>("MindContentLabel");
             saveInButton = rootVE.Q<Button>("SaveInButton");
             saveInButton.RegisterCallback<MouseDownEvent>(OnSavingBox);
             mindChoiceContainer = rootVE.Q<VisualElement>("MindChoiceContainer");
 
+            announcerContainer = rootVE.Q<VisualElement>("AnnouncerContainer");
+            announcerContainer.focusable = false;
+            announcerContainer.style.opacity = 0;
             titleLabel = rootVE.Q<Label>("titleLabel");
             dayLabel = rootVE.Q<Label>("DayLabel");
 
             choiceContainer = rootVE.Q<VisualElement>("ChoiceContainer");
         }
 
-        // TODO: Change out in ja 3 pics by changing style enum
+        public void ChangeToStyleView(WorldStyle _style)
+        {
+            switch (_style)
+            {
+                case WorldStyle.Modern:
+                    interiorPic.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_in");
+                    outsidePic.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_out");
+                    if(GlobalDataManager.Instance.JalousieShutDown) 
+                        jalousiePic.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_jalousie_shutten");
+                    else
+                        jalousiePic.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_jalousie_fullopen");
+                    // shelf.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_shelf");
+                    // wineListImg.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_winelist");
+                    // wineListBtn.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_wineui");
+                    break;
+                case WorldStyle.RPG:
+                    interiorPic.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_in");
+                    outsidePic.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_out");
+                    if(GlobalDataManager.Instance.JalousieShutDown) 
+                        jalousiePic.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_jalousie_shutten");
+                    else
+                        jalousiePic.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_jalousie_fullopen");
+                    // shelf.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_shelf");
+                    // wineListImg.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_winelist");
+                    // wineListBtn.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_wineui");
+                    break;
+                case WorldStyle.Utopia:
+                    interiorPic.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_in");
+                    outsidePic.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_out");
+                    if(GlobalDataManager.Instance.JalousieShutDown) 
+                        jalousiePic.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_jalousie_shutten");
+                    else
+                        jalousiePic.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_jalousie_fullopen");
+                    // shelf.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_shelf");
+                    // wineListImg.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_winelist");
+                    // wineListBtn.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_wineui");
+                    break;
+            }
+        }
 
-        public void FullCGOn(Texture2D img) => fullCG.style.backgroundImage = img;
-        public void FullCGOff() => fullCG.style.backgroundImage = null;
-        public void SmallCGOn(Texture2D img) => smallCG.style.backgroundImage = img;
-        public void SmallCGOff() => smallCG.style.backgroundImage = null;
+        public void FullCGOn(Sprite img) => fullCG.sprite = img;
+        public void FullCGOff() => fullCG.sprite = null;
+        public void SmallCGOn(Sprite img) => smallCG.sprite = img;
+        public void SmallCGOff() => smallCG.sprite = null;
 
         private string contentPassed;
 
@@ -119,6 +163,8 @@ namespace KiyuzuDev.ITGWDO.AVG
 
         public void UpdateMind(string mind)
         {
+            mindContainer.style.opacity = 1;
+            mindContainer.focusable = true;
             mindPassed = mind.Replace("\\n", "\n");
             StartCoroutine(MindTextJump(mindPassed));
         }
@@ -170,7 +216,8 @@ namespace KiyuzuDev.ITGWDO.AVG
         {
             if (mouseDownEvent.button == 0)
             {
-                // TODO: Save it in! 
+                mindContainer.style.opacity = 0;
+                mindContainer.focusable = false;
             }
         }
 
@@ -179,18 +226,21 @@ namespace KiyuzuDev.ITGWDO.AVG
             string[] array = content.Split('|');
             titleLabel.text = array[0];
             dayLabel.text = array[1];
-            // TODO: If not Exist show me 
-            // Invoke(nameof(Inactive), 3);
+            announcerContainer.style.opacity = 1;
+            Invoke(nameof(Invisible), 3);
+        }
+
+        void Invisible()
+        {
+            announcerContainer.style.opacity = 0;
         }
 
         public void GenerateChoices(bool choiceAtMindBox, string content)
         {
-
+            // TODO: choice
+            
+            // TODO: mind choice
         }
-
-        // TODO: choice
-        
-        // TODO: mind choice
         
         public static bool DialogueTextNotJumping { get; set; }
         public static bool MindTextNotJumping { get; set; }

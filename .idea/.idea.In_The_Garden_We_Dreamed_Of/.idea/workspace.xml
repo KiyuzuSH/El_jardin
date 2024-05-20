@@ -4,32 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d194d226-ba54-45bc-be24-de0cd9395214" name="更改" comment="制作中">
-      <change afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/StorySO_BundledAssetGroupSchema.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/StorySO_BundledAssetGroupSchema.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/StorySO_ContentUpdateGroupSchema.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/StorySO_ContentUpdateGroupSchema.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/StorySO.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/StorySO.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/shape_triangle_down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/shape_triangle_down.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/shape_triangle_right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/shape_triangle_right.png.meta" afterDir="false" />
+    <list default="true" id="d194d226-ba54-45bc-be24-de0cd9395214" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/Collection.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/Collection.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.In_The_Garden_We_Dreamed_Of/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.In_The_Garden_We_Dreamed_Of/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99020.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99020.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99022.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99022.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99023.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99023.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99024.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99024.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99032.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99032.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99033.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99033.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99044.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99044.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99045.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99045.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/AVGConsts.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/AVGConsts.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uxml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uxml.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/GameStartView.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/GameStartView.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/TransitionBlackView.uss" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/TransitionBlackView.uss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/TransitionBlackView.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/TransitionBlackView.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AVGScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AVGScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CocktailScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CocktailScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/AVGView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AVG/AVGView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/AppearanceControlManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/AppearanceControlManager.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/ChoiceButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AVG/ChoiceButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AVG/DialogueManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/DialogueViewManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/DialogueViewManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/MindShowManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/MindShowManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bartending/ShakeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bartending/ShakeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/MindChoiceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AVG/MindChoiceManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Consts.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Consts.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GlobalDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GlobalDataManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/GameStartView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/GameStartView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/TransitionBlackView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/TransitionBlackView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/zpix SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/zpix SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,17 +64,13 @@
     &quot;assignee&quot;: &quot;KiyuzuSH&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="7d72ea72-437d-41d7-9043-3febc2def662" />
-        <option name="url" value="git@github.com:KiyuzuSH/In_The_Garden_We_Dreamed_Of.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:KiyuzuSH/In_The_Garden_We_Dreamed_Of.git&quot;,
+    &quot;accountId&quot;: &quot;7d72ea72-437d-41d7-9043-3febc2def662&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17d9ce77f27a4bd2afb5ba32c9bea97646ac00/1e/7efcd5dc/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17d9ce77f27a4bd2afb5ba32c9bea97646ac00/2d/00be877c/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17d9ce77f27a4bd2afb5ba32c9bea97646ac00/36/60b340ae/Int32.cs" root0="SKIP_HIGHLIGHTING" />
@@ -74,6 +78,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17d9ce77f27a4bd2afb5ba32c9bea97646ac00/ef/ae258369/ReadOnlySpan`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/383db090fd544f24b368fd389016a28f176200/18/7350d486/IManipulator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/383db090fd544f24b368fd389016a28f176200/1c/e1ac723b/Manipulator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/383db090fd544f24b368fd389016a28f176200/60/2b9db497/KeyDownEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/383db090fd544f24b368fd389016a28f176200/7c/4b918e13/MouseDownEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/383db090fd544f24b368fd389016a28f176200/e2/608f741e/UIDocument.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/41914444499f4996a3e6af79cf6c1fdb574b98/fd/ce230bee/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/92/a8eded2c/Void.cs" root0="SKIP_HIGHLIGHTING" />
@@ -130,15 +136,15 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\wz.LEGIONR7000P-HI\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\wz.LEGIONR7000P-HI\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\wz.LEGIONR7000P-HI\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\wz.LEGIONR7000P-HI\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
       &quot;C:\\Users\\wz.LEGIONR7000P-HI\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
   <component name="RunManager" selected="附加到 Unity 编辑器.附加到 Unity 编辑器">
     <configuration name="启动 Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity Engine\2022.3.17f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="E:\Unity_Engine\2022.3.17f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;D:\Unity Project\El_jardin&quot; -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Unity Project\El_jardin" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -146,7 +152,7 @@
       <method v="2" />
     </configuration>
     <configuration name="单元测试(批处理模式)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity Engine\2022.3.17f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="E:\Unity_Engine\2022.3.17f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;D:\Unity Project\El_jardin&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Unity Project\El_jardin" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -244,7 +250,11 @@
       <workItem from="1715433919111" duration="26683000" />
       <workItem from="1715579031690" duration="14404000" />
       <workItem from="1715618525498" duration="15296000" />
-      <workItem from="1715635903582" duration="1809000" />
+      <workItem from="1715635903582" duration="12120000" />
+      <workItem from="1715654352052" duration="1353000" />
+      <workItem from="1716034791266" duration="23000" />
+      <workItem from="1716034836205" duration="6131000" />
+      <workItem from="1716191235927" duration="16621000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <option name="closed" value="true" />
@@ -590,7 +600,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715631980478</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Making Phase II, not completed">
+      <option name="closed" value="true" />
+      <created>1715637812176</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1715637812176</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -598,6 +616,11 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
+    <option name="unityProject" value="true" />
+    <option name="unityProjectFolder" value="true" />
+  </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -625,7 +648,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Changed System\App-&gt;CanvasControlManager" />
     <MESSAGE value="Test Change" />
     <MESSAGE value="Remade CanvasControlManager" />
     <MESSAGE value="提交了新的美术素材，修改了一下游戏显示逻辑。" />
@@ -650,7 +672,8 @@
     <MESSAGE value="AVG UI Phase I" />
     <MESSAGE value="AVG Scene builded, scripting (Phase II). Fixed bug on Switching Scenes." />
     <MESSAGE value="制作中" />
-    <option name="LAST_COMMIT_MESSAGE" value="制作中" />
+    <MESSAGE value="Making Phase II, not completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Making Phase II, not completed" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

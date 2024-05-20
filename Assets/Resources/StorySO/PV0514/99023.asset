@@ -19,5 +19,5 @@ MonoBehaviour:
   events:
   - eventType: 0
     args:
-    - 99025
+    - 99024
   choiceAtMindBox: 0
