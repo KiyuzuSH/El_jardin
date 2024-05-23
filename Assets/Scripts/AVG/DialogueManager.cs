@@ -27,21 +27,10 @@ namespace KiyuzuDev.ITGWDO.AVG
         
         #endregion
         
-        public int CurrentStory { get; private set; }
-        public int CurrentLine { get; private set; }
-        
         private void Start()
         {
-            // can delete
-            CurrentStory = 99;
-            // also can delete
-            CurrentLine = 99001;
-            ProcessLine(CurrentLine);
+
         }
-        
-        /// TODO: int CurrentStory & int CurrentLine
-        /// Can be defined by SaveData Loading
-        /// Write Method when SaveLoad written
 
         public static DialogueLine PresentLine { get; private set; }
         

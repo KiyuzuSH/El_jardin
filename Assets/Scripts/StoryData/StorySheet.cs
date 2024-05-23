@@ -9,6 +9,6 @@ namespace KiyuzuDev.ITGWDO.StoryData
         public int storyId;
         public List<DialogueLine> dialogueLines;
 
-        public DialogueLine GetSpecificLineById(int id) => dialogueLines[id];
+        public DialogueLine GetSpecificLine(int id) => dialogueLines[id];
     }
 }

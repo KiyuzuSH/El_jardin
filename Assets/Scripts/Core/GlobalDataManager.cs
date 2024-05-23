@@ -34,7 +34,7 @@ namespace KiyuzuDev.ITGWDO
         #endregion
         
         public WorldStyle PresentWorldStyle { get; private set; }
-        public bool JalousieShutDown { get; set; }
+        public bool JalousieShutDown { get; private set; }
         
         private void Start()
         {

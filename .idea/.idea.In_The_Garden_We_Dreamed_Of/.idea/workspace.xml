@@ -4,40 +4,91 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d194d226-ba54-45bc-be24-de0cd9395214" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/Collection.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/Collection.png.meta" afterDir="false" />
+    <list default="true" id="d194d226-ba54-45bc-be24-de0cd9395214" name="更改" comment="05.20累积更新">
+      <change afterPath="$PROJECT_DIR$/Assets/Configs/InputSystem.inputsettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Configs/InputSystem.inputsettings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/AnnouncerBox.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/AnnouncerBox.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ArrowLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ArrowLeft.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ArrowRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ArrowRight.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/CollectionGetBack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/CollectionGetBack.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/CollectionPanel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/CollectionPanel.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/NameBox.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/NameBox.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/PausedSign.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/PausedSign.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/WineList.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/WineList.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/DialogueEventModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/DialogueEventModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/DialogueLine.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/DialogueLine.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/SOGenerator.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/SOGenerator/SOGen.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/SOGenerator/SOGen.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/SOGenerator/SOGen.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/SOGenerator/SOGen.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/StorySheet.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/StorySheet.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/CollectionView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/CollectionView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.In_The_Garden_We_Dreamed_Of/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.In_The_Garden_We_Dreamed_Of/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99020.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99020.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99022.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99022.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99023.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99023.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99024.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99024.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99032.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99032.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99033.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99033.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99044.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99044.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99045.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99045.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uxml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uxml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/GameStartView.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/GameStartView.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ChoiceBox.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ChoiceBox.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/Collection.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/Collection.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/DayAnnouncerBox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/DayAnnouncerBox.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/DialogueBox.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/DialogueBox.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/DialogueBox.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/DialogueBox.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/MindBox.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/MindBox.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_out.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_out.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_winelist.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_winelist.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_out.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_out.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_winelist.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_winelist.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_out.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_out.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_winelist.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_winelist.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/gifTester.gif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/gifTester.gif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uss.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uxml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/ChoiceButton.uxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/ChoiceButton.uxml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/GameStartView.uxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/GameStartView.uxml.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/TransitionBlackView.uss" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/TransitionBlackView.uss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/TransitionBlackView.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/TransitionBlackView.uxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/AVGScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AVGScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CocktailScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CocktailScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/AVGView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AVG/AVGView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/ChoiceButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AVG/ChoiceButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/MindChoiceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AVG/MindChoiceManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Consts.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Consts.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/ChoiceButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/ChoiceButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AVG/DialogueManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/ScriptManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AVG/ScriptManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GlobalDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GlobalDataManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/GameStartView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/GameStartView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/TransitionBlackView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/TransitionBlackView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/zpix SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/zpix SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/GameStartView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/GameStartView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/TransitionBlackView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/TransitionBlackView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/DialogueEventModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/DialogueEventModel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/DialogueLine.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/DialogueLine.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/SOGen.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/SOGen.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/SOGen.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/SOGen.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/StorySheet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/StorySheet.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,28 +122,16 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17d9ce77f27a4bd2afb5ba32c9bea97646ac00/1e/7efcd5dc/String.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17d9ce77f27a4bd2afb5ba32c9bea97646ac00/2d/00be877c/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17d9ce77f27a4bd2afb5ba32c9bea97646ac00/36/60b340ae/Int32.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17d9ce77f27a4bd2afb5ba32c9bea97646ac00/ba/c8982a8d/List`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17d9ce77f27a4bd2afb5ba32c9bea97646ac00/ef/ae258369/ReadOnlySpan`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/383db090fd544f24b368fd389016a28f176200/18/7350d486/IManipulator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/383db090fd544f24b368fd389016a28f176200/1c/e1ac723b/Manipulator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/383db090fd544f24b368fd389016a28f176200/60/2b9db497/KeyDownEvent.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/383db090fd544f24b368fd389016a28f176200/7c/4b918e13/MouseDownEvent.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/383db090fd544f24b368fd389016a28f176200/e2/608f741e/UIDocument.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/41914444499f4996a3e6af79cf6c1fdb574b98/fd/ce230bee/List`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/92/a8eded2c/Void.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a05f37d7a0a34fad9547811820ecb7447c00/31/9741973b/Input.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/383db090fd544f24b368fd389016a28f176200/54/fffd5505/Focusable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/383db090fd544f24b368fd389016a28f176200/a6/887f45a5/PickingMode.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Project/In_The_Garden_We_Dreamed_Of/Assets/Resources/StorySO/PV0514/99020.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Project/In_The_Garden_We_Dreamed_Of/Assets/Scripts/AVG/AVGView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Project/In_The_Garden_We_Dreamed_Of/Assets/Scripts/AVG/AVGView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AVG/AVGView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AVG/ChoiceButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioSrcManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Consts.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/GlobalDataManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/GameStartView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/TransitionBlackView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/StorySOGenerator/DialogueLine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.8/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../TheGarden/Assets/Scripts/AVG/DialogueManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -254,7 +293,7 @@
       <workItem from="1715654352052" duration="1353000" />
       <workItem from="1716034791266" duration="23000" />
       <workItem from="1716034836205" duration="6131000" />
-      <workItem from="1716191235927" duration="16621000" />
+      <workItem from="1716191235927" duration="63796000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <option name="closed" value="true" />
@@ -608,7 +647,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715637812176</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="05.20累积更新">
+      <option name="closed" value="true" />
+      <created>1716232933925</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1716232933925</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -648,7 +695,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Test Change" />
     <MESSAGE value="Remade CanvasControlManager" />
     <MESSAGE value="提交了新的美术素材，修改了一下游戏显示逻辑。" />
     <MESSAGE value="搭建了调酒界面" />
@@ -673,7 +719,8 @@
     <MESSAGE value="AVG Scene builded, scripting (Phase II). Fixed bug on Switching Scenes." />
     <MESSAGE value="制作中" />
     <MESSAGE value="Making Phase II, not completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Making Phase II, not completed" />
+    <MESSAGE value="05.20累积更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="05.20累积更新" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

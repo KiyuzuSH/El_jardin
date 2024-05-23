@@ -7,10 +7,19 @@ namespace KiyuzuDev.ITGWDO.AVG
 {
     public class ScriptManager : MonoBehaviour
     {
+        #region Singleton
+
         public static ScriptManager Instance { get; private set; }
         
-        private List<StorySheet> storyList;
+        private void OnDestroy()
+        {
+            Destroy(Instance);
+        }
+
+        #endregion
         
+        private List<StorySheet> storyList;
+
         private void Awake()
         {
             if (Instance == null) Instance = this;
@@ -22,13 +31,8 @@ namespace KiyuzuDev.ITGWDO.AVG
             
             storyList = Resources.LoadAll<StorySheet>("StorySO").ToList();
         }
-        
-        private void OnDestroy()
-        {
-            Destroy(Instance);
-        }
-        
-        public int StoryListSize() => storyList.Count;
+
+        public int StoryListSize => storyList.Count;
 
         public List<int> StoryIndexList()
         {
@@ -46,7 +50,7 @@ namespace KiyuzuDev.ITGWDO.AVG
         }
         
         public DialogueLine LoadSpecificLine(int storyId, int lineId) 
-            => LoadStorySheetById(storyId).GetSpecificLineById(lineId);
+            => LoadStorySheetById(storyId).GetSpecificLine(lineId);
 
         public DialogueLine LoadSpecificLine(int lineId)
             => LoadSpecificLine(int.Parse(lineId.ToString().Substring(0, 2)), lineId);

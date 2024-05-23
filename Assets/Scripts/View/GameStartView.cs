@@ -1,35 +1,50 @@
 using UnityEngine;
 using UnityEngine.AddressableAssets;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 namespace KiyuzuDev.ITGWDO.View
 {
     public class GameStartView : MonoBehaviour
     {
-        [SerializeField] private AssetReference StartedScene;
-        [SerializeField] private bool debugMode = true;
-        
-        private VisualElement rootVE;
-        private Button newGameButton;
+        #region Singleton
+
+        public static GameStartView Instance { get; private set; }
         
         private void Awake()
         {
-            rootVE = GetComponent<UIDocument>().rootVisualElement;
-            newGameButton = rootVE.Q<Button>("StartButton");
+            if (Instance == null) Instance = this;
+            else if (Instance != this)
+            {
+                Destroy(gameObject);
+                Instance = this;
+            }
+        }
+        
+        private void OnDestroy()
+        {
+            Destroy(Instance);
         }
 
+        #endregion
+        
+        [SerializeField] private Button newGameButton;
+        
         private void OnEnable()
         {
-            newGameButton.clicked += StartGame;
+            newGameButton.onClick.AddListener(StartGame);
         }
 
         private void OnDisable()
         {
-            newGameButton.clicked -= StartGame;
+            newGameButton.onClick.RemoveAllListeners();
         }
-
+        
+        [SerializeField] private AssetReference StartScene;
+        [SerializeField] private bool debugMode = true;
+        
         private void StartGame()
         {
+            newGameButton.interactable = false;
             // TODO: disable all player's input
             if (debugMode)
             {
@@ -38,8 +53,8 @@ namespace KiyuzuDev.ITGWDO.View
             else
             {
                 // TODO: Initialization the Game
-                Core.SceneLoader.LoadAddressableScene(StartedScene);
-                // Core.SceneLoader.LoadAddressableScene(Core.SceneLoader.AVGSceneKey);
+                // Core.SceneLoader.LoadAddressableScene(StartedScene);
+                Core.SceneLoader.LoadAddressableScene(Core.SceneLoader.AVGSceneKey);
             }
             Debug.Log("Triggered Start Button");
         }
