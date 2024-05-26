@@ -11,9 +11,13 @@ public class DialogueLineRaw
     public string dialogueLineType;
     public string personName;
     public string content;
-    public string eventNames;
-    public string eventArgs;
-    public string choiceAtMindBox;
+    public string eventFore;
+    public string eventForeArgs;
+    public string eventMain;
+    public string eventMainArgs;
+    public string eventAfter;
+    public string eventAfterArgs;
+    public string toLine;
 }
 
 public class SOGen : MonoBehaviour
@@ -26,7 +30,7 @@ public class SOGen : MonoBehaviour
 
     private void Start()
     {
-        CreateStoryAsset("PV0514");
+        CreateStoryAsset("Chap1");
     }
 
     private void CreateStoryAsset(string scriptFileName)
@@ -38,32 +42,39 @@ public class SOGen : MonoBehaviour
         {
             DialogueLine line = ScriptableObject.CreateInstance<DialogueLine>();
             line.lineId = lineRaw.lineId;
-            Enum.TryParse(lineRaw.dialogueLineType + "Line",out line.DialogueLineType);
+            Enum.TryParse(lineRaw.dialogueLineType, out line.DialogueLineType);
             line.personName = lineRaw.personName;
             line.content = lineRaw.content;
-            line.events = LoadEventListFromAsset(lineRaw.eventNames, lineRaw.eventArgs);
-            bool.TryParse(lineRaw.choiceAtMindBox,out line.choiceAtMindBox);
+            line.eventFore = ParseEvent(lineRaw.eventFore, lineRaw.eventForeArgs);
+            line.eventMain = ParseEvent(lineRaw.eventMain, lineRaw.eventMainArgs);
+            line.eventAfter = ParseEvent(lineRaw.eventAfter, lineRaw.eventAfterArgs);
+            int.TryParse(lineRaw.toLine, out line.toLine);
             AssetDatabase.CreateAsset(line, pathSO + scriptFileName + "/" + line.lineId + ".asset");
             lineList.Add(line);
             EditorUtility.SetDirty(line);
         }
         StorySheet story = ScriptableObject.CreateInstance<StorySheet>();
-        story.storyId = 99;
+        story.storyId = 1;
         story.dialogueLines = lineList;
         AssetDatabase.CreateAsset(story, pathSO + scriptFileName + ".asset");
         EditorUtility.SetDirty(story);
         AssetDatabase.SaveAssets();
     }
-
-    private List<DialogueEventModel> LoadEventListFromAsset(string eventNames, string eventArgs)
+    
+    private DialogueEvent ParseEvent(string _eventType,string _eventArgs)
     {
-        var res = new List<DialogueEventModel>();
-        var dialogueEvent = new DialogueEventModel();
-        Enum.TryParse(eventNames, out dialogueEvent.eventType);
-        string[] arg = new string[1];
-        arg[0] = eventArgs;
-        dialogueEvent.args = arg;
-        res.Add(dialogueEvent);
-        return res;
+        var dEvent = new DialogueEvent();
+        Enum.TryParse(_eventType, out dEvent.eventType);
+        if (_eventArgs == null) dEvent.args = Array.Empty<string>();
+        else
+        {
+            if (!_eventArgs.Contains(",")) dEvent.args = new[] { _eventArgs };
+            else
+            {
+                string[] arg = _eventArgs.Split(",");
+                dEvent.args = arg;
+            }
+        }
+        return dEvent;
     }
 }

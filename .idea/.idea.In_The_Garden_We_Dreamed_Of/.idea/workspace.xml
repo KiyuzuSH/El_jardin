@@ -4,91 +4,382 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d194d226-ba54-45bc-be24-de0cd9395214" name="更改" comment="05.20累积更新">
-      <change afterPath="$PROJECT_DIR$/Assets/Configs/InputSystem.inputsettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Configs/InputSystem.inputsettings.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/AnnouncerBox.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/AnnouncerBox.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ArrowLeft.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ArrowLeft.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ArrowRight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ArrowRight.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/CollectionGetBack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/CollectionGetBack.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/CollectionPanel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/CollectionPanel.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/NameBox.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/NameBox.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/PausedSign.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/PausedSign.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/WineList.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/WineList.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/DialogueEventModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/DialogueEventModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/DialogueLine.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/DialogueLine.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/SOGenerator.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/SOGenerator/SOGen.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/SOGenerator/SOGen.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/SOGenerator/SOGen.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/SOGenerator/SOGen.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/StorySheet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/StorySheet.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/CollectionView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/CollectionView.cs.meta" afterDir="false" />
+    <list default="true" id="d194d226-ba54-45bc-be24-de0cd9395214" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/bargui.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/bargui/modern_shelf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/bargui/modern_shelf.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/bargui/modern_winelist.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/bargui/modern_winelist.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/bargui/modern_winelist_normalized.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/bargui/modern_winelist_normalized.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/deco.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/deco/modern_in.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/deco/modern_in.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/deco/modern_jalousie_fullopen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/deco/modern_jalousie_fullopen.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/deco/modern_jalousie_shutten.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/deco/modern_jalousie_shutten.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/deco/modern_out.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/deco/modern_out.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/gui.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/gui/modern_announcer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/gui/modern_announcer.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/gui/modern_d_down.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/gui/modern_d_down.gif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/gui/modern_d_namebox.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/gui/modern_d_namebox.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/gui/modern_d_textbox.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/gui/modern_d_textbox.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/gui/modern_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/gui/modern_left.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/gui/modern_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/gui/modern_right.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/bargui.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/bargui/rpg_shelf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/bargui/rpg_shelf.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/bargui/rpg_winelist.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/bargui/rpg_winelist.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/bargui/rpg_winelist_normalized.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/bargui/rpg_winelist_normalized.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/deco.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/deco/rpg_in.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/deco/rpg_in.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/deco/rpg_jalousie_fullopen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/deco/rpg_jalousie_fullopen.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/deco/rpg_jalousie_shutten.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/deco/rpg_jalousie_shutten.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/deco/rpg_out.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/deco/rpg_out.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/gui.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/gui/rpg_announcer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/gui/rpg_announcer.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/gui/rpg_d_down.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/gui/rpg_d_down.gif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/gui/rpg_d_namebox.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/gui/rpg_d_namebox.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/gui/rpg_d_textbox.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/gui/rpg_d_textbox.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/gui/rpg_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/gui/rpg_left.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/gui/rpg_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/gui/rpg_right.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/bargui.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/bargui/utopia_shelf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/bargui/utopia_shelf.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/bargui/utopia_winelist.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/bargui/utopia_winelist.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/bargui/utopia_winelist_normalized.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/bargui/utopia_winelist_normalized.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/deco.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/deco/utopia_in.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/deco/utopia_in.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/deco/utopia_jalousie_fullopen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/deco/utopia_jalousie_fullopen.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/deco/utopia_jalousie_shutten.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/deco/utopia_jalousie_shutten.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/deco/utopia_out.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/deco/utopia_out.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/gui.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/gui/utopia_announcer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/gui/utopia_announcer.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/gui/utopia_d_down.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/gui/utopia_d_down.gif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/gui/utopia_d_namebox.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/gui/utopia_d_namebox.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/gui/utopia_d_textbox.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/gui/utopia_d_textbox.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/gui/utopia_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/gui/utopia_left.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/gui/utopia_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/gui/utopia_right.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/StorySO/Chap1.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/DialogueManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/DialogueManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/ScriptManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/ScriptManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/AVGView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/AVGView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.In_The_Garden_We_Dreamed_Of/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.In_The_Garden_We_Dreamed_Of/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ChoiceBox.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ChoiceBox.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/Collection.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/Collection.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/DayAnnouncerBox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/DayAnnouncerBox.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/DialogueBox.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/DialogueBox.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/DialogueBox.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/DialogueBox.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/MindBox.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/MindBox.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_out.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_out.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_winelist.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_winelist.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_out.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_out.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_winelist.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_winelist.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_out.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_out.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_winelist.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_winelist.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/gifTester.gif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/gifTester.gif.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uss.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/AVGView.uxml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/ChoiceButton.uxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/ChoiceButton.uxml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/GameStartView.uxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/GameStartView.uxml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/TransitionBlackView.uss" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/TransitionBlackView.uss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ViewDocument/TransitionBlackView.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ViewDocument/TransitionBlackView.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/AnnouncerBox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/AnnouncerBox.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ArrowLeft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ArrowLeft.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ArrowRight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ArrowRight.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/DialogueBox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/DialogueBox.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ItemPlate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/ItemPlate.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/NameBox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/NameBox.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/WineList.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/AVGUI/WineList.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_in.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_in.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_jalousie_fullopen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_jalousie_fullopen.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_jalousie_shutten.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_jalousie_shutten.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_out.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_out.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_shelf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_shelf.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_winelist.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_winelist.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_winelist_normalized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_winelist_normalized.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_wineui.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_wineui.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_in.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_in.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_jalousie_fullopen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_jalousie_fullopen.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_jalousie_shutten.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_jalousie_shutten.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_out.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_out.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_shelf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_shelf.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_winelist.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_winelist.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_winelist_normalized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_winelist_normalized.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_wineui.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_wineui.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_in.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_in.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_jalousie_fullopen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_jalousie_fullopen.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_jalousie_shutten.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_jalousie_shutten.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_out.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_out.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_shelf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_shelf.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_winelist.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_winelist.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_winelist_normalized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_winelist_normalized.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_wineui.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_wineui.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99001.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99001.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99002.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99002.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99003.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99003.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99004.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99004.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99005.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99005.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99006.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99006.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99007.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99007.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99008.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99008.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99009.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99009.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99010.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99010.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99011.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99011.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99012.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99012.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99013.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99013.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99014.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99014.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99015.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99015.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99016.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99016.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99017.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99017.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99018.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99018.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99019.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99019.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99020.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99020.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99021.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99021.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99022.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99022.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99023.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99023.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99024.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99024.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99025.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99025.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99026.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99026.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99027.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99027.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99028.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99028.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99029.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99029.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99030.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99030.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99031.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99031.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99032.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99032.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99033.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99033.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99034.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99034.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99035.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99035.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99036.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99036.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99037.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99037.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99038.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99038.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99039.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99039.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99040.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99040.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99041.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99041.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99042.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99042.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99043.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99043.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99044.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99044.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99045.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99045.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99046.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99046.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99047.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99047.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99048.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99048.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99049.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99049.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99050.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99050.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99051.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99051.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99052.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99052.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99053.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99053.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99054.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99054.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99055.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99055.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99056.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99056.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99057.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99057.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99058.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99058.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99059.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99059.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99060.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99060.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99061.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99061.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99062.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99062.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99063.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99063.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99064.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99064.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99065.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99065.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99066.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99066.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99067.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99067.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99068.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99068.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99069.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99069.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99070.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99070.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99071.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99071.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99072.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99072.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99073.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99073.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99074.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99074.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99075.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99075.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99076.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99076.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99077.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99077.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99078.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99078.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99079.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99079.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99080.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99080.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99081.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99081.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99082.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99082.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99083.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99083.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99084.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99084.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99085.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99085.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99086.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99086.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99087.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99087.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99088.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99088.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99089.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99089.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99090.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99090.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99091.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99091.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99092.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99092.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99093.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99093.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99094.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99094.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99095.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/PV0514/99095.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StoryScripts/0_Chapter0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StoryScripts/0_Chapter0.csv.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StoryScripts/PV0514.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StoryScripts/PV0514.csv.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StoryScripts/TestChapterNew.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StoryScripts/TestChapterNew.csv.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/AVGScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AVGScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/AVGView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AVG/AVGView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/ChoiceButton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/ChoiceButton.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AVG/DialogueManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/ScriptManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AVG/ScriptManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GlobalDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GlobalDataManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/GameStartView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/GameStartView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/TransitionBlackView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/TransitionBlackView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/DialogueEventModel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/DialogueEventModel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/DialogueLine.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/DialogueLine.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/SOGen.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/SOGen.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/SOGen.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/SOGen.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/StorySheet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StorySOGenerator/StorySheet.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/AVGView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/AVGView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/CharacterViewManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/CharacterViewManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/ChoiceButtonManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/ChoiceButtonManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/DialogueManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/DialogueManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/MindChoiceManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/MindChoiceManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/ScriptManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/ScriptManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/SideTitleViewManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AVG/SideTitleViewManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StoryData/DialogueEventModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/DialogueEventModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StoryData/DialogueLine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/DialogueLine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StoryData/SOGenerator/SOGen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/SOGenerator/SOGen.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,14 +415,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/383db090fd544f24b368fd389016a28f176200/54/fffd5505/Focusable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/383db090fd544f24b368fd389016a28f176200/a6/887f45a5/PickingMode.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Project/In_The_Garden_We_Dreamed_Of/Assets/Resources/StorySO/PV0514/99020.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Project/In_The_Garden_We_Dreamed_Of/Assets/Scripts/AVG/AVGView.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Project/In_The_Garden_We_Dreamed_Of/Assets/Scripts/AVG/AVGView.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AVG/AVGView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AVG/ChoiceButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioSrcManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/DialogueManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/GlobalDataManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/ScriptManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/View/AVGView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.8/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../TheGarden/Assets/Scripts/AVG/DialogueManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -142,6 +431,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="PerforceDirect.Settings">
+    <option name="CHARSET" value="无" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -169,7 +461,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.statistic.project.settings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
     &quot;附加到 Unity 编辑器.附加到 Unity 编辑器.executor&quot;: &quot;Debug&quot;
   },
@@ -293,7 +585,8 @@
       <workItem from="1715654352052" duration="1353000" />
       <workItem from="1716034791266" duration="23000" />
       <workItem from="1716034836205" duration="6131000" />
-      <workItem from="1716191235927" duration="63796000" />
+      <workItem from="1716191235927" duration="66864000" />
+      <workItem from="1716499383168" duration="30420000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <option name="closed" value="true" />
@@ -655,7 +948,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716232933925</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="修正UI，Phase I">
+      <option name="closed" value="true" />
+      <created>1716496439493</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1716496439493</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -695,7 +996,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Remade CanvasControlManager" />
     <MESSAGE value="提交了新的美术素材，修改了一下游戏显示逻辑。" />
     <MESSAGE value="搭建了调酒界面" />
     <MESSAGE value="累计更新" />
@@ -720,7 +1020,8 @@
     <MESSAGE value="制作中" />
     <MESSAGE value="Making Phase II, not completed" />
     <MESSAGE value="05.20累积更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="05.20累积更新" />
+    <MESSAGE value="修正UI，Phase I" />
+    <option name="LAST_COMMIT_MESSAGE" value="修正UI，Phase I" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

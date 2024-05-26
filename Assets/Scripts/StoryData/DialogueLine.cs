@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace KiyuzuDev.ITGWDO.StoryData
@@ -10,12 +9,12 @@ namespace KiyuzuDev.ITGWDO.StoryData
         NarrationLine,
         MindLine,
         ChooseLine,
+        MindChooseLine,
+        ChoiceLine,
         ControlLine,
         GameLine,
-        CollectionLine,
     }
     
-    /// <summary> 一句对白，any kind ok </summary>
     public class DialogueLine : ScriptableObject
     {
         public int lineId;
@@ -25,9 +24,9 @@ namespace KiyuzuDev.ITGWDO.StoryData
         public string personName;
         [TextArea]
         public string content;
-        /// <summary> 触发事件列表 </summary>
-        public List<DialogueEventModel> events;
-        /// <summary> 选项是否在想法框 </summary>
-        public bool choiceAtMindBox;
+        public DialogueEvent eventFore;
+        public DialogueEvent eventMain;
+        public DialogueEvent eventAfter;
+        public int toLine;
     }
 }
