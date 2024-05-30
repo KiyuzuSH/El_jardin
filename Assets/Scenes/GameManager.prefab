@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 6851863655182188834}
   - component: {fileID: 3515944616107520894}
   - component: {fileID: 8059390901888248795}
-  - component: {fileID: 5483881711039471970}
+  - component: {fileID: 2207481722734610787}
   m_Layer: 5
   m_Name: BlackView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &6851863655182188834
 RectTransform:
@@ -85,23 +85,14 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
---- !u!114 &5483881711039471970
-MonoBehaviour:
+--- !u!222 &2207481722734610787
+CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690509476197824272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  m_CullTransparentMesh: 1
 --- !u!1 &1898574550255884239
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,6 +511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fce384f4daa091e499887d8dcb76be2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blackScreen: {fileID: 6994655580883467642}
 --- !u!114 &2273335661654510247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,7 +548,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d7c173ee4a8aab45943c8acaeabe863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackImg: {fileID: 6084187359153446568}
 --- !u!1 &7229842880384816520
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,14 +646,13 @@ GameObject:
   m_Component:
   - component: {fileID: 6851238772995481234}
   - component: {fileID: 3322244906334006644}
-  - component: {fileID: 6084187359153446568}
-  - component: {fileID: 1612811900909728880}
+  - component: {fileID: 6994655580883467642}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &6851238772995481234
 RectTransform:
@@ -691,19 +681,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7782964276095258989}
   m_CullTransparentMesh: 1
---- !u!225 &6084187359153446568
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7782964276095258989}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
-  m_IgnoreParentGroups: 0
---- !u!114 &1612811900909728880
+--- !u!114 &6994655580883467642
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -712,27 +690,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 7782964276095258989}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_Texture: {fileID: 0}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!1 &8359383527230851668
 GameObject:
   m_ObjectHideFlags: 0
