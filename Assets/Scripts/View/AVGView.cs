@@ -2,6 +2,9 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
+using KiyuzuDev.ITGWDO.Core;
+using KiyuzuDev.ITGWDO.StoryData;
 
 namespace KiyuzuDev.ITGWDO.View
 {
@@ -34,101 +37,66 @@ namespace KiyuzuDev.ITGWDO.View
             _mindTypewriter = null;
             if (TextTimePerChar < 0f) TextTimePerChar = 0.1f;
             if (MindTimePerChar < 0f) MindTimePerChar = 0.1f;
-            // ChangeToStyleView(GlobalDataManager.Instance.PresentWorldStyle);
+            continuePicAnim = continuePic.GetComponent<Animator>();
+            continuePicImg = continuePic.GetComponent<Image>();
+            continuePic.SetActive(false);
         }
 
         #region 风格改变
+
+        private const string pathModernSprites = "Sprites/Theme/modern/";
+        private const string pathRPGSprites = "Sprites/Theme/rpg/";
+        private const string pathUtopiaSprites = "Sprites/Theme/utopia/";
         
-        [SerializeField] private Image outsidePic;
-        [SerializeField] private Image interiorPic;
-        [SerializeField] private GameObject jalousiePic;
+        [SerializeField] private GameObject nameBox;
+        [SerializeField] private Image dialogueBox;
+        [SerializeField] private GameObject continuePic;
+        private Image continuePicImg;
+        private Animator continuePicAnim;
+        [SerializeField] private Sprite modernDown;
+        [SerializeField] private Sprite rpgDown;
+        [SerializeField] private Sprite utopiaDown;
+        private string currentState;
         
         public void ChangeToStyleView(WorldStyle _style)
         {
             switch (_style)
             {
                 case WorldStyle.Modern:
-                    interiorPic.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_in");
-                    outsidePic.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_out");
-                    if(GlobalDataManager.Instance.JalousieShutDown) 
-                        jalousiePic.GetComponent<Image>().sprite 
-                            = Resources.Load<Sprite>("Sprites/Theme/modern/modern_jalousie_shutten");
-                    else
-                        jalousiePic.GetComponent<Image>().sprite 
-                            = Resources.Load<Sprite>("Sprites/Theme/modern/modern_jalousie_fullopen");
-                    // shelf.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_shelf");
-                    // wineListImg.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_winelist");
-                    // wineListBtn.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_wineui");
+                    nameBox.GetComponent<Image>().sprite =
+                        Resources.Load<Sprite>(pathModernSprites + "gui/modern_d_namebox");
+                    dialogueBox.sprite = Resources.Load<Sprite>(pathModernSprites + "gui/modern_d_textbox");
+                    continuePicImg.sprite = modernDown;
+                    currentState = "modern_d_down_aniclip";
                     break;
                 case WorldStyle.RPG:
-                    interiorPic.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_in");
-                    outsidePic.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_out");
-                    if(GlobalDataManager.Instance.JalousieShutDown) 
-                        jalousiePic.GetComponent<Image>().sprite 
-                            = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_jalousie_shutten");
-                    else
-                        jalousiePic.GetComponent<Image>().sprite 
-                            = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_jalousie_fullopen");
-                    // shelf.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_shelf");
-                    // wineListImg.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_winelist");
-                    // wineListBtn.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_wineui");
+                    nameBox.GetComponent<Image>().sprite =
+                        Resources.Load<Sprite>(pathRPGSprites + "gui/rpg_d_namebox");
+                    dialogueBox.sprite = Resources.Load<Sprite>(pathRPGSprites + "gui/rpg_d_textbox");
+                    continuePicImg.sprite = rpgDown;
+                    currentState = "rpg_d_down_aniclip";
                     break;
                 case WorldStyle.Utopia:
-                    interiorPic.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_in");
-                    outsidePic.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_out");
-                    if(GlobalDataManager.Instance.JalousieShutDown) 
-                        jalousiePic.GetComponent<Image>().sprite 
-                            = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_jalousie_shutten");
-                    else
-                        jalousiePic.GetComponent<Image>().sprite 
-                            = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_jalousie_fullopen");
-                    // shelf.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_shelf");
-                    // wineListImg.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_winelist");
-                    // wineListBtn.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_wineui");
+                    nameBox.GetComponent<Image>().sprite =
+                        Resources.Load<Sprite>(pathUtopiaSprites + "gui/utopia_d_namebox");
+                    dialogueBox.sprite = Resources.Load<Sprite>(pathUtopiaSprites + "gui/utopia_d_textbox");
+                    continuePicImg.sprite = utopiaDown;
+                    currentState = "utopia_d_down_aniclip";
                     break;
             }
+            continuePicAnim.Play(currentState);
+            // shelf.sprite
+            // wineListImg.sprite
+            // wineListBtn.sprite
         }
         
         #endregion
-
-        #region 大小CG显隐
-
-        [SerializeField] private GameObject fullCG;
-        [SerializeField] private GameObject smallCG;
-
-        public void FullCGOn(Sprite img)
-        {
-            fullCG.GetComponent<Image>().sprite = img;
-            fullCG.GetComponent<CanvasGroup>().alpha = 1;
-        }
-
-        public void FullCGOff()
-        {
-            fullCG.GetComponent<Image>().sprite = null;
-            fullCG.GetComponent<CanvasGroup>().alpha = 0;
-        }
-        public void SmallCGOn(Sprite img)
-        {
-            var tmp = smallCG.GetComponent<Image>();
-            tmp.sprite = img;
-            tmp.SetNativeSize();
-            smallCG.GetComponent<CanvasGroup>().alpha = 1;
-        }
-
-        public void SmallCGOff()
-        {
-            smallCG.GetComponent<Image>().sprite = null;
-            smallCG.GetComponent<CanvasGroup>().alpha = 0;
-        }
-
-        #endregion
-
+        
         #region 主文本显示
 
         [Range(0, 1)] private static float TextTimePerChar = 0.01f;
 
         [SerializeField] private GameObject dialogueContainer;
-        [SerializeField] private GameObject nameBox;
         [SerializeField] private TMP_Text textName;
         [SerializeField] private TMP_Text textDialogue;
         // [SerializeField] private Image continuePic;
@@ -144,6 +112,7 @@ namespace KiyuzuDev.ITGWDO.View
             contentPassed = content.Replace("\\n", "\n").Replace("\\t","\t");
             if (personName == "") UnshowNameBox();
             else ShowNameBox(personName);
+            continuePic.SetActive(false);
             _textTypewriter = StartCoroutine(TextTypewriter(contentPassed));
         }
         
@@ -233,6 +202,7 @@ namespace KiyuzuDev.ITGWDO.View
                 yield return new WaitForSeconds(TextTimePerChar);
             }
             _textTypewriter = null;
+            continuePic.SetActive(true);
             // Can call a Complete back
         }
 
@@ -241,19 +211,20 @@ namespace KiyuzuDev.ITGWDO.View
             if (_textTypewriter == null) return;
             StopCoroutine(TextTypewriter());
             _textTypewriter = null;
+            continuePic.SetActive(true);
             textDialogue.text = contentPassed;
         }
         
         private void ShowNameBox(string _name)
         {
-            nameBox.SetActive(true);
+            nameBox.GetComponent<CanvasGroup>().alpha = 1;
             textName.text = _name;
         }
 
         private void UnshowNameBox()
         {
             textName.text = "";
-            nameBox.SetActive(false);
+            nameBox.GetComponent<CanvasGroup>().alpha = 0;
         }
 
         // continue Pic event
@@ -273,6 +244,7 @@ namespace KiyuzuDev.ITGWDO.View
         public void UpdateMind(string mind)
         {
             mindPassed = mind.Replace("\\n", "\n").Replace("\\t","\t");
+            continuePic.SetActive(false);
             _mindTypewriter = StartCoroutine(MindTypewriter(mindPassed));
         }
 
@@ -362,6 +334,7 @@ namespace KiyuzuDev.ITGWDO.View
                 yield return new WaitForSeconds(MindTimePerChar);
             }
             _mindTypewriter = null;
+            continuePic.SetActive(true);
             // Can call a Complete back
         }
 
@@ -370,65 +343,139 @@ namespace KiyuzuDev.ITGWDO.View
             if (_mindTypewriter == null) return;
             StopCoroutine(MindTypewriter());
             _mindTypewriter = null;
+            continuePic.SetActive(true);
             textMind.text = mindPassed;
         }
 
         #endregion
-        
-        [SerializeField] private GameObject announcerContainer;
+
+        #region 报幕条
+
+        [SerializeField] private CanvasGroup announcerContainer;
         [SerializeField] private TMP_Text titleLabel;
         [SerializeField] private TMP_Text dayLabel;
         
         public void UpdateAnnouncementTitle(string content)
         {
-            string[] array = content.Split('|');
+            string[] array = content.Split("\\n");
             titleLabel.text = array[1];
             dayLabel.text = array[0];
-            if(!announcerContainer.activeSelf) announcerContainer.SetActive(true);
+            announcerContainer.alpha = 1;
             Invoke(nameof(Invisible), 3);
         }
 
-        void Invisible()
-        {
-            announcerContainer.SetActive(false);
-        }
+        void Invisible() => 
+            DOTween.To(
+                x => announcerContainer.alpha = x,
+                1, 0, 0.75f);
+
+        #endregion
+
+        #region 生成选项
 
         [SerializeField] private Transform gridButton;
         [SerializeField] private GameObject buttonChoicePrefab;
         public void GenerateChoices()
         {
-            // TODO: choice
-            
-            // if (SMI.GetLine(SMI.CurrentLine)[1] == "^&")
-            // {
-            //     var btn = Instantiate(buttonMindChoice, gridButton);
-            //     btn.GetComponentInChildren<TMP_Text>().text = SMI.GetLine(SMI.CurrentLine)[4];
-            //     btn.GetComponent<Button>().onClick.AddListener(OnChoiceClick);
-            //     if (SMI.GetLine(SMI.CurrentLine + 1)[1] == "^&")
-            //     {
-            //         SMI.CurrentLine++;
-            //         GenerateChoice();
-            //     }
-            // }
-        }
-        private void OnChoiceClick()
-        {
-            // DialogueManager.Instance.CheckCurrentLine();
-            // for (int i = 0; i < gridButton.childCount; i++) Destroy(gridButton.GetChild(i).gameObject);
+            for (int id = DialogueManager.PresentLineID + 1;; id++)
+            {
+                var btn = Instantiate(buttonChoicePrefab, gridButton);
+                switch (GlobalDataManager.Instance.PresentWorldStyle)
+                {
+                    case WorldStyle.Modern:
+                        btn.GetComponent<Image>().sprite =
+                            Resources.Load<Sprite>(pathModernSprites + "gui/modern_choicebutton");
+                        break;
+                    case WorldStyle.RPG:
+                        btn.GetComponent<Image>().sprite =
+                            Resources.Load<Sprite>(pathRPGSprites + "gui/rpg_choicebutton");
+                        break;
+                    case WorldStyle.Utopia:
+                        btn.GetComponent<Image>().sprite =
+                            Resources.Load<Sprite>(pathUtopiaSprites + "gui/utopia_choicebutton");
+                        break;
+                }
+                btn.GetComponentInChildren<TMP_Text>().text = ScriptManager.Instance.LoadSpecificLine(id).content;
+                btn.GetComponent<Button>().onClick.AddListener(
+                    delegate
+                    {
+                        OnChoiceClick(ScriptManager.Instance.LoadSpecificLine(id).toLine);
+                    });
+                if (ScriptManager.Instance.LoadSpecificLine(id + 1).DialogueLineType != EnumDialogueLineType.ChoiceLine) break;
+            }
         }
         
+        private void OnChoiceClick(int toId)
+        {
+            DialogueManager.Instance.LoadLineById(toId);
+            for (int i = 0; i < gridButton.childCount; i++) Destroy(gridButton.GetChild(i).gameObject);
+            DialogueManager.Instance.ProcessLine();
+        }
+                
+        #endregion
+
+        #region 生成mind选项
+
         [SerializeField] private Transform gridMindButton;
         [SerializeField] private GameObject buttonMindChoicePrefab;
         public void GenerateMindChoices()
         {
-            // TODO: mind choice
+            for (int id = DialogueManager.PresentLineID + 1;; id++)
+            {
+                var btn = Instantiate(buttonMindChoicePrefab, gridMindButton);
+                switch (GlobalDataManager.Instance.PresentWorldStyle)
+                {
+                    case WorldStyle.Modern:
+                        btn.GetComponent<Image>().sprite =
+                            Resources.Load<Sprite>(pathModernSprites + "gui/modern_choicebutton");
+                        break;
+                    case WorldStyle.RPG:
+                        btn.GetComponent<Image>().sprite =
+                            Resources.Load<Sprite>(pathRPGSprites + "gui/rpg_choicebutton");
+                        break;
+                    case WorldStyle.Utopia:
+                        btn.GetComponent<Image>().sprite =
+                            Resources.Load<Sprite>(pathUtopiaSprites + "gui/utopia_choicebutton");
+                        break;
+                }
+                btn.GetComponentInChildren<TMP_Text>().text = ScriptManager.Instance.LoadSpecificLine(id).content;
+                btn.GetComponent<Button>().onClick.AddListener(
+                    delegate
+                    {
+                        OnMindChoiceClick(ScriptManager.Instance.LoadSpecificLine(id).toLine);
+                    });
+                if (ScriptManager.Instance.LoadSpecificLine(id + 1).DialogueLineType != EnumDialogueLineType.ChoiceLine) break;
+            }
         }
-        private void OnMindChoiceClick()
+        
+        private void OnMindChoiceClick(int toId)
         {
-            
+            DialogueManager.Instance.LoadLineById(toId);
+            for (int i = 0; i < gridMindButton.childCount; i++) Destroy(gridMindButton.GetChild(i).gameObject);
+            DialogueManager.Instance.ProcessLine();
         }
 
-        // Continue button event, move to other place
+        #endregion
+        
+        private void Update()
+        {
+            SetControlPicSwitch();
+        }
+
+        private void SetControlPicSwitch()
+        {
+            if (_textTypewriter != null && _mindTypewriter != null)
+            {
+                continuePic.SetActive(false);
+            }
+            else
+            {
+                continuePic.SetActive(true);
+            }
+        }
+        
+        
+
         void OnContinue()
         {
             if (_textTypewriter != null)
@@ -436,20 +483,12 @@ namespace KiyuzuDev.ITGWDO.View
                 SkipTextTypewriter();
                 return;
             }
-
             if (_mindTypewriter != null)
             {
                 SkipMindTypewriter();
                 return;
             }
-
-            // TODO: message of get continue
-        }
-
-        // mind box moving event, may move other place
-        void OnSavingBox()
-        {
-
+            // TODO: input to move to next line, should be a callback
         }
     }
 }

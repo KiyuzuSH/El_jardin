@@ -48,13 +48,13 @@ namespace KiyuzuDev.ITGWDO.View
             // TODO: disable all player's input
             if (debugMode)
             {
-                Core.SceneLoader.LoadAddressableScene(Core.SceneLoader.TestSceneKey);
+                LegacySceneLoader.Instance.LoadScene("TestScene");
             }
             else
             {
                 // TODO: Initialization the Game
                 // Core.SceneLoader.LoadAddressableScene(StartedScene);
-                Core.SceneLoader.LoadAddressableScene(Core.SceneLoader.AVGSceneKey);
+                LegacySceneLoader.Instance.LoadScene("AVGScene");
             }
             Debug.Log("Triggered Start Button");
         }

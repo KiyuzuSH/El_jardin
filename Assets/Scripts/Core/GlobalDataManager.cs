@@ -1,15 +1,7 @@
-using System;
 using UnityEngine;
 
-namespace KiyuzuDev.ITGWDO
+namespace KiyuzuDev.ITGWDO.Core
 {
-    public enum WorldStyle
-    {
-        Modern = 1,
-        RPG = 2,
-        Utopia = 3,
-    }
-    
     public class GlobalDataManager : MonoBehaviour
     {
         #region Singleton
@@ -24,6 +16,7 @@ namespace KiyuzuDev.ITGWDO
                 Destroy(gameObject);
                 Instance = this;
             }
+            DontDestroyOnLoad(Instance);
         }
 
         private void OnDestroy()
@@ -36,54 +29,21 @@ namespace KiyuzuDev.ITGWDO
         public WorldStyle PresentWorldStyle { get; private set; }
         public bool JalousieShutDown { get; private set; }
         
-        private void Start()
+        private void OnEnable()
         {
             JalousieShutDown = true;
-            SetStyle(WorldStyle.Utopia);
+            PresentWorldStyle = WorldStyle.Utopia;
         }
 
-        public void SetStyle(WorldStyle _style)
+        public void SetWorldStyle(WorldStyle targetStyle)
         {
-            switch (_style)
-            {
-                case WorldStyle.Modern:
-                    // interior.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_in");
-                    // interior.color = Color.white;
-                    // outside.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_out");
-                    // if(JalousieShutDown) 
-                    //     jalousie.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_jalousie_shutten");
-                    // else
-                    //     jalousie.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_jalousie_fullopen");
-                    // shelf.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_shelf");
-                    // wineListImg.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_winelist");
-                    // wineListBtn.sprite = Resources.Load<Sprite>("Sprites/Theme/modern/modern_wineui");
-                    break;
-                case WorldStyle.RPG:
-                    // interior.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_in");
-                    // interior.color = Color.white;
-                    // outside.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_out");
-                    // if(JalousieShutDown) 
-                    //     jalousie.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_jalousie_shutten");
-                    // else
-                    //     jalousie.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_jalousie_fullopen");
-                    // shelf.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_shelf");
-                    // wineListImg.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_winelist");
-                    // wineListBtn.sprite = Resources.Load<Sprite>("Sprites/Theme/rpg/rpg_wineui");
-                    break;
-                case WorldStyle.Utopia:
-                    // interior.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_in");
-                    // interior.color = Color.white;
-                    // outside.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_out");
-                    // if(JalousieShutDown) 
-                    //     jalousie.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_jalousie_shutten");
-                    // else
-                    //     jalousie.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_jalousie_fullopen");
-                    // shelf.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_shelf");
-                    // wineListImg.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_winelist");
-                    // wineListBtn.sprite = Resources.Load<Sprite>("Sprites/Theme/utopia/utopia_wineui");
-                    break;
-            }
-            PresentWorldStyle = _style;
+            PresentWorldStyle = targetStyle;
+            View.AVGView.Instance.ChangeToStyleView(PresentWorldStyle);
+        }
+
+        private void Start()
+        {
+            // View.AVGView.Instance.ChangeToStyleView(PresentWorldStyle);
         }
     }
 }

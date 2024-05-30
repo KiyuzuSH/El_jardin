@@ -76,3 +76,5 @@ crashlytics-build.properties
 
 /[Aa]ssets/Plugins/NaughtyAttributes/
 /[Aa]ssets/Plugins/CSVSerializer/
+
+/[Aa]ssets/DOTween Examples/

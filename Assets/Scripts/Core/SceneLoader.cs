@@ -10,7 +10,7 @@ namespace KiyuzuDev.ITGWDO.Core
     public class SceneLoader : MonoBehaviour
     {
         #region Singleton
-
+        
         public static SceneLoader Instance { get; private set; }
         
         private void Awake()
@@ -27,14 +27,14 @@ namespace KiyuzuDev.ITGWDO.Core
         {
             Destroy(Instance);
         }
-
+        
         #endregion
         
         public const string StartSceneKey = "StartScene";
         public const string TestSceneKey = "TestScene";
         public const string AVGSceneKey = "AVGScene";
         public const string CocktailSceneKey = "CocktailScene";
-
+        
         public static event System.Action LoadingStarted;//S
         public static event System.Action<float> LoadingProcess;//P
         public static event System.Action LoadingCompleted;//C
@@ -43,7 +43,7 @@ namespace KiyuzuDev.ITGWDO.Core
         public static bool ShowLoadingScreen { get; private set; }
         public static bool IsSceneLoaded { get; private set; }
         public static SceneInstance loadedSceneInstance;
-
+        
         static IEnumerator LoadAddressableSceneCoroutine(object sceneKey, bool showLoadingScreen,
             bool loadSceneAdditively, bool activateOnLoad)
         {
@@ -51,6 +51,7 @@ namespace KiyuzuDev.ITGWDO.Core
                 loadSceneAdditively ? 
                     LoadSceneMode.Additive 
                     : LoadSceneMode.Single;
+            IsSceneLoaded = false;
             var asyncOperationHandle = Addressables.LoadSceneAsync(sceneKey, loadSceneMode, activateOnLoad);
             LoadingStarted?.Invoke();
             ShowLoadingScreen = showLoadingScreen;
@@ -68,7 +69,7 @@ namespace KiyuzuDev.ITGWDO.Core
             IsSceneLoaded = true;
             loadedSceneInstance = asyncOperationHandle.Result;
         }
-
+        
         public static void ActivateLoadedScene()
         {
             loadedSceneInstance.ActivateAsync().completed += _ =>
@@ -84,18 +85,13 @@ namespace KiyuzuDev.ITGWDO.Core
         /// <param name="showLoadingScreen"> 是否显示加载界面 </param>
         /// <param name="loadSceneAdditively"> 是否不独占地加载场景 </param>
         /// <param name="activateOnLoad"> 加载完成后是否立刻激活 </param>
-        public static void LoadAddressableScene(
-            object sceneKey, 
-            bool showLoadingScreen = false,
-            bool loadSceneAdditively = false,
-            bool activateOnLoad = false)
+        public static void LoadAddressableScene
+        (object sceneKey, bool showLoadingScreen = false, 
+            bool loadSceneAdditively = false, bool activateOnLoad = false)
         {
             Instance.StartCoroutine(
-                LoadAddressableSceneCoroutine(
-                    sceneKey, 
-                    showLoadingScreen, 
-                    loadSceneAdditively,
-                    activateOnLoad)
+                LoadAddressableSceneCoroutine
+                    (sceneKey, showLoadingScreen, loadSceneAdditively, activateOnLoad)
                 );
         }
     }

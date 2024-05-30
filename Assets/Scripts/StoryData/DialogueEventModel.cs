@@ -4,13 +4,15 @@ namespace KiyuzuDev.ITGWDO.StoryData
     public enum EnumDialogueEventType
     {
         None = 0,
-        To,
         Wait,
         Style,
         CGLoad,
         CGUnLoad,
         BlackOn,
         BlackOff,
+        HumanLoad,
+        HumanChangePos,
+        HumanUnload,
     }
     
     /// <summary> 事件触发的模型 </summary>
