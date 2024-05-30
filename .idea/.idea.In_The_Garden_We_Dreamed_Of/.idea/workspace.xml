@@ -4,199 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d194d226-ba54-45bc-be24-de0cd9395214" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/AVGView.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/AVGView/ChoiceButton.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/AVGView/ChoiceButton.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/AVGView/ManPic.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/AVGView/ManPic.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/AVGView/MindChoiceButton.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/AVGView/MindChoiceButton.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Characters/3.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/B水晶球-有底座.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/B水晶球-有底座.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/B水晶球.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/B水晶球.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/D断剑-木刻-有底座.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/D断剑-木刻-有底座.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/D断剑-木刻.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/D断剑-木刻.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/D断剑-金属-有底座.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/D断剑-金属-有底座.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/D断剑-金属.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/D断剑-金属.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/E眼睛-有底座.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/E眼睛-有底座.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/E眼睛.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/E眼睛.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/L啤酒瓶盖-有底座.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/L啤酒瓶盖-有底座.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/L啤酒瓶盖.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/L啤酒瓶盖.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/N水晶挂坠-有底座.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/N水晶挂坠-有底座.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/N水晶挂坠.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/N水晶挂坠.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/O衔尾蛇-有底座.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/O衔尾蛇-有底座.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/O衔尾蛇.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/O衔尾蛇.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/P证件.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/P证件.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/S石碑-有底座.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/S石碑-有底座.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/S石碑.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/S石碑.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/底座.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/底座.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass_gif.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass_gif/001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass_gif/001.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass_gif/002.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass_gif/002.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass_gif/003.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass_gif/003.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass_gif/004.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass_gif/004.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass_gif/005.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass_gif/005.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass_gif/006.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass_gif/006.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/d_down_anicon.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/d_down_anicon.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/gui/modern_d_down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/gui/modern_d_down.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/gui/modern_d_down_aniclip.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/gui/modern_d_down_aniclip.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_collectionButton.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_collectionButton.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_shelf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_shelf.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_winelist.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_winelist.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_winelistButton.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_winelistButton.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_winelist_normalized.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/modern_winelist_normalized.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/gui/rpg_d_down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/gui/rpg_d_down.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/gui/rpg_d_down_aniclip.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/gui/rpg_d_down_aniclip.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_collectionButton.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_collectionButton.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_shelf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_shelf.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_winelist.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_winelist.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_winelistButton.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_winelistButton.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_winelist_normalized.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/rpg_winelist_normalized.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/gui/utopia_d_down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/gui/utopia_d_down.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/gui/utopia_d_down_aniclip.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/gui/utopia_d_down_aniclip.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_collectionButton.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_collectionButton.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_shelf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_shelf.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_winelist.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_winelist.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_winelistButton.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_winelistButton.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_winelist_normalized.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/utopia_winelist_normalized.png.meta" afterDir="false" />
+    <list default="true" id="d194d226-ba54-45bc-be24-de0cd9395214" name="更改" comment="0530">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.In_The_Garden_We_Dreamed_Of/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.In_The_Garden_We_Dreamed_Of/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/1桂花酒.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/1桂花酒.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/2酒吧-阴暗.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/2酒吧-阴暗.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/3精灵.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/3精灵.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/4无底海.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/4无底海.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/5花海.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/5花海.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/6朦胧2-花.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/6朦胧2-花.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/7人偶.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/7人偶.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/Coronation.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/Coronation.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/wuticg.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/wuticg.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/朦胧1-粉色.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/朦胧1-粉色.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/朦胧3-绿色.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/朦胧3-绿色.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/玻璃杯.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/玻璃杯.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/眼睛.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/眼睛.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/酒吧-光明.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/CG/酒吧-光明.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/Keepnotvoid.object" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Collections/Keepnotvoid.object.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass/001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass/001.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass/002.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass/002.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass/003.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass/003.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass/004.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass/004.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass/005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass/005.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass/006.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass/006.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass/GIF_0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/Hourglass/GIF_0.gif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/shape_triangle_down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/shape_triangle_down.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/shape_triangle_right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Items/shape_triangle_right.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/gui/modern_d_down.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern/gui/modern_d_down.gif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern_collectionButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern_collectionButton.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern_shelf.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern_shelf.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern_winelist.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern_winelist.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern_winelistButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern_winelistButton.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern_winelist_normalized.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/modern_winelist_normalized.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/gui/rpg_d_down.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg/gui/rpg_d_down.gif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg_collectionButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg_collectionButton.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg_shelf.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg_shelf.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg_winelist.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg_winelist.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg_winelistButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg_winelistButton.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg_winelist_normalized.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/rpg_winelist_normalized.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/gui/utopia_d_down.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia/gui/utopia_d_down.gif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia_collectionButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia_collectionButton.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia_shelf.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia_shelf.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia_winelist.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia_winelist.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia_winelistButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia_winelistButton.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia_winelist_normalized.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Theme/utopia_winelist_normalized.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/gifTester.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/gifTester.gif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Chap1/Keepnotvoid.object" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StorySO/Chap1/Keepnotvoid.object.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StoryScripts/Keepnotvoid.object" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StoryScripts/Keepnotvoid.object.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AVGScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AVGScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CocktailScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CocktailScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/DialogueManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GlobalDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GlobalDataManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/SceneLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StoryData/DialogueEventModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StoryData/DialogueEventModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/AVGView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/AVGView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/GameStartView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/GameStartView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/TransitionBlackView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/TransitionBlackView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -405,7 +214,7 @@
       <workItem from="1716191235927" duration="66864000" />
       <workItem from="1716499383168" duration="30420000" />
       <workItem from="1716705497666" duration="466000" />
-      <workItem from="1716807300231" duration="63789000" />
+      <workItem from="1716807300231" duration="64729000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <option name="closed" value="true" />
@@ -783,7 +592,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716705936937</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="0530">
+      <option name="closed" value="true" />
+      <created>1717085508597</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1717085508597</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -823,7 +640,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="搭建了调酒界面" />
     <MESSAGE value="累计更新" />
     <MESSAGE value="预制体完成" />
     <MESSAGE value="还差酒量统计" />
@@ -848,7 +664,8 @@
     <MESSAGE value="05.20累积更新" />
     <MESSAGE value="修正UI，Phase I" />
     <MESSAGE value="0525累积更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="0525累积更新" />
+    <MESSAGE value="0530" />
+    <option name="LAST_COMMIT_MESSAGE" value="0530" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
