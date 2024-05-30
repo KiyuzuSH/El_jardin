@@ -37,13 +37,17 @@ namespace KiyuzuDev.ITGWDO.Core
 
         public void SetWorldStyle(WorldStyle targetStyle)
         {
-            PresentWorldStyle = targetStyle;
-            View.AVGView.Instance.ChangeToStyleView(PresentWorldStyle);
-        }
+            if(View.AVGView.Instance == null) {
+                Debug.LogWarning("Warning: Cannot change world style due to the absense of an instance of AVGView.");
+                return;
+            }
+            View.AVGView.Instance.ChangeToStyleView(targetStyle);
+			PresentWorldStyle = targetStyle;
+		}
 
         private void Start()
         {
-            // View.AVGView.Instance.ChangeToStyleView(PresentWorldStyle);
+            SetWorldStyle(PresentWorldStyle);
         }
     }
 }

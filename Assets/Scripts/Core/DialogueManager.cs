@@ -81,9 +81,9 @@ namespace KiyuzuDev.ITGWDO.Core
             LoadLineById(PresentLine.toLine);
         }
 
-        private void ProcessEventFore()
-        {
-            switch (PresentLine.eventFore.eventType)
+        private void ProcessEventFore() {
+			var args = PresentLine.eventFore.args;
+			switch (PresentLine.eventFore.eventType)
             {
                 case EnumDialogueEventType.None:
                     return;
@@ -91,20 +91,20 @@ namespace KiyuzuDev.ITGWDO.Core
                     // TODO: not used, write if used
                     break;
                 case EnumDialogueEventType.Style:
-                    Enum.TryParse(PresentLine.eventFore.args[0],out WorldStyle targetStyle);
+                    Enum.TryParse(args[0],out WorldStyle targetStyle);
                     GlobalDataManager.Instance.SetWorldStyle(targetStyle);
                     break;
                 case EnumDialogueEventType.CGLoad:
-                    switch (PresentLine.eventFore.args[0].ToLower())
+                    switch (args[0].ToLower())
                     {
                         case "full":
                             AVGBackgroundView.Instance.FullCGOn(
-                                Resources.Load<Sprite>(PresentLine.eventFore.args[1])
+                                Resources.Load<Sprite>(args[1])
                                 );
                             break;
                         case "part":
                             AVGBackgroundView.Instance.PartCGOn(
-                                Resources.Load<Sprite>(PresentLine.eventFore.args[1])
+                                Resources.Load<Sprite>(args[1])
                             );
                             break;
                     }
@@ -113,13 +113,17 @@ namespace KiyuzuDev.ITGWDO.Core
                     AVGBackgroundView.Instance.FullCGOff();
                     AVGBackgroundView.Instance.PartCGOff();
                     break;
-                case EnumDialogueEventType.BlackOn:
-
-                    break;
-                case EnumDialogueEventType.BlackOff:
-
-                    break;
-                case EnumDialogueEventType.HumanLoad:
+                case EnumDialogueEventType.BlackOn: {
+                        int duration = args.Length >= 1 ? int.Parse(args[0]) : 2;
+                        GameManager.Instance.FadeBlackScreenOpacity(1, duration);
+                        break;
+                    }
+                case EnumDialogueEventType.BlackOff: {
+                        int duration = args.Length >= 1 ? int.Parse(args[0]) : 2;
+                        GameManager.Instance.FadeBlackScreenOpacity(0, duration);
+					    break;
+					}
+				case EnumDialogueEventType.HumanLoad:
 
                     break;
                 case EnumDialogueEventType.HumanChangePos:
