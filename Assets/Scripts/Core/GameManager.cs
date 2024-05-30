@@ -24,14 +24,12 @@ namespace KiyuzuDev.ITGWDO.Core
         }
 
 		#region ºÚÆÁ
-		[SerializeField] private UnityEngine.UI.MaskableGraphic blackScreen;
+		[SerializeField] private CanvasGroup blackScreen;
 
         private float BlackScreenOpacity {
-            get => blackScreen.color.a;
+            get => blackScreen.alpha;
             set {
-                var color = Color.black;
-                color.a = value;
-                blackScreen.color = color;
+                blackScreen.alpha = value;
             }
         }
 
@@ -43,7 +41,6 @@ namespace KiyuzuDev.ITGWDO.Core
             float startOpacity = BlackScreenOpacity;
             for(float startTime = Time.time, t; (t = (Time.time - startTime) / duration) < 1; ) {
                 BlackScreenOpacity = Mathf.Lerp(startOpacity, opacity, t);
-                Debug.Log(BlackScreenOpacity);
                 yield return new WaitForEndOfFrame();
 			}
             BlackScreenOpacity = opacity;
