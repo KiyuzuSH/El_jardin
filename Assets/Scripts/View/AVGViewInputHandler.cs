@@ -22,10 +22,20 @@ namespace KiyuzuDev.ITGWDO.View {
 		/// </summary>
 		/// <remarks>
 		/// If the current line is rolling, immediately show all texts.</remarks>
-		public void EndLine() {
+		private void EndLine() {
 			var dialogue = Core.DialogueManager.Instance;
 			if(dialogue == null) {
 				Debug.LogWarning("Warning: Cannot end line because no dialogue manager is present.");
+				return;
+			}
+			if (AVGView.Instance._textTypewriter != null)
+			{
+				AVGView.Instance.SkipTextTypewriter();
+				return;
+			}
+			if (AVGView.Instance._mindTypewriter != null)
+			{
+				AVGView.Instance.SkipMindTypewriter();
 				return;
 			}
 

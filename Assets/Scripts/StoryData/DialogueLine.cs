@@ -29,4 +29,11 @@ namespace KiyuzuDev.ITGWDO.StoryData
         public DialogueEvent eventAfter;
         public int toLine;
     }
+
+    public enum EventPlace
+    {
+        Fore,
+        Main,
+        After,
+    }
 }

@@ -42,7 +42,8 @@ namespace KiyuzuDev.ITGWDO.Core
                 return;
             }
             View.AVGView.Instance.ChangeToStyleView(targetStyle);
-			PresentWorldStyle = targetStyle;
+			View.AVGBackgroundView.Instance.ChangeToStyleView(targetStyle);
+            PresentWorldStyle = targetStyle;
 		}
 
         private void Start()

@@ -11,6 +11,11 @@ namespace KiyuzuDev.ITGWDO.Core
 
         public static ScriptManager Instance { get; private set; }
         
+        private void Awake()
+        {
+            Instance = this;
+        }
+        
         private void OnDestroy()
         {
             Destroy(Instance);
@@ -19,43 +24,33 @@ namespace KiyuzuDev.ITGWDO.Core
         #endregion
         
         private List<StorySheet> storyList;
-
-        private void Awake()
+        
+        private void OnEnable()
         {
-            if (Instance == null) Instance = this;
-            else if (Instance != this)
-            {
-                Destroy(gameObject);
-                Instance = this;
-            }
-            
             storyList = Resources.LoadAll<StorySheet>("StorySO").ToList();
         }
 
-        public int StoryListSize => storyList.Count;
+        // public int StoryListSize => storyList.Count;
+        //
+        // public List<int> StoryIndexList()
+        // {
+        //     List<int> res = new List<int>();
+        //     foreach (StorySheet storySheet in storyList) res.Add(storySheet.storyId);
+        //     return res;
+        // }
 
-        public List<int> StoryIndexList()
-        {
-            List<int> res = new List<int>();
-            foreach (StorySheet storySheet in storyList) res.Add(storySheet.storyId);
-            return res;
-        }
+        // public StorySheet LoadStorySheetById(int id)
+        // {
+        //     foreach (StorySheet storySheet in storyList)
+        //         if (storySheet.storyId == id)
+        //             return storySheet;
+        //     return null;
+        // }
+        //
+        //  public DialogueLine LoadSpecificLine(int storyId, int lineId) 
+        //      => LoadStorySheetById(storyId).GetSpecificLine(lineId);
 
-        public StorySheet LoadStorySheetById(int id)
-        {
-            foreach (StorySheet storySheet in storyList)
-                if (storySheet.storyId == id)
-                    return storySheet;
-            return null;
-        }
-        
-        public DialogueLine LoadSpecificLine(int storyId, int lineId) 
-            => LoadStorySheetById(storyId).GetSpecificLine(lineId);
-
-        public DialogueLine LoadSpecificLine(int lineId)
-            => LoadSpecificLine(int.Parse(lineId.ToString().Substring(0, 1)), lineId);
-
-
-
+        public DialogueLine LoadSpecificLine(int lineId) 
+            => Resources.Load<DialogueLine>("StorySO/0531/" + lineId);
     }
 }

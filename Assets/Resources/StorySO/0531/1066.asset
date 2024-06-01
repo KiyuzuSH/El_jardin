@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbe1b3c835404e73b0d71265db59a868, type: 3}
+  m_Name: 1066
+  m_EditorClassIdentifier: 
+  lineId: 1066
+  DialogueLineType: 2
+  personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
+  content: "\u201C\u597D\u5566\u5FEB\u70B9\u4E0A\u9152\u5427\uFF0C\u4F20\u5947\u8C03\u9152\u5E08\uFF01\u201D\\n\u4ED6\u751A\u81F3\u5439\u4E86\u4E00\u58F0\u53E3\u54E8\u6765\u4E3A\u4F60\u5F00\u573A\u3002"
+  eventFore:
+    eventType: 0
+    args: []
+  eventMain:
+    eventType: 0
+    args: []
+  eventAfter:
+    eventType: 0
+    args: []
+  toLine: 1067

@@ -40,6 +40,7 @@ namespace KiyuzuDev.ITGWDO.View
             continuePicAnim = continuePic.GetComponent<Animator>();
             continuePicImg = continuePic.GetComponent<Image>();
             continuePic.SetActive(false);
+            mindContainer.SetActive(false);
         }
 
         #region 风格改变
@@ -51,6 +52,8 @@ namespace KiyuzuDev.ITGWDO.View
         [SerializeField] private GameObject nameBox;
         [SerializeField] private Image dialogueBox;
         [SerializeField] private GameObject continuePic;
+        [SerializeField] private Image mindImg;
+        [SerializeField] private Image announcerImg;
         private Image continuePicImg;
         private Animator continuePicAnim;
         [SerializeField] private Sprite modernDown;
@@ -66,6 +69,8 @@ namespace KiyuzuDev.ITGWDO.View
                     nameBox.GetComponent<Image>().sprite =
                         Resources.Load<Sprite>(pathModernSprites + "gui/modern_d_namebox");
                     dialogueBox.sprite = Resources.Load<Sprite>(pathModernSprites + "gui/modern_d_textbox");
+                    mindImg.sprite = Resources.Load<Sprite>(pathModernSprites + "gui/modern_mindbox");
+                    announcerImg.sprite = Resources.Load<Sprite>(pathModernSprites + "gui/modern_announcer");
                     continuePicImg.sprite = modernDown;
                     currentState = "modern_d_down_aniclip";
                     break;
@@ -73,6 +78,8 @@ namespace KiyuzuDev.ITGWDO.View
                     nameBox.GetComponent<Image>().sprite =
                         Resources.Load<Sprite>(pathRPGSprites + "gui/rpg_d_namebox");
                     dialogueBox.sprite = Resources.Load<Sprite>(pathRPGSprites + "gui/rpg_d_textbox");
+                    mindImg.sprite = Resources.Load<Sprite>(pathRPGSprites + "gui/rpg_mindbox");
+                    announcerImg.sprite = Resources.Load<Sprite>(pathRPGSprites + "gui/rpg_announcer");
                     continuePicImg.sprite = rpgDown;
                     currentState = "rpg_d_down_aniclip";
                     break;
@@ -80,6 +87,8 @@ namespace KiyuzuDev.ITGWDO.View
                     nameBox.GetComponent<Image>().sprite =
                         Resources.Load<Sprite>(pathUtopiaSprites + "gui/utopia_d_namebox");
                     dialogueBox.sprite = Resources.Load<Sprite>(pathUtopiaSprites + "gui/utopia_d_textbox");
+                    mindImg.sprite = Resources.Load<Sprite>(pathUtopiaSprites + "gui/utopia_mindbox");
+                    announcerImg.sprite = Resources.Load<Sprite>(pathUtopiaSprites + "gui/utopia_announcer");
                     continuePicImg.sprite = utopiaDown;
                     currentState = "utopia_d_down_aniclip";
                     break;
@@ -105,7 +114,7 @@ namespace KiyuzuDev.ITGWDO.View
         private static readonly string[] _uguiCloseSymbols = { "b", "i", "size", "color" };
         
         private string contentPassed;
-        private Coroutine _textTypewriter;
+        public Coroutine _textTypewriter;
 
         public void UpdateText(string personName, string content)
         {
@@ -206,12 +215,11 @@ namespace KiyuzuDev.ITGWDO.View
             // Can call a Complete back
         }
 
-        private void SkipTextTypewriter()
+        public void SkipTextTypewriter()
         {
             if (_textTypewriter == null) return;
             StopCoroutine(TextTypewriter());
             _textTypewriter = null;
-            continuePic.SetActive(true);
             textDialogue.text = contentPassed;
         }
         
@@ -239,7 +247,14 @@ namespace KiyuzuDev.ITGWDO.View
         [SerializeField] private TMP_Text textMind;
         
         private string mindPassed;
-        private Coroutine _mindTypewriter;
+        public Coroutine _mindTypewriter;
+
+        public bool ismindAva() => mindContainer.activeSelf;
+        
+        public void SetAvailable()
+        {
+            mindContainer.SetActive(true);
+        }
 
         public void UpdateMind(string mind)
         {
@@ -338,12 +353,11 @@ namespace KiyuzuDev.ITGWDO.View
             // Can call a Complete back
         }
 
-        private void SkipMindTypewriter()
+        public void SkipMindTypewriter()
         {
             if (_mindTypewriter == null) return;
             StopCoroutine(MindTypewriter());
             _mindTypewriter = null;
-            continuePic.SetActive(true);
             textMind.text = mindPassed;
         }
 
@@ -359,7 +373,7 @@ namespace KiyuzuDev.ITGWDO.View
         {
             string[] array = content.Split("\\n");
             titleLabel.text = array[1];
-            dayLabel.text = array[0];
+            dayLabel.text = array[0]; 
             announcerContainer.alpha = 1;
             Invoke(nameof(Invisible), 3);
         }
@@ -367,7 +381,7 @@ namespace KiyuzuDev.ITGWDO.View
         void Invisible() => 
             DOTween.To(
                 x => announcerContainer.alpha = x,
-                1, 0, 0.75f);
+                1, 0, 0.75f).SetAutoKill(true);
 
         #endregion
 
@@ -379,7 +393,15 @@ namespace KiyuzuDev.ITGWDO.View
         {
             for (int id = DialogueManager.PresentLineID + 1;; id++)
             {
+                var dLine = ScriptManager.Instance.LoadSpecificLine(id);
                 var btn = Instantiate(buttonChoicePrefab, gridButton);
+                btn.GetComponentInChildren<TMP_Text>().text = dLine.content;
+                btn.GetComponent<Button>().onClick.AddListener(
+                    delegate
+                    {
+                        OnChoiceClick(dLine.toLine);
+                    });
+                
                 switch (GlobalDataManager.Instance.PresentWorldStyle)
                 {
                     case WorldStyle.Modern:
@@ -395,18 +417,14 @@ namespace KiyuzuDev.ITGWDO.View
                             Resources.Load<Sprite>(pathUtopiaSprites + "gui/utopia_choicebutton");
                         break;
                 }
-                btn.GetComponentInChildren<TMP_Text>().text = ScriptManager.Instance.LoadSpecificLine(id).content;
-                btn.GetComponent<Button>().onClick.AddListener(
-                    delegate
-                    {
-                        OnChoiceClick(ScriptManager.Instance.LoadSpecificLine(id).toLine);
-                    });
+
                 if (ScriptManager.Instance.LoadSpecificLine(id + 1).DialogueLineType != EnumDialogueLineType.ChoiceLine) break;
             }
         }
         
         private void OnChoiceClick(int toId)
         {
+            Debug.Log("Clicked");
             DialogueManager.Instance.LoadLineById(toId);
             for (int i = 0; i < gridButton.childCount; i++) Destroy(gridButton.GetChild(i).gameObject);
             DialogueManager.Instance.ProcessLine();
@@ -450,6 +468,7 @@ namespace KiyuzuDev.ITGWDO.View
         
         private void OnMindChoiceClick(int toId)
         {
+            Debug.Log("Clicked");
             DialogueManager.Instance.LoadLineById(toId);
             for (int i = 0; i < gridMindButton.childCount; i++) Destroy(gridMindButton.GetChild(i).gameObject);
             DialogueManager.Instance.ProcessLine();
@@ -464,31 +483,15 @@ namespace KiyuzuDev.ITGWDO.View
 
         private void SetControlPicSwitch()
         {
-            if (_textTypewriter != null && _mindTypewriter != null)
+            if (_textTypewriter != null || _mindTypewriter != null)
             {
                 continuePic.SetActive(false);
             }
             else
             {
                 continuePic.SetActive(true);
+                continuePicAnim.Play(currentState);
             }
-        }
-        
-        
-
-        void OnContinue()
-        {
-            if (_textTypewriter != null)
-            {
-                SkipTextTypewriter();
-                return;
-            }
-            if (_mindTypewriter != null)
-            {
-                SkipMindTypewriter();
-                return;
-            }
-            // TODO: input to move to next line, should be a callback
         }
     }
 }

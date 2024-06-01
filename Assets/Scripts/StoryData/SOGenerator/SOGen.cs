@@ -30,7 +30,7 @@ public class SOGen : MonoBehaviour
 
     private void Start()
     {
-        CreateStoryAsset("Chap1");
+        CreateStoryAsset("0531");
     }
 
     private void CreateStoryAsset(string scriptFileName)
