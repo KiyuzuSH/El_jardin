@@ -21,7 +21,8 @@ namespace KiyuzuDev.ITGWDO.View {
 		/// End the current line and trigger the rest logic.
 		/// </summary>
 		/// <remarks>
-		/// If the current line is rolling, immediately show all texts.</remarks>
+		/// TODO: If the current line is rolling, immediately show all texts.
+		/// </remarks>
 		public void EndLine() {
 			var dialogue = Core.DialogueManager.Instance;
 			if(dialogue == null) {

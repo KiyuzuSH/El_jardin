@@ -24,8 +24,11 @@ namespace KiyuzuDev.ITGWDO.Core
         }
 
 		#region ºÚÆÁ
+        /// <summary>The UI canvas group for showing the black screen.</summary>
 		[SerializeField] private CanvasGroup blackScreen;
 
+        /// <summary>The internal interface for the black screen UI's opacity.</summary>
+        /// <remarks>Should not be exposed as public.</remarks>
         private float BlackScreenOpacity {
             get => blackScreen.alpha;
             set {
@@ -33,10 +36,17 @@ namespace KiyuzuDev.ITGWDO.Core
             }
         }
 
+        /// <summary>
+        /// Make the game screen fade to a certain alpha of black.
+        /// </summary>
+        /// <returns>The coroutine performing the fading.</returns>
         public Coroutine FadeBlackScreenOpacity(float opacity, float duration = .5f) {
             return StartCoroutine(FadeBlackScreenOpacityCoroutine(opacity, duration));
 		}
 
+        /// <summary>
+        /// The internal coroutine for fading the black screen's opacity.
+        /// </summary>
         private IEnumerator FadeBlackScreenOpacityCoroutine(float opacity, float duration = .5f) {
             float startOpacity = BlackScreenOpacity;
             for(float startTime = Time.time, t; (t = (Time.time - startTime) / duration) < 1; ) {
