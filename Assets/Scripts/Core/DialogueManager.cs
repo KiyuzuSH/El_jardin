@@ -13,55 +13,35 @@ namespace KiyuzuDev.ITGWDO.Core
         
         private void Awake()
         {
-            if (Instance == null) Instance = this;
-            else if (Instance != this)
-            {
-                Destroy(gameObject);
-                Instance = this;
-            }
-        }
-        
-        private void OnDestroy()
-        {
-            Destroy(Instance);
+            Instance = this;
         }
         
         #endregion
-        
-        public static DialogueLine PresentLine { get; private set; }
-        public static int PresentLineID { get; set; }
 
         private void Start()
         {
-            LoadLineById(1001);
+            ScriptManager.Instance.LoadLineByIdPresent(1001);
             ProcessLine();
-        }
-
-        public void LoadLineById(int id)
-        {
-            PresentLine = ScriptManager.Instance.LoadSpecificLine(id);
         }
         
         public void ProcessLine()
         {
-            PresentLineID = PresentLine.lineId;
-            if (PresentLineID == 1001) AVGBackgroundView.Instance.SetBlack();
-            if (PresentLineID == 1003) AVGBackgroundView.Instance.SetVisible();
-            if (PresentLineID > 1043 && !AVGView.Instance.ismindAva())
+            ScriptManager.Instance.SetPresentLineId();
+            if (ScriptManager.PresentLineID > 1043 && !AVGView.Instance.ismindAva())
                 AVGView.Instance.SetAvailable();
             ProcessEvent(EventPlace.Fore);
             ProcessEvent(EventPlace.Main);
-            switch (PresentLine.DialogueLineType)
+            switch (ScriptManager.PresentLine.DialogueLineType)
             {
                 case EnumDialogueLineType.TitleLine:
                     AVGView.Instance.UpdateText("","");
-                    AVGView.Instance.UpdateAnnouncementTitle(PresentLine.content);
+                    AVGView.Instance.UpdateAnnouncementTitle(ScriptManager.PresentLine.content);
                     return;
                 case EnumDialogueLineType.NarrationLine:
-                    AVGView.Instance.UpdateText(PresentLine.personName,PresentLine.content);
+                    AVGView.Instance.UpdateText(ScriptManager.PresentLine.personName,ScriptManager.PresentLine.content);
                     break;
                 case EnumDialogueLineType.MindLine:
-                    AVGView.Instance.UpdateMind(PresentLine.content);
+                    AVGView.Instance.UpdateMind(ScriptManager.PresentLine.content);
                     break;
                 case EnumDialogueLineType.ChooseLine:
                     AVGView.Instance.GenerateChoices();
@@ -74,7 +54,8 @@ namespace KiyuzuDev.ITGWDO.Core
                     Debug.Log("This is a control Line. ");
                     return;
                 case EnumDialogueLineType.GameLine:
-                    // TODO: Turn to Game Scene
+                    GlobalDataManager.Instance.NextLineID = ScriptManager.PresentLine.toLine;
+                    LegacySceneLoader.Instance.LoadScene("CocktailScene");
                     break;
             }
         }
@@ -82,7 +63,7 @@ namespace KiyuzuDev.ITGWDO.Core
         public void MoveNextLine()
         {
             ProcessEvent(EventPlace.After);
-            LoadLineById(PresentLine.toLine);
+            ScriptManager.Instance.SetLineDataPresent(ScriptManager.PresentLine.toLine);
         }
 
         private void ProcessEvent(EventPlace evtPlc)
@@ -92,16 +73,16 @@ namespace KiyuzuDev.ITGWDO.Core
             switch (evtPlc)
             {
                 case EventPlace.Fore:
-                    args = PresentLine.eventFore.args;
-                    type = PresentLine.eventFore.eventType;
+                    args = ScriptManager.PresentLine.eventFore.args;
+                    type = ScriptManager.PresentLine.eventFore.eventType;
                     break;
                 case EventPlace.Main:
-                    args = PresentLine.eventMain.args;
-                    type = PresentLine.eventMain.eventType;
+                    args = ScriptManager.PresentLine.eventMain.args;
+                    type = ScriptManager.PresentLine.eventMain.eventType;
                     break;
                 case EventPlace.After:
-                    args = PresentLine.eventAfter.args;
-                    type = PresentLine.eventAfter.eventType;
+                    args = ScriptManager.PresentLine.eventAfter.args;
+                    type = ScriptManager.PresentLine.eventAfter.eventType;
                     break;
             }
 			switch (type)
@@ -137,10 +118,6 @@ namespace KiyuzuDev.ITGWDO.Core
                             AVGBackgroundView.Instance.FullCGOff();
                             break;
                         case "part":
-                            AVGBackgroundView.Instance.PartCGOff();
-                            break;
-                        case "all":
-                            AVGBackgroundView.Instance.FullCGOff();
                             AVGBackgroundView.Instance.PartCGOff();
                             break;
                     }

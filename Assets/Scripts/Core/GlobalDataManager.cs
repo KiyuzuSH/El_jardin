@@ -29,26 +29,42 @@ namespace KiyuzuDev.ITGWDO.Core
         public WorldStyle PresentWorldStyle { get; private set; }
         public bool JalousieShutDown { get; private set; }
         
+        public int NextLineID { get; set; }
+        
+        public string DoneWineName { get; set; }
+        
+        // TODO: Wine DATA
+        
         private void OnEnable()
         {
-            JalousieShutDown = true;
+            JalousieShutDown = false;
             PresentWorldStyle = WorldStyle.Utopia;
         }
 
         public void SetWorldStyle(WorldStyle targetStyle)
         {
-            if(View.AVGView.Instance == null) {
-                Debug.LogWarning("Warning: Cannot change world style due to the absense of an instance of AVGView.");
-                return;
+            if(View.AVGView.Instance != null)
+            {
+                Debug.Log("Changed AVGView Style");
+                View.AVGView.Instance.ChangeToStyleView(targetStyle);
             }
-            View.AVGView.Instance.ChangeToStyleView(targetStyle);
-			View.AVGBackgroundView.Instance.ChangeToStyleView(targetStyle);
+            if(View.AVGBackgroundView.Instance != null)
+            {
+                Debug.Log("Changed AVGBackgroundView Style");
+                View.AVGBackgroundView.Instance.ChangeToStyleView(targetStyle);
+            }
             PresentWorldStyle = targetStyle;
 		}
 
         private void Start()
         {
             SetWorldStyle(PresentWorldStyle);
+        }
+
+        public void LoadLineOfDialogue(int id)
+        {
+            ScriptManager.Instance.LoadLineByIdPresent(id);
+            DialogueManager.Instance.ProcessLine();
         }
     }
 }

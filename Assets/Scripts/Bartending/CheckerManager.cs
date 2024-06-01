@@ -1,3 +1,4 @@
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
@@ -34,8 +35,8 @@ namespace KiyuzuDev.ITGWDO
 
         private void Start()
         {
-            infoPanel.SetActive(false);
-            warningPanel.SetActive(false);
+            infoPanel.GetComponent<CanvasGroup>().alpha = 0;
+            warningPanel.GetComponent<CanvasGroup>().alpha = 0;
         }
 
         private void CheckThings()
@@ -76,25 +77,25 @@ namespace KiyuzuDev.ITGWDO
         {
             totalAmount.text = WineManager.Instance.TotalVol.ToString();
             CheckThings();
-            if (Mathf.Approximately(Time.timeScale, 1.0f) 
-                && !infoPanel.activeSelf) 
-                infoPanel.SetActive(true);
+            if (Mathf.Approximately(Time.timeScale, 1.0f)) 
+                infoPanel.GetComponent<CanvasGroup>().alpha = 1;
         }
 
         private void OnMouseExit()
         {
             totalAmount.text = WineManager.Instance.TotalVol.ToString();
             CheckThings();
-            infoPanel.SetActive(false);
+            infoPanel.GetComponent<CanvasGroup>().alpha = 0;
         }
         
         public void ShowWarning(IngrType _type)
         {
-            if (warningPanel.activeInHierarchy)
+            if (warningPanel.GetComponent<CanvasGroup>().alpha > 0)
             {
                 CancelInvoke();
-                warningPanel.SetActive(false);
+                warningPanel.GetComponent<CanvasGroup>().alpha = 0;
             }
+
             switch (_type)
             {
                 case IngrType.Lemon:
@@ -122,10 +123,27 @@ namespace KiyuzuDev.ITGWDO
                     }
                     break;
             }
-            warningPanel.SetActive(true);
+
+            warningPanel.GetComponent<CanvasGroup>().alpha = 1;
             Invoke(nameof(DisableWarning),2);
         }
-        
-        private void DisableWarning() => warningPanel.SetActive(false);
+
+        public void FullWarning()
+        {
+            if (warningPanel.GetComponent<CanvasGroup>().alpha > 0)
+            {
+                CancelInvoke();
+                warningPanel.GetComponent<CanvasGroup>().alpha = 0;
+            }
+
+            warningPanel.GetComponentInChildren<TMP_Text>().text = "已达容量上限";
+            warningPanel.GetComponent<CanvasGroup>().alpha = 1;
+            Invoke(nameof(DisableWarning),2);
+        }
+
+        private void DisableWarning() => 
+            DOTween.To(
+                x => warningPanel.GetComponent<CanvasGroup>().alpha = x,
+                1, 0, 0.75f).SetAutoKill(true);
     }
 }

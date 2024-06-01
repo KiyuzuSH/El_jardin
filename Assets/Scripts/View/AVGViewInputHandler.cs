@@ -28,12 +28,12 @@ namespace KiyuzuDev.ITGWDO.View {
 				Debug.LogWarning("Warning: Cannot end line because no dialogue manager is present.");
 				return;
 			}
-			if (AVGView.Instance._textTypewriter != null)
+			if (AVGView.Instance.haveTextTypewriter)
 			{
 				AVGView.Instance.SkipTextTypewriter();
 				return;
 			}
-			if (AVGView.Instance._mindTypewriter != null)
+			if (AVGView.Instance.haveMindTypewriter)
 			{
 				AVGView.Instance.SkipMindTypewriter();
 				return;

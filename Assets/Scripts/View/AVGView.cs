@@ -33,8 +33,8 @@ namespace KiyuzuDev.ITGWDO.View
         
         private void OnEnable()
         {
-            _textTypewriter = null;
-            _mindTypewriter = null;
+            haveTextTypewriter = false;
+            haveMindTypewriter = false;
             if (TextTimePerChar < 0f) TextTimePerChar = 0.1f;
             if (MindTimePerChar < 0f) MindTimePerChar = 0.1f;
             continuePicAnim = continuePic.GetComponent<Animator>();
@@ -114,7 +114,7 @@ namespace KiyuzuDev.ITGWDO.View
         private static readonly string[] _uguiCloseSymbols = { "b", "i", "size", "color" };
         
         private string contentPassed;
-        public Coroutine _textTypewriter;
+        public bool haveTextTypewriter;
 
         public void UpdateText(string personName, string content)
         {
@@ -122,7 +122,8 @@ namespace KiyuzuDev.ITGWDO.View
             if (personName == "") UnshowNameBox();
             else ShowNameBox(personName);
             continuePic.SetActive(false);
-            _textTypewriter = StartCoroutine(TextTypewriter(contentPassed));
+            haveTextTypewriter = true;
+            StartCoroutine(TextTypewriter(contentPassed));
         }
         
         private IEnumerator TextTypewriter(string _text = "")
@@ -210,16 +211,19 @@ namespace KiyuzuDev.ITGWDO.View
                 textDialogue.text = _tmpText + (tagOpened ? $"</{tagType}>" : "");
                 yield return new WaitForSeconds(TextTimePerChar);
             }
-            _textTypewriter = null;
+            haveTextTypewriter = false;
             continuePic.SetActive(true);
+            continuePicAnim.Play(currentState);
             // Can call a Complete back
         }
 
         public void SkipTextTypewriter()
         {
-            if (_textTypewriter == null) return;
+            if (haveTextTypewriter == false) return;
             StopCoroutine(TextTypewriter());
-            _textTypewriter = null;
+            haveTextTypewriter = false;
+            continuePic.SetActive(true);
+            continuePicAnim.Play(currentState);
             textDialogue.text = contentPassed;
         }
         
@@ -247,7 +251,7 @@ namespace KiyuzuDev.ITGWDO.View
         [SerializeField] private TMP_Text textMind;
         
         private string mindPassed;
-        public Coroutine _mindTypewriter;
+        public bool haveMindTypewriter;
 
         public bool ismindAva() => mindContainer.activeSelf;
         
@@ -260,7 +264,8 @@ namespace KiyuzuDev.ITGWDO.View
         {
             mindPassed = mind.Replace("\\n", "\n").Replace("\\t","\t");
             continuePic.SetActive(false);
-            _mindTypewriter = StartCoroutine(MindTypewriter(mindPassed));
+            haveMindTypewriter = true;
+            StartCoroutine(MindTypewriter(mindPassed));
         }
 
         private IEnumerator MindTypewriter(string _text = "")
@@ -348,16 +353,19 @@ namespace KiyuzuDev.ITGWDO.View
                 textMind.text = _tmpText + (tagOpened ? $"</{tagType}>" : "");
                 yield return new WaitForSeconds(MindTimePerChar);
             }
-            _mindTypewriter = null;
+            haveMindTypewriter = false;
             continuePic.SetActive(true);
+            continuePicAnim.Play(currentState);
             // Can call a Complete back
         }
 
         public void SkipMindTypewriter()
         {
-            if (_mindTypewriter == null) return;
+            if (haveMindTypewriter == false) return;
             StopCoroutine(MindTypewriter());
-            _mindTypewriter = null;
+            haveMindTypewriter = false;
+            continuePic.SetActive(true);
+            continuePicAnim.Play(currentState);
             textMind.text = mindPassed;
         }
 
@@ -391,9 +399,9 @@ namespace KiyuzuDev.ITGWDO.View
         [SerializeField] private GameObject buttonChoicePrefab;
         public void GenerateChoices()
         {
-            for (int id = DialogueManager.PresentLineID + 1;; id++)
+            for (int id = ScriptManager.PresentLineID + 1;; id++)
             {
-                var dLine = ScriptManager.Instance.LoadSpecificLine(id);
+                var dLine = ScriptManager.Instance.LoadLineDataPresent(id);
                 var btn = Instantiate(buttonChoicePrefab, gridButton);
                 btn.GetComponentInChildren<TMP_Text>().text = dLine.content;
                 btn.GetComponent<Button>().onClick.AddListener(
@@ -418,14 +426,15 @@ namespace KiyuzuDev.ITGWDO.View
                         break;
                 }
 
-                if (ScriptManager.Instance.LoadSpecificLine(id + 1).DialogueLineType != EnumDialogueLineType.ChoiceLine) break;
+                if (ScriptManager.Instance.LoadLineDataPresent(id + 1).DialogueLineType != EnumDialogueLineType.ChoiceLine) break;
             }
         }
         
         private void OnChoiceClick(int toId)
         {
             Debug.Log("Clicked");
-            DialogueManager.Instance.LoadLineById(toId);
+            ScriptManager.Instance.SetLineDataPresent(toId);
+            DialogueManager.Instance.ProcessLine();
             for (int i = 0; i < gridButton.childCount; i++) Destroy(gridButton.GetChild(i).gameObject);
             DialogueManager.Instance.ProcessLine();
         }
@@ -438,7 +447,7 @@ namespace KiyuzuDev.ITGWDO.View
         [SerializeField] private GameObject buttonMindChoicePrefab;
         public void GenerateMindChoices()
         {
-            for (int id = DialogueManager.PresentLineID + 1;; id++)
+            for (int id = ScriptManager.PresentLineID + 1;; id++)
             {
                 var btn = Instantiate(buttonMindChoicePrefab, gridMindButton);
                 switch (GlobalDataManager.Instance.PresentWorldStyle)
@@ -456,42 +465,24 @@ namespace KiyuzuDev.ITGWDO.View
                             Resources.Load<Sprite>(pathUtopiaSprites + "gui/utopia_choicebutton");
                         break;
                 }
-                btn.GetComponentInChildren<TMP_Text>().text = ScriptManager.Instance.LoadSpecificLine(id).content;
+                btn.GetComponentInChildren<TMP_Text>().text = ScriptManager.Instance.LoadLineDataPresent(id).content;
                 btn.GetComponent<Button>().onClick.AddListener(
                     delegate
                     {
-                        OnMindChoiceClick(ScriptManager.Instance.LoadSpecificLine(id).toLine);
+                        OnMindChoiceClick(ScriptManager.Instance.LoadLineDataPresent(id).toLine);
                     });
-                if (ScriptManager.Instance.LoadSpecificLine(id + 1).DialogueLineType != EnumDialogueLineType.ChoiceLine) break;
+                if (ScriptManager.Instance.LoadLineDataPresent(id + 1).DialogueLineType != EnumDialogueLineType.ChoiceLine) break;
             }
         }
         
         private void OnMindChoiceClick(int toId)
         {
             Debug.Log("Clicked");
-            DialogueManager.Instance.LoadLineById(toId);
+            ScriptManager.Instance.SetLineDataPresent(toId);
             for (int i = 0; i < gridMindButton.childCount; i++) Destroy(gridMindButton.GetChild(i).gameObject);
             DialogueManager.Instance.ProcessLine();
         }
 
         #endregion
-        
-        private void Update()
-        {
-            SetControlPicSwitch();
-        }
-
-        private void SetControlPicSwitch()
-        {
-            if (_textTypewriter != null || _mindTypewriter != null)
-            {
-                continuePic.SetActive(false);
-            }
-            else
-            {
-                continuePic.SetActive(true);
-                continuePicAnim.Play(currentState);
-            }
-        }
     }
 }

@@ -72,20 +72,6 @@ namespace KiyuzuDev.ITGWDO.View
             }
         }
 
-        public void SetBlack()
-        {
-            interiorPic.color = Color.black;
-            outsidePic.color = Color.black;
-            jalousiePic.GetComponent<Image>().color = Color.black;
-        }
-        
-        public void SetVisible()
-        {
-            interiorPic.color = Color.white;
-            outsidePic.color = Color.white;
-            jalousiePic.GetComponent<Image>().color = Color.white;
-        }
-
         #endregion
         
         #region 大小CG显隐

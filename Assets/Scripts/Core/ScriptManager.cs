@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using KiyuzuDev.ITGWDO.StoryData;
@@ -15,42 +16,69 @@ namespace KiyuzuDev.ITGWDO.Core
         {
             Instance = this;
         }
-        
-        private void OnDestroy()
-        {
-            Destroy(Instance);
-        }
 
         #endregion
         
         private List<StorySheet> storyList;
+
+        private StorySheet _presentStory;
+        public StorySheet PresentStory
+        {
+            get => _presentStory;
+            private set => _presentStory = value;
+        }
+
+        public int PresentStoryId { get; set; }
+
+        public int StoryListSize => storyList.Count;
         
         private void OnEnable()
         {
             storyList = Resources.LoadAll<StorySheet>("StorySO").ToList();
         }
 
-        // public int StoryListSize => storyList.Count;
-        //
-        // public List<int> StoryIndexList()
-        // {
-        //     List<int> res = new List<int>();
-        //     foreach (StorySheet storySheet in storyList) res.Add(storySheet.storyId);
-        //     return res;
-        // }
+        private void Start()
+        {
+            PresentStory = storyList[0];
+            PresentStoryId = storyList[0].storyId;
+            LoadIDs();
+        }
 
-        // public StorySheet LoadStorySheetById(int id)
-        // {
-        //     foreach (StorySheet storySheet in storyList)
-        //         if (storySheet.storyId == id)
-        //             return storySheet;
-        //     return null;
-        // }
-        //
-        //  public DialogueLine LoadSpecificLine(int storyId, int lineId) 
-        //      => LoadStorySheetById(storyId).GetSpecificLine(lineId);
+        private void LoadIDs(){}
+        
+        private void UpdateStory(int id)
+        {
+            foreach (var sheet in storyList)
+            {
+                if (sheet.storyId == id)
+                {
+                    PresentStory = sheet;
+                    PresentStoryId = id;
+                }
+            }
+        }
+        
+        public static DialogueLine PresentLine { get; private set; }
+        public static int PresentLineID { get; private set; }
 
-        public DialogueLine LoadSpecificLine(int lineId) 
-            => Resources.Load<DialogueLine>("StorySO/0531/" + lineId);
+        public StorySheet LoadStorySheetById(int id)
+        {
+            foreach (StorySheet storySheet in storyList)
+                if (storySheet.storyId == id)
+                    return storySheet;
+            return null;
+        }
+
+        public void LoadLineById(int storyId, int lineId) 
+            => PresentLine = LoadStorySheetById(storyId).dialogueLines[lineId];
+
+        public void SetPresentLineId() => PresentStoryId = PresentLine.lineId;
+        
+        public void LoadLineByIdPresent(int lineId) => PresentLine = PresentStory.dialogueLines[lineId];
+
+        public DialogueLine LoadLineDataPresent(int lineId) => PresentStory.dialogueLines[lineId];
+
+        public void SetLineDataPresent(int lineId) => PresentLine = PresentStory.dialogueLines[lineId];
+
     }
 }
