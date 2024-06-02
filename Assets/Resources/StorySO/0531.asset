@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6935cf741b27b1041807ece064c65808, type: 3}
   m_Name: 0531
   m_EditorClassIdentifier: 
-  storyId: 1
+  storyId: X
   dialogueLines:
-  - lineId: 1001
+  - lineId: 1
     DialogueLineType: 0
     personName: 
     content: "\u68A6\u4E2D\\n\u5F03\u6211\u53BB\u8005"
@@ -27,38 +27,40 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1002
-  - lineId: 1002
+    toLine: 2
+  - lineId: 2
     DialogueLineType: 1
     personName: "\uFF1F\uFF1F"
     content: "\u201C\u55E8\uFF0C\u9192\u9192\u3002\u201D"
     eventFore:
-      eventType: 0
-      args: []
+      eventType: 5
+      args:
+      - 0.01
     eventMain:
       eventType: 0
       args: []
     eventAfter:
-      eventType: 0
-      args: []
-    toLine: 1003
-  - lineId: 1003
+      eventType: 3
+      args:
+      - full
+      - Sprites/CG/Train
+    toLine: 3
+  - lineId: 3
     DialogueLineType: 1
     personName: 
     content: "\u4ED6\u5F88\u8F7B\u5730\u89E6\u78B0\u4F60\uFF0C\u597D\u50CF\u5E76\u4E0D\u662F\u4E3A\u4E86\u5B8C\u5168\u53EB\u9192\u4F60\u3002"
     eventFore:
-      eventType: 3
+      eventType: 6
       args:
-      - full
-      - Sprites/CG/Train.png
+      - 0.5
     eventMain:
       eventType: 0
       args: []
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1004
-  - lineId: 1004
+    toLine: 4
+  - lineId: 4
     DialogueLineType: 1
     personName: 
     content: "\u4F60\u7684\u773C\u76AE\u5F88\u6C89\u3002"
@@ -71,8 +73,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1005
-  - lineId: 1005
+    toLine: 5
+  - lineId: 5
     DialogueLineType: 1
     personName: 
     content: "\u4ED6\u9519\u8EAB\u4ECE\u524D\u6392\u7684\u5EA7\u4F4D\u548C\u4F60\u4E4B\u95F4\u6324\u8FC7\uFF0C\u7136\u540E\u62FF\u4E0A\u5916\u5957\uFF0C\\n\u4F60\u542C\u89C1\u5E03\u6599\u6469\u6332\u7684\u58F0\u97F3\u3002\u4ED6\u6234\u4E0A\u56F4\u5DFE\uFF0C\u5916\u9762\u5F88\u51B7\u3002"
@@ -85,8 +87,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1006
-  - lineId: 1006
+    toLine: 6
+  - lineId: 6
     DialogueLineType: 1
     personName: 
     content: "\u800C\u8F66\u53A2\u91CC\u5F88\u6696\u548C\u3002\u4F60\u7684\u8EAB\u4F53\u5F88\u6C89\u3002\u4F60\u7684\u5185\u5FC3\u5728\u5C16\u53EB\uFF0C\\n\u5FC5\u987B\u62E6\u4E0B\u4ED6\uFF0C\u5FC5\u987B\uFF0C\u5FC5\u987B\u3002\u4E0D\u80FD\u8BA9\u4ED6\u4E0B\u8F66\uFF0C"
@@ -99,8 +101,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1007
-  - lineId: 1007
+    toLine: 7
+  - lineId: 7
     DialogueLineType: 1
     personName: 
     content: "\u5947\u602A\uFF0C\u662F\u4E0B\u8F66\u8FD8\u662F\u4E0A\u8F66\uFF1F\u4F60\u8BB0\u4E0D\u6E05\u4E86\uFF0C\u56E0\u4E3A\u4F60\u53CD\u53CD\u590D\u590D\u5730\u505A\u8FD9\u4E2A\u68A6\u3002\\n\u6709\u65F6\u4ED6\u534A\u9014\u4E0B\u8F66\uFF0C\u6709\u65F6\u4F60\u53BB\u7AD9\u53F0\u9001\u4ED6\u3002\u4ED6\u603B\u662F\u6084\u6084\u5730\u6E9C\u8D70\u4E86\u4F3C\u7684\uFF0C\\n\u4F60\u4EEC\u597D\u50CF\u4E00\u6B21\u4E5F\u6CA1\u6709\u9053\u522B\u3002"
@@ -113,8 +115,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1008
-  - lineId: 1008
+    toLine: 8
+  - lineId: 8
     DialogueLineType: 1
     personName: 
     content: "\u4F60\u7684\u5185\u5FC3\u5728\u5C16\u53EB\uFF0C\u4F46\u662F\u8F66\u53A2\u91CC\u5F88\u6E29\u6696\u3002\u8EAB\u4F53\u5F88\u6C89\uFF0C\u4F60\u8FDE\u624B\u6307\u5934\u90FD\u52A8\u4E0D\u4E86\u3002"
@@ -127,8 +129,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1009
-  - lineId: 1009
+    toLine: 9
+  - lineId: 9
     DialogueLineType: 1
     personName: 
     content: "\u95E8\u5173\u4E86\uFF0C\u4F60\u77E5\u9053\u4ED6\u4E0B\u8F66\u4E86\u3002"
@@ -141,22 +143,23 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1010
-  - lineId: 1010
+    toLine: 10
+  - lineId: 10
     DialogueLineType: 1
     personName: 
     content: "\u8F66\u53A2\u91CC\u5F00\u59CB\u4E0B\u96EA\u4E86\uFF0C\u4F60\u7684\u773C\u524D\u4E00\u7247\u6F06\u9ED1\u3002"
     eventFore:
-      eventType: 0
-      args: []
+      eventType: 5
+      args:
+      - 0.6
     eventMain:
       eventType: 0
       args: []
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1011
-  - lineId: 1011
+    toLine: 11
+  - lineId: 11
     DialogueLineType: 1
     personName: 
     content: "\u4E16\u754C\u65E0\u8FB9\u65E0\u9645\u3002\u7A7A\u65E0\u4E00\u7269\u3002"
@@ -168,9 +171,10 @@ MonoBehaviour:
       args: []
     eventAfter:
       eventType: 0
-      args: []
-    toLine: 1012
-  - lineId: 1012
+      args:
+      - full
+    toLine: 12
+  - lineId: 12
     DialogueLineType: 1
     personName: 
     content: "\u4F1A\u4E0D\u4F1A\u662F\u4F60\u68A6\u5230\u4E86\u4E00\u5207\u3001\u6240\u6709\u7684\u4E00\u5207\uFF1F"
@@ -183,38 +187,38 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1013
-  - lineId: 1013
+    toLine: 13
+  - lineId: 13
     DialogueLineType: 6
     personName: 
     content: 
     eventFore:
-      eventType: 5
-      args: []
+      eventType: 6
+      args:
+      - 0.5
     eventMain:
-      eventType: 0
-      args: []
+      eventType: 2
+      args:
+      - Utopia
     eventAfter:
       eventType: 0
-      args:
-      - full
-    toLine: 1014
-  - lineId: 1014
+      args: []
+    toLine: 14
+  - lineId: 14
     DialogueLineType: 0
     personName: 
     content: "Day1|\u4E4C\u5E87\u4E9A\\n\u9910\u524D\u9152"
     eventFore:
-      eventType: 2
-      args:
-      - Utopia
+      eventType: 0
+      args: []
     eventMain:
       eventType: 0
       args: []
     eventAfter:
-      eventType: 6
+      eventType: 0
       args: []
-    toLine: 1015
-  - lineId: 1015
+    toLine: 15
+  - lineId: 15
     DialogueLineType: 1
     personName: "\u8B66\u5458"
     content: "\u665A\u4E0A\u597D\uFF0C\u8001\u677F\u3002"
@@ -222,15 +226,15 @@ MonoBehaviour:
       eventType: 7
       args:
       - 0
-      - Utopia_Police.png
+      - Utopia_Police
     eventMain:
       eventType: 0
       args: []
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1016
-  - lineId: 1016
+    toLine: 16
+  - lineId: 16
     DialogueLineType: 1
     personName: "\u8B66\u5458"
     content: "\u6708\u4E4B\u8282\u6109\u5FEB\u3002\u5F88\u9AD8\u5174\u770B\u5230\u4F60\u8FD8\u6D3B\u7740\u3002"
@@ -243,8 +247,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1017
-  - lineId: 1017
+    toLine: 17
+  - lineId: 17
     DialogueLineType: 3
     personName: 
     content: 
@@ -258,7 +262,7 @@ MonoBehaviour:
       eventType: 0
       args: []
     toLine: 0
-  - lineId: 1018
+  - lineId: 18
     DialogueLineType: 5
     personName: 
     content: "\u201C\u2026\u2026\u8BF7\u95EE\u4F60\u662F\uFF1F\u201D"
@@ -271,8 +275,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1020
-  - lineId: 1019
+    toLine: 20
+  - lineId: 19
     DialogueLineType: 5
     personName: 
     content: "\u201C\u6682\u65F6\u8FD8\u6B7B\u4E0D\u4E86\u3002\u201D"
@@ -285,8 +289,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1039
-  - lineId: 1020
+    toLine: 39
+  - lineId: 20
     DialogueLineType: 1
     personName: 
     content: "\u7B28\u86CB\u3002\u5F88\u663E\u7136\uFF0C\\n\u6709\u4E2A\u4EBA\u8DDF\u4F60\u5957\u8FD1\u4E4E\uFF0C\u4F46\u4F60\u60F3\u4E0D\u8D77\u4ED6\u662F\u8C01\u4E86\u3002\\n\u4E00\u822C\u6765\u8BF4\uFF0C\u4F60\u5C31\u4E0D\u80FD\u5047\u88C5\u8BA4\u8BC6\u4ED6\u5417\uFF1F"
@@ -299,8 +303,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1021
-  - lineId: 1021
+    toLine: 21
+  - lineId: 21
     DialogueLineType: 1
     personName: 
     content: "\u4F60\u8BE5\u4E0D\u4F1A\u8FDE\u4F60\u5931\u5FC6\u4E86\u8FD9\u4EF6\u4E8B\u672C\u8EAB\u4E5F\u5FD8\u6389\u4E86\u5427\uFF1F"
@@ -313,8 +317,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1022
-  - lineId: 1022
+    toLine: 22
+  - lineId: 22
     DialogueLineType: 3
     personName: 
     content: 
@@ -328,7 +332,7 @@ MonoBehaviour:
       eventType: 0
       args: []
     toLine: 0
-  - lineId: 1023
+  - lineId: 23
     DialogueLineType: 5
     personName: 
     content: "\u2026\u2026\u8BF7\u95EE\u4F60\u53C8\u662F\uFF1F"
@@ -341,8 +345,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1025
-  - lineId: 1024
+    toLine: 25
+  - lineId: 24
     DialogueLineType: 5
     personName: 
     content: "\uFF08\u4FDD\u6301\u6C89\u9ED8\uFF09"
@@ -355,8 +359,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1036
-  - lineId: 1025
+    toLine: 36
+  - lineId: 25
     DialogueLineType: 1
     personName: 
     content: "\u5B8C\u4E86\uFF0C\u5168\u5B8C\u4E86\uFF0C\u770B\u8D77\u6765\u6C38\u591C\u7EC8\u4E8E\u628A\u4F60\u7684\u8111\u5B50\u5F7B\u5E95\u70E7\u574F\u4E86\u3002"
@@ -369,8 +373,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1026
-  - lineId: 1026
+    toLine: 26
+  - lineId: 26
     DialogueLineType: 1
     personName: 
     content: "\u8BA9\u6211\u9759\u4E00\u9759\uFF0C\u522B\u518D\u8BF4\u8822\u8BDD\u4E86\u3002\\n\u53E6\u5916\uFF0C\u4F60\u53EF\u4EE5\u628A\u6211\u7406\u89E3\u6210\u5E7B\u89C9\u3002\\n\u6240\u4EE5\u6700\u597D\u4E0D\u8981\u5728\u522B\u4EBA\u773C\u76AE\u5E95\u4E0B\u548C\u6211\u8FD9\u4E2A\u4E0D\u5B58\u5728\u7684\u5E7B\u89C9\u8BB2\u8BDD\uFF0C\u660E\u767D\u5417\uFF1F"
@@ -383,8 +387,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1027
-  - lineId: 1027
+    toLine: 27
+  - lineId: 27
     DialogueLineType: 3
     personName: 
     content: 
@@ -398,7 +402,7 @@ MonoBehaviour:
       eventType: 0
       args: []
     toLine: 0
-  - lineId: 1028
+  - lineId: 28
     DialogueLineType: 5
     personName: 
     content: "\u201C\u597D\u7684\u3002\u201D"
@@ -411,8 +415,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1031
-  - lineId: 1029
+    toLine: 31
+  - lineId: 29
     DialogueLineType: 5
     personName: 
     content: "\u201C\u662F\u4F60\u5148\u5411\u6211\u642D\u8BDD\u7684\u3002\u201D"
@@ -425,8 +429,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1031
-  - lineId: 1030
+    toLine: 31
+  - lineId: 30
     DialogueLineType: 5
     personName: 
     content: "\uFF08\u4FDD\u6301\u6C89\u9ED8\uFF09"
@@ -439,8 +443,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1034
-  - lineId: 1031
+    toLine: 34
+  - lineId: 31
     DialogueLineType: 1
     personName: 
     content: "\u4F60\u542C\u5230\u4E86\u6454\u95E8\u58F0\u548C\u91CD\u91CD\u7684\u811A\u6B65\u58F0\uFF0C\u5728\u4F60\u7684\u8111\u6D77\u91CC\u3002"
@@ -453,8 +457,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1032
-  - lineId: 1032
+    toLine: 32
+  - lineId: 32
     DialogueLineType: 1
     personName: 
     content: "\u5C31\u50CF\u4F60\u8111\u5B50\u91CC\u6709\u4E00\u4F4D\u4EFB\u6027\u7684\u5E7B\u60F3\u670B\u53CB\uFF0C\\n\u8FD8\u6709\u4E00\u4E2A\u5C5E\u4E8E\u4ED6\u7684\u5E7B\u60F3\u51FA\u6765\u7684\u623F\u95F4\uFF0C\\n\u73B0\u5728\u4ED6\u6C14\u5F97\u8D70\u5F00\u4E86\u3002"
@@ -467,8 +471,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1033
-  - lineId: 1033
+    toLine: 33
+  - lineId: 33
     DialogueLineType: 1
     personName: 
     content: "\u8FD9\u6837\u4F60\u5C31\u80FD\u4E13\u5FC3\u5E94\u5BF9\u773C\u524D\u5B9E\u5B9E\u5728\u5728\u7684\u5BA2\u4EBA\u4E86\u3002"
@@ -481,8 +485,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1046
-  - lineId: 1034
+    toLine: 46
+  - lineId: 34
     DialogueLineType: 1
     personName: 
     content: "\u5F88\u597D\uFF0C\u4F60\u542C\u4ECE\u4E86\u529D\u544A\u3002"
@@ -495,8 +499,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1035
-  - lineId: 1035
+    toLine: 35
+  - lineId: 35
     DialogueLineType: 1
     personName: 
     content: "\u8BE5\u4E13\u5FC3\u5E94\u5BF9\u773C\u524D\u5B9E\u5B9E\u5728\u5728\u7684\u5BA2\u4EBA\u4E86\u3002"
@@ -509,8 +513,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1046
-  - lineId: 1036
+    toLine: 46
+  - lineId: 36
     DialogueLineType: 1
     personName: 
     content: "\u4F60\u6CA1\u6709\u770B\u5230\u7B2C\u4E8C\u4F4D\u8BF4\u8BDD\u8005\uFF0C\u4ED6\u6E90\u81EA\u4E8E\u4F60\u7684\u5E7B\u60F3\u3002"
@@ -523,8 +527,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1037
-  - lineId: 1037
+    toLine: 37
+  - lineId: 37
     DialogueLineType: 1
     personName: 
     content: "\u542C\u8D77\u6765\u5F88\u75AF\u72C2\uFF0C\u4F46\u81F3\u5C11\u4ED6\u7684\u63D0\u9192\u662F\u5BF9\u7684\u3002\\n\u4F60\u4E0D\u8BB0\u5F97\u5E38\u8BC6\u4EE5\u5916\u7684\u4EFB\u4F55\u4E1C\u897F\uFF0C\u5374\u88AB\u8981\u6C42\u7ECF\u8425\u8FD9\u5BB6\u9152\u9986\u3002"
@@ -537,8 +541,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1038
-  - lineId: 1038
+    toLine: 38
+  - lineId: 38
     DialogueLineType: 1
     personName: 
     content: "\u6700\u597D\u5C0F\u5FC3\u884C\u4E8B\u3002"
@@ -551,8 +555,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1046
-  - lineId: 1039
+    toLine: 46
+  - lineId: 39
     DialogueLineType: 1
     personName: 
     content: "\u806A\u660E\u7684\u56DE\u7B54\u3002\u987A\u7740\u4ED6\u7684\u8BDD\u8BF4\u4E0B\u53BB\u3002"
@@ -565,8 +569,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1040
-  - lineId: 1040
+    toLine: 40
+  - lineId: 40
     DialogueLineType: 1
     personName: 
     content: "\u56E0\u4E3A\u4F60\u6839\u672C\u5C31\u4E0D\u8BA4\u8BC6\u8FD9\u4F4D\u5BA2\u4EBA\uFF0C\u4F60\u4E0D\u8BA4\u8BC6\u4EFB\u4F55\u4EBA\u3002"
@@ -579,8 +583,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1041
-  - lineId: 1041
+    toLine: 41
+  - lineId: 41
     DialogueLineType: 1
     personName: 
     content: "\u4E0A\u5468\u53D1\u751F\u4E86\u4E00\u4E9B\u5C0F\u4E8B\u6545\uFF0C\u8BA9\u4F60\u5931\u53BB\u4E86\u5E38\u8BC6\u4E4B\u5916\u7684\u4E00\u5207\u8BB0\u5FC6\u3002"
@@ -593,8 +597,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1042
-  - lineId: 1042
+    toLine: 42
+  - lineId: 42
     DialogueLineType: 1
     personName: 
     content: "\u4ED6\u53EB\u4F60\u201C\u8001\u677F\u201D\uFF0C\u6240\u4EE5\u4ED6\u5E94\u8BE5\u662F\u5E38\u5BA2\u3002"
@@ -607,8 +611,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1043
-  - lineId: 1043
+    toLine: 43
+  - lineId: 43
     DialogueLineType: 1
     personName: 
     content: "\u9057\u61BE\u7684\u662F\uFF0C\u5176\u5B9E\u4F60\u4E0D\u662F\u8FD9\u95F4\u9152\u9986\u7684\u8001\u677F\uFF0C\\n\u4F60\u53EA\u662F\u4E00\u4F4D\u5DE5\u4F5C\u662F\u201C\u5047\u88C5\u8001\u677F\u201D\u7684\u5458\u5DE5\u800C\u5DF2\u3002"
@@ -621,8 +625,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1044
-  - lineId: 1044
+    toLine: 44
+  - lineId: 44
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u201C\u771F\u5012\u9709\uFF0C\u5982\u679C\u53D1\u73B0\u81EA\u5DF1\u5931\u5FC6\u524D\u662F\u767E\u4E07\u5BCC\u7FC1\u8BE5\u591A\u597D\u554A\u3002\u201D"
@@ -635,8 +639,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1045
-  - lineId: 1045
+    toLine: 45
+  - lineId: 45
     DialogueLineType: 1
     personName: 
     content: "\u5618\uFF0C\u522B\u642D\u7406\u4ED6\u3002"
@@ -649,8 +653,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1046
-  - lineId: 1046
+    toLine: 46
+  - lineId: 46
     DialogueLineType: 1
     personName: "\u8B66\u5458"
     content: "\u60A8\u8FD8\u662F\u8FD9\u4E48\u7231\u5F00\u73A9\u7B11\u3002"
@@ -663,8 +667,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1047
-  - lineId: 1047
+    toLine: 47
+  - lineId: 47
     DialogueLineType: 1
     personName: "\u8B66\u5458"
     content: "\u90A3\u4E48\u2026\u2026"
@@ -677,8 +681,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1048
-  - lineId: 1048
+    toLine: 48
+  - lineId: 48
     DialogueLineType: 1
     personName: 
     content: "\u62DC\u6258\uFF0C\u522B\u70B9\u9152\uFF0C\u4F60\u6839\u672C\u4E0D\u8BB0\u5F97\u4EC0\u4E48\u914D\u65B9\uFF01\\n\u5B9E\u5728\u8981\u70B9\u7684\u8BDD\uFF0C\u81F3\u5C11\u522B\u8BF4\u201C\u8001\u89C4\u77E9\u201D\uFF0C\u90A3\u79CD\u81EA\u6211\u4E2D\u5FC3\u7684\u5BA2\u4EBA\u6700\u8BA8\u538C\u4E86\uFF01\\n\u6839\u672C\uFF01\u6CA1\u4EBA\uFF01\u8BB0\u5F97\u4F60\u4EEC\u7231\u559D\u4EC0\u4E48\uFF01"
@@ -691,8 +695,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1049
-  - lineId: 1049
+    toLine: 49
+  - lineId: 49
     DialogueLineType: 1
     personName: 
     content: "\u4F60\u5E7B\u60F3\u4E2D\u7684\u670B\u53CB\u4E00\u76F4\u5982\u6B64\u5435\u95F9\u5417\uFF1F"
@@ -705,8 +709,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1050
-  - lineId: 1050
+    toLine: 50
+  - lineId: 50
     DialogueLineType: 1
     personName: "\u8B66\u5458"
     content: "\u8001\u6837\u5B50\u3002"
@@ -719,8 +723,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1051
-  - lineId: 1051
+    toLine: 51
+  - lineId: 51
     DialogueLineType: 1
     personName: "\u8B66\u5458"
     content: "\u6211\u8981\u4E00\u676F\u3010\u7406\u6027\u3011\u3002"
@@ -733,8 +737,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1052
-  - lineId: 1052
+    toLine: 52
+  - lineId: 52
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u201C\u54E6\uFF0C\u597D\u6781\u4E86\uFF01\u201D"
@@ -747,8 +751,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1053
-  - lineId: 1053
+    toLine: 53
+  - lineId: 53
     DialogueLineType: 4
     personName: 
     content: 
@@ -762,7 +766,7 @@ MonoBehaviour:
       eventType: 0
       args: []
     toLine: 0
-  - lineId: 1054
+  - lineId: 54
     DialogueLineType: 5
     personName: "\uFF08\u8111\u6D77\u9009\u9879\uFF09"
     content: "\u6709\u4EC0\u4E48\u597D\u7684\uFF1F"
@@ -775,8 +779,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1055
-  - lineId: 1055
+    toLine: 55
+  - lineId: 55
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u201C\u4F60\u4EC0\u4E48\u90FD\u4E0D\u8BB0\u5F97\u4E86\uFF0C\\n\u5F53\u7136\u4E5F\u5305\u62EC\u2018\u8001\u6837\u5B50\u2019\u914D\u65B9\u5BF9\u5427\u3002\u201D"
@@ -789,8 +793,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1056
-  - lineId: 1056
+    toLine: 56
+  - lineId: 56
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u201C\u2026\u2026\u8981\u4E0D\u8BD5\u7740\\n\u968F\u4FBF\u5012\u70B9\u4EC0\u4E48\u7AEF\u4E0A\u53BB\u5427\uFF1F\\n\u5076\u5C14\u4E5F\u6709\u8FD9\u6837\u968F\u6027\u7684\u8C03\u9152\u5E08\u5462\u3002\\n\u4F1A\u5F88\u6709\u8DA3\u7684\u3002\u201D"
@@ -803,8 +807,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1057
-  - lineId: 1057
+    toLine: 57
+  - lineId: 57
     DialogueLineType: 4
     personName: 
     content: 
@@ -818,7 +822,7 @@ MonoBehaviour:
       eventType: 0
       args: []
     toLine: 0
-  - lineId: 1058
+  - lineId: 58
     DialogueLineType: 5
     personName: "\uFF08\u8111\u6D77\u9009\u9879\uFF09"
     content: "\u2026\u2026"
@@ -831,8 +835,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1059
-  - lineId: 1059
+    toLine: 59
+  - lineId: 59
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u5F53\u7136\uFF0C\u4F60\u53EA\u662F\u5728\u201C\u60F3\u7740\u201D\\n\u548C\u8FD9\u4F4D\u670B\u53CB\u5BF9\u8BDD\u800C\u5DF2\uFF0C\\n\u4F60\u5F88\u806A\u660E\uFF0C\\n\u4E0D\u662F\u6240\u6709\u7684\u4EA4\u6D41\u90FD\u9700\u8981\u5BA3\u4E4B\u4E8E\u53E3\u3002\\n\u770B\u8D77\u6765\u4F60\u4EEC\u8FDB\u884C\u5F97\u5F88\u987A\u5229\uFF0C\u53EA\u662F\uFF0C"
@@ -845,8 +849,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1060
-  - lineId: 1060
+    toLine: 60
+  - lineId: 60
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u5BF9\u4E8E\u8FD9\u4F4D\u5BA2\u4EBA\u6765\u8BF4\uFF0C\\n\u4F60\u8D70\u795E\u7684\u65F6\u95F4\u6709\u70B9\u592A\u957F\u4E86\uFF1F\\n\u4ED6\u7A7F\u7740\u770B\u8D77\u6765\u50CF\u662F\u5236\u670D\u7684\u5957\u88C5\uFF0C\\n\u4E00\u4E1D\u591A\u4F59\u7684\u8936\u76B1\u4E5F\u6CA1\u6709\u3002"
@@ -859,8 +863,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1061
-  - lineId: 1061
+    toLine: 61
+  - lineId: 61
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u4E5F\u8BB8\u4ED6\u521A\u521A\u4E0B\u73ED\uFF0C\u6216\u662F\u6B63\u8981\u4E0A\u73ED\u3002\\n\u4F60\u8BFB\u4E0D\u51FA\u66F4\u591A\u53EF\u4EE5\u4F5C\u4E3A\u7EBF\u7D22\u7684\u60C5\u7EEA\u3002\\n\u81F3\u4E8E\u4F60\u8D70\u795E\u7684\u72B6\u51B5\uFF0C\u4ED6\u8010\u5FC3\u5730\u7B49\u7740\uFF0C\u751A\u81F3\u6709\u4E9B\u2026\u2026\u8D85\u51FA\u901A\u5E38\u8303\u56F4\u7684\u5C0A\u91CD\uFF1F"
@@ -873,8 +877,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1062
-  - lineId: 1062
+    toLine: 62
+  - lineId: 62
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u201C\u597D\u5427\uFF0C\u603B\u800C\u8A00\u4E4B\u5462\u2014\u2014\\n\u5982\u679C\u4F60\u9700\u8981\u5E2E\u52A9\u7684\u8BDD\uFF0C\\n\u5931\u5FC6\u524D\u7684\u4F60\u8FD8\u7B97\u662F\u5199\u4E86\u672C\u914D\u65B9\u7684\u3002\\n\u4E0D\u8FC7\u90A3\u79CD\u4E1C\u897F\u5E94\u8BE5\u53EB\u8C1C\u8BED\u800C\u4E0D\u662F\u8C03\u5236\u6307\u5357\u5427\u2026\u2026\u5E94\u8BE5\u5C31\u653E\u5728\u5E97\u91CC\u6765\u7740\uFF1F\u201D"
@@ -887,8 +891,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1063
-  - lineId: 1063
+    toLine: 63
+  - lineId: 63
     DialogueLineType: 4
     personName: 
     content: 
@@ -902,7 +906,7 @@ MonoBehaviour:
       eventType: 0
       args: []
     toLine: 0
-  - lineId: 1064
+  - lineId: 64
     DialogueLineType: 5
     personName: "\uFF08\u8111\u6D77\u9009\u9879\uFF09"
     content: "\u4E3A\u4EC0\u4E48\u4E0D\u5199\u5F97\u7B80\u5355\u70B9\uFF1F"
@@ -915,8 +919,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1065
-  - lineId: 1065
+    toLine: 65
+  - lineId: 65
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u201C\u636E\u67D0\u4E2A\u9634\u6C89\u7684\u5BB6\u4F19\u8BF4\uFF0C\\n\u662F\u4E3A\u4E86\u9632\u76D7\u54E6\u3002\u201D"
@@ -929,8 +933,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1066
-  - lineId: 1066
+    toLine: 66
+  - lineId: 66
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u201C\u597D\u5566\u5FEB\u70B9\u4E0A\u9152\u5427\uFF0C\u4F20\u5947\u8C03\u9152\u5E08\uFF01\u201D\\n\u4ED6\u751A\u81F3\u5439\u4E86\u4E00\u58F0\u53E3\u54E8\u6765\u4E3A\u4F60\u5F00\u573A\u3002"
@@ -943,8 +947,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1067
-  - lineId: 1067
+    toLine: 67
+  - lineId: 67
     DialogueLineType: 7
     personName: "\u8C03\u9152\u6D41\u7A0B"
     content: "\u8C03\u9152\u6D41\u7A0B"
@@ -957,22 +961,25 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1068
-  - lineId: 1068
+    toLine: 68
+  - lineId: 68
     DialogueLineType: 1
     personName: "\u8B66\u5458"
     content: "\u8C22\u8C22\u3002"
     eventFore:
-      eventType: 0
-      args: []
+      eventType: 2
+      args:
+      - Utopia
     eventMain:
-      eventType: 0
-      args: []
+      eventType: 7
+      args:
+      - 0
+      - Utopia_Police
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1069
-  - lineId: 1069
+    toLine: 69
+  - lineId: 69
     DialogueLineType: 6
     personName: 
     content: "\u6B63\u786E\u7684\u9152->1070, \u5176\u4ED6\u7684\u9152->1080"
@@ -985,8 +992,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1070
-  - lineId: 1070
+    toLine: 70
+  - lineId: 70
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u4ED6\u770B\u8D77\u6765\u677E\u4E86\u4E00\u53E3\u6C14\uFF1F"
@@ -999,8 +1006,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1071
-  - lineId: 1071
+    toLine: 71
+  - lineId: 71
     DialogueLineType: 4
     personName: 
     content: 
@@ -1014,7 +1021,7 @@ MonoBehaviour:
       eventType: 0
       args: []
     toLine: 0
-  - lineId: 1072
+  - lineId: 72
     DialogueLineType: 5
     personName: "\uFF08\u8111\u6D77\u9009\u98791\uFF09"
     content: "\u53EA\u662F\u4E0B\u73ED\u540E\u6765\u4E00\u676F\uFF1F"
@@ -1027,8 +1034,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1079
-  - lineId: 1073
+    toLine: 79
+  - lineId: 73
     DialogueLineType: 5
     personName: "\uFF08\u8111\u6D77\u9009\u98792\uFF09"
     content: "\u8FD9\u662F\u67D0\u79CD\u6D4B\u8BD5\u5417\uFF1F"
@@ -1041,8 +1048,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1074
-  - lineId: 1074
+    toLine: 74
+  - lineId: 74
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u4E3A\u4E86\u786E\u8BA4\u4F60\u6709\u6CA1\u6709\u5931\u5FC6\u3002\\n\u5047\u8BBE\u662F\u8FD9\u6837\uFF0C\u90A3\u4E48\u4ED6\u77E5\u9053\u4F60\u5931\u5FC6\u7684\u53EF\u80FD\u6027\u6216\u662F\u4F20\u95FB\u3002"
@@ -1055,8 +1062,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1075
-  - lineId: 1075
+    toLine: 75
+  - lineId: 75
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u4F46\u662F\uFF0C\u6709\u8FD9\u79CD\u5FC5\u8981\u5417\uFF1F\\n\u8C03\u9152\u5E08\u5931\u5FC6\uFF0C\\n\u8FD9\u80FD\u9020\u6210\u4EC0\u4E48\u4E86\u4E0D\u5F97\u7684\u4E8B\u5462\uFF1F"
@@ -1069,8 +1076,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1076
-  - lineId: 1076
+    toLine: 76
+  - lineId: 76
     DialogueLineType: 4
     personName: 
     content: 
@@ -1084,7 +1091,7 @@ MonoBehaviour:
       eventType: 0
       args: []
     toLine: 0
-  - lineId: 1077
+  - lineId: 77
     DialogueLineType: 5
     personName: "\uFF08\u8111\u6D77\u9009\u9879\uFF09"
     content: "\u70B9\u5355\u65F6\u4E0D\u80FD\u518D\u8BF4\u201C\u7ED9\u6211\u6765\u4E00\u676F\u8001\u6837\u5B50\u201D\u4E86\uFF1F"
@@ -1097,8 +1104,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1079
-  - lineId: 1078
+    toLine: 79
+  - lineId: 78
     DialogueLineType: 5
     personName: "\uFF08\u8111\u6D77\u9009\u9879\uFF09"
     content: "\u72EC\u5BB6\u79D8\u65B9\u5931\u4F20\uFF1F"
@@ -1111,8 +1118,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1079
-  - lineId: 1079
+    toLine: 79
+  - lineId: 79
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u201C\u4F60\u4F1A\u77E5\u9053\u7684\u3002\u201D\\n\u4F60\u7684\u8111\u4E2D\u670B\u53CB\u8F7B\u8F7B\u5730\u7B11\u4E86\u3002\\n\u4E0D\u5B89\u7684\u9884\u611F\u4E00\u95EA\u800C\u8FC7\u3002"
@@ -1125,8 +1132,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1094
-  - lineId: 1080
+    toLine: 94
+  - lineId: 80
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u4ED6\u770B\u8D77\u6765\u6709\u4E9B\u5931\u671B\uFF1F"
@@ -1139,8 +1146,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1081
-  - lineId: 1081
+    toLine: 81
+  - lineId: 81
     DialogueLineType: 4
     personName: 
     content: 
@@ -1154,7 +1161,7 @@ MonoBehaviour:
       eventType: 0
       args: []
     toLine: 0
-  - lineId: 1082
+  - lineId: 82
     DialogueLineType: 5
     personName: "\uFF08\u8111\u6D77\u9009\u9879\uFF09"
     content: "\u770B\u6765\u6211\u641E\u7838\u4E86\u3002"
@@ -1167,8 +1174,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1083
-  - lineId: 1083
+    toLine: 83
+  - lineId: 83
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u8FD9\u5931\u671B\u4E0D\u662F\u201C\u770B\u770B\u4F60\u90FD\u505A\u4E86\u4EC0\u4E48\u201D\uFF0C\\n\u800C\u662F\u201C\u539F\u6765\u5982\u6B64\u201D"
@@ -1181,8 +1188,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1084
-  - lineId: 1084
+    toLine: 84
+  - lineId: 84
     DialogueLineType: 4
     personName: 
     content: 
@@ -1196,7 +1203,7 @@ MonoBehaviour:
       eventType: 0
       args: []
     toLine: 0
-  - lineId: 1085
+  - lineId: 85
     DialogueLineType: 5
     personName: "\uFF08\u8111\u6D77\u9009\u9879\uFF09"
     content: "\u2026\u2026\u6240\u4EE5\u6211\u4E0D\u662F\u90A3\u79CD\u559C\u6B22\u5373\u5174\u53D1\u6325\u7684\u6709\u8DA3\u8C03\u9152\u5E08\u3002"
@@ -1209,8 +1216,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1094
-  - lineId: 1086
+    toLine: 94
+  - lineId: 86
     DialogueLineType: 5
     personName: "\uFF08\u8111\u6D77\u9009\u9879\uFF09"
     content: "\u4E5F\u8BB8\u4ED6\u5728\u786E\u8BA4\u67D0\u4EF6\u4E8B\u3002"
@@ -1223,8 +1230,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1094
-  - lineId: 1087
+    toLine: 94
+  - lineId: 87
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u4ED6\u770B\u8D77\u6765\u6709\u4E9B\u610F\u5916\uFF1F"
@@ -1237,8 +1244,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1088
-  - lineId: 1088
+    toLine: 88
+  - lineId: 88
     DialogueLineType: 4
     personName: 
     content: 
@@ -1252,7 +1259,7 @@ MonoBehaviour:
       eventType: 0
       args: []
     toLine: 0
-  - lineId: 1089
+  - lineId: 89
     DialogueLineType: 5
     personName: "\uFF08\u8111\u6D77\u9009\u9879\uFF09"
     content: "\u2026\u2026\u53EF\u80FD\u6211\u4E0D\u662F\u90A3\u79CD\u559C\u6B22\u5373\u5174\u53D1\u6325\u7684\u6709\u8DA3\u8C03\u9152\u5E08\uFF1F"
@@ -1265,8 +1272,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1090
-  - lineId: 1090
+    toLine: 90
+  - lineId: 90
     DialogueLineType: 1
     personName: "\u8B66\u5458"
     content: "\u4E5F\u5BF9\uFF0C\u5076\u5C14\u4E5F\u4F1A\u6709\u8FD9\u6837\u7684\u60C5\u51B5\u3002"
@@ -1279,8 +1286,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1091
-  - lineId: 1091
+    toLine: 91
+  - lineId: 91
     DialogueLineType: 1
     personName: "\u8B66\u5458"
     content: "\u5982\u679C\u4F60\u80FD\u5728\u522B\u7684\u4E8B\u4E0A\u4E5F\u7ED9\u6211\u4E00\u4E9B\u610F\u5916\u7684\u60CA\u559C\u5C31\u597D\u4E86\u3002"
@@ -1293,8 +1300,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1092
-  - lineId: 1092
+    toLine: 92
+  - lineId: 92
     DialogueLineType: 1
     personName: 
     content: "\u77ED\u6682\u7684\u60CA\u8BB6\u8FC7\u540E\uFF0C\u4ED6\u770B\u8D77\u6765\u677E\u4E86\u4E00\u53E3\u6C14\uFF1F\\n\u7136\u540E\u9732\u51FA\u4E86\u4E00\u79CD\u201C\u4E07\u4E8B\u62DC\u6258\u4E86\u201D\u7684\u795E\u60C5\u3002"
@@ -1307,8 +1314,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1093
-  - lineId: 1093
+    toLine: 93
+  - lineId: 93
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u90A3\u4E48\u4ED6\u6709\u201C\u522B\u7684\u4E8B\u201D\u8981\u62DC\u6258\u4F60\uFF1F\\n\u73B0\u5728\u4F60\u66F4\u641E\u4E0D\u6E05\u72B6\u51B5\u4E86\u3002"
@@ -1321,8 +1328,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1094
-  - lineId: 1094
+    toLine: 94
+  - lineId: 94
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u4ED6\u6C89\u9ED8\u5730\u3001\u7F13\u6162\u5730\u54C1\u5C1D\u7740\u3002\\n\u5E97\u91CC\u6CA1\u6709\u5176\u4ED6\u7684\u5BA2\u4EBA\u3002\\n\u4F60\u4EEC\u76F8\u987E\u65E0\u8A00\u3002"
@@ -1335,8 +1342,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1095
-  - lineId: 1095
+    toLine: 95
+  - lineId: 95
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u6216\u8BB8\uFF0C\u4F60\u5E94\u8BE5\u804A\u70B9\u4EC0\u4E48\uFF1F\\n\u6BD5\u7ADF\u4ED6\u5148\u5411\u4F60\u6253\u62DB\u547C\u4E86\u3002\\n\u4F60\u4EEC\u53EF\u80FD\u8BA4\u8BC6\u4E86\u4E0D\u77ED\u7684\u65F6\u95F4\u3002\\n\u719F\u5BA2\u548C\u8C03\u9152\u5E08\u4E4B\u95F4\\n\u5E94\u8BE5\u804A\u70B9\u4EC0\u4E48\u624D\u597D\uFF1F"
@@ -1349,8 +1356,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1096
-  - lineId: 1096
+    toLine: 96
+  - lineId: 96
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u201C\u4F60\u4E00\u5411\u4E0D\u64C5\u957F\u5728\u559D\u9152\u65F6\u804A\u5929\u5462\u3002\u201D\u4F60\u5E7B\u60F3\u7684\u670B\u53CB\u8F7B\u8F7B\u5730\u8BF4\u9053\uFF0C\\n\u597D\u50CF\u5F88\u6000\u5FF5\u4F3C\u7684\u3002"
@@ -1363,8 +1370,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1097
-  - lineId: 1097
+    toLine: 97
+  - lineId: 97
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u5FD8\u6389\u5427\uFF0C\u5FD8\u6389\u5427\uFF0C\u4F60\u4E0D\u80FD\u60F3\u8D77\u6765\u3002"
@@ -1377,22 +1384,22 @@ MonoBehaviour:
     eventAfter:
       eventType: 5
       args: []
-    toLine: 1098
-  - lineId: 1098
+    toLine: 98
+  - lineId: 98
     DialogueLineType: 6
     personName: 
     content: 
     eventFore:
-      eventType: 6
+      eventType: 0
       args: []
     eventMain:
       eventType: 0
       args: []
     eventAfter:
-      eventType: 0
+      eventType: 6
       args: []
-    toLine: 1099
-  - lineId: 1099
+    toLine: 99
+  - lineId: 99
     DialogueLineType: 3
     personName: 
     content: 
@@ -1406,7 +1413,7 @@ MonoBehaviour:
       eventType: 0
       args: []
     toLine: 0
-  - lineId: 1100
+  - lineId: 100
     DialogueLineType: 5
     personName: "\u9009\u98791"
     content: "\u201C\u4F60\u80FD\u770B\u89C1\u2018\u65B0\u6708\u2019\u5417\uFF1F\u201D"
@@ -1419,8 +1426,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1102
-  - lineId: 1101
+    toLine: 102
+  - lineId: 101
     DialogueLineType: 5
     personName: "\u9009\u98792"
     content: "\u201C\u4F60\u559C\u6B22\u8FD9\u6B3E\u9152\u3002\u201D"
@@ -1433,8 +1440,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1040
-  - lineId: 1102
+    toLine: 40
+  - lineId: 102
     DialogueLineType: 1
     personName: 
     content: "\u4F60\u8F7B\u58F0\u8BF4\u9053\uFF0C\u9B3C\u4F7F\u795E\u5DEE\u4E00\u822C\u3002\\n\u6CA1\u4EBA\u77E5\u9053\u4F60\u95EE\u7684\u662F\u676F\u4E2D\u9152\u3001\u5929\u4E0A\u6708\uFF0C\u8FD8\u662F\u66F4\u52A0\u6666\u6DA9\u7684\u3001\u5176\u9690\u55BB\u7684\u4E8B\u7269\u3002"
@@ -1447,8 +1454,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1103
-  - lineId: 1103
+    toLine: 103
+  - lineId: 103
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u4ED6\u7B11\u7740\u6447\u4E86\u6447\u5934\u3002"
@@ -1461,8 +1468,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1104
-  - lineId: 1104
+    toLine: 104
+  - lineId: 104
     DialogueLineType: 1
     personName: "\u8B66\u5458"
     content: "\u60A8\u80FD\u8BA9\u5B83\u9690\u5F62\uFF0C\u800C\u6211\u53EA\u662F\u4E2A\u666E\u901A\u4EBA\uFF0C\u53EA\u80FD\u8D5E\u7F8E\u548C\u54C1\u5C1D\u3002\\n\u5047\u8BBE\u4E00\u4E2A\u9B54\u672F\u5E08\u7684\u80FD\u529B\u521A\u597D\u662F\u770B\u7A7F\u53E6\u4E00\u4E2A\u9B54\u672F\u5E08\u7684\u628A\u620F\uFF0C\\n\u90A3\u4E0D\u5C31\u548C\u4E24\u4E2A\u666E\u901A\u4EBA\u6CA1\u6709\u4E24\u6837\u4E86\u5417\uFF1F"
@@ -1475,8 +1482,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1105
-  - lineId: 1105
+    toLine: 105
+  - lineId: 105
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u4ED6\u4E0D\u77E5\u9053\uFF0C\u8FD9\u9B54\u672F\u5E76\u975E\u6765\u6E90\u4E8E\u4F60\uFF0C\\n\u800C\u662F\u8FD9\u95F4\u9152\u9986\u3002"
@@ -1489,8 +1496,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1106
-  - lineId: 1106
+    toLine: 106
+  - lineId: 106
     DialogueLineType: 1
     personName: "\u8B66\u5458"
     content: "\u60A8\u544A\u8BC9\u6211\u5B83\u5728\u676F\u5B50\u91CC\uFF0C\u6211\u5C31\u4F1A\u7AEF\u8D77\u6765\u559D\u4E0B\u5B83\u3002\u89C4\u5219\u5C31\u662F\u8FD9\u6837\u3002\\n\u8001\u677F\uFF0C\u6709\u65F6\u5019\u6211\u5FCD\u4E0D\u4F4F\u60F3\uFF0C\u5931\u660E\u7684\u4EBA\u662F\u4E0D\u662F\u4E5F\u5FC5\u987B\u50CF\u8FD9\u6837\u4FE1\u4EFB\u4ED6\u4EBA\uFF1F"
@@ -1503,8 +1510,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1107
-  - lineId: 1107
+    toLine: 107
+  - lineId: 107
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u4ED6\u663E\u7136\u5728\u6697\u793A\u4E9B\u4EC0\u4E48\uFF0C\u4F46\u5F88\u9057\u61BE\uFF0C\\n\u4F60\u4E0D\u77E5\u9053\u3002"
@@ -1517,8 +1524,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1108
-  - lineId: 1108
+    toLine: 108
+  - lineId: 108
     DialogueLineType: 3
     personName: 
     content: 
@@ -1532,7 +1539,7 @@ MonoBehaviour:
       eventType: 0
       args: []
     toLine: 0
-  - lineId: 1109
+  - lineId: 109
     DialogueLineType: 5
     personName: "\u9009\u98791a"
     content: "\uFF08\u4FDD\u6301\u6C89\u9ED8\uFF09"
@@ -1545,8 +1552,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1111
-  - lineId: 1110
+    toLine: 111
+  - lineId: 110
     DialogueLineType: 5
     personName: "\u9009\u98791b"
     content: "\u201C\u5047\u5982\u6211\u7ED9\u4F60\u4E0B\u6BD2\u5462\uFF1F\u201D"
@@ -1559,8 +1566,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1112
-  - lineId: 1111
+    toLine: 112
+  - lineId: 111
     DialogueLineType: 1
     personName: 1a
     content: "\u4F60\u62A5\u4EE5\u4E00\u4E2A\u516C\u5F0F\u5316\u7684\u5FAE\u7B11\uFF0C\u4FDD\u6301\u4E86\u9002\u5EA6\u7684\u795E\u79D8\u611F\u3002"
@@ -1573,10 +1580,10 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1113
-  - lineId: 1112
+    toLine: 113
+  - lineId: 112
     DialogueLineType: 1
-    personName: 
+    personName: 1b
     content: "\u4ED6\u6123\u4E86\u4E00\u4E0B\uFF0C\u8FD8\u662F\u6BEB\u65E0\u82A5\u8482\u5730\u7EE7\u7EED\u559D\u4E0B\u4E00\u53E3\u9152\uFF0C\u81F3\u5C11\u4ED6\u8868\u73B0\u5F97\u5F88\u9547\u5B9A\u3002"
     eventFore:
       eventType: 0
@@ -1587,8 +1594,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1113
-  - lineId: 1113
+    toLine: 113
+  - lineId: 113
     DialogueLineType: 2
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u4F60\u5E7B\u60F3\u4E2D\u7684\u670B\u53CB\u7B11\u4E86\uFF0C\\n\u4F46\u4ED6\u8FD8\u662F\u6279\u8BC4\u9053\uFF1A\\n\u201C\u5662\uFF0C\u7CDF\u7CD5\u7684\u7B11\u8BDD\u3002\u201D"
@@ -1601,8 +1608,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1114
-  - lineId: 1114
+    toLine: 114
+  - lineId: 114
     DialogueLineType: 1
     personName: "\u8B66\u5458"
     content: "\u2026\u2026\u90A3\u6211\u4E5F\u53EA\u6709\u559D\u4E0B\u53BB\u624D\u4F1A\u77E5\u9053\u4E86\u3002"
@@ -1615,29 +1622,29 @@ MonoBehaviour:
     eventAfter:
       eventType: 5
       args: []
-    toLine: 1115
-  - lineId: 1115
+    toLine: 115
+  - lineId: 115
     DialogueLineType: 6
     personName: 
     content: "\u9ED1\u5C4F\u8854\u63A5\uFF0C\u8FD8\u662F\u4E4C\u6258\u90A6\u80CC\u666F"
     eventFore:
-      eventType: 9
-      args:
-      - 0
-      - Utopia_Beggar.png
+      eventType: 0
+      args: []
     eventMain:
       eventType: 0
       args: []
     eventAfter:
-      eventType: 6
-      args: []
-    toLine: 1116
-  - lineId: 1116
+      eventType: 9
+      args:
+      - 0
+      - Utopia_Beggar
+    toLine: 116
+  - lineId: 116
     DialogueLineType: 1
     personName: "\u4E5E\u4E10"
     content: "\u591A\u8C22\u4F60\u7684\u597D\u610F\u2026\u2026\u4F46\u6211\u8FDE\u8D4A\u8D26\u90FD\u5FEB\u8FD8\u4E0D\u6E05\u4E86\u3002"
     eventFore:
-      eventType: 0
+      eventType: 6
       args: []
     eventMain:
       eventType: 0
@@ -1645,8 +1652,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1117
-  - lineId: 1117
+    toLine: 117
+  - lineId: 117
     DialogueLineType: 1
     personName: "\u4E5E\u4E10"
     content: "\u79F0\u5F97\u4E0A\u6709\u4EF7\u503C\u7684\u5C31\u53EA\u6709\u8FD9\u4E2A\u4E86\u3002"
@@ -1659,8 +1666,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1118
-  - lineId: 1118
+    toLine: 118
+  - lineId: 118
     DialogueLineType: 6
     personName: 
     content: "\u83B7\u5F97\u6536\u85CF\u54C1\u6728\u5251"
@@ -1668,15 +1675,15 @@ MonoBehaviour:
       eventType: 3
       args:
       - part
-      - Sprites/Collections/SwordTest.png
+      - Sprites/Collections/COLLECTION_EXAMPLE
     eventMain:
       eventType: 0
       args: []
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1119
-  - lineId: 1119
+    toLine: 119
+  - lineId: 119
     DialogueLineType: 1
     personName: 
     content: "\u4E00\u67C4\u6728\u523B\u7684\u5251\uFF0C\u4E0D\u4EC5\u7C97\u7CD9\uFF0C\u8FD8\u6B8B\u7834\u4E0D\u582A\uFF0C\u50CF\u662F\u7ECF\u5386\u4E86\u6FC0\u70C8\u7684\u6253\u6597\u3002"
@@ -1690,8 +1697,8 @@ MonoBehaviour:
       eventType: 0
       args:
       - part
-    toLine: 1120
-  - lineId: 1120
+    toLine: 120
+  - lineId: 120
     DialogueLineType: 3
     personName: 
     content: 
@@ -1705,7 +1712,7 @@ MonoBehaviour:
       eventType: 0
       args: []
     toLine: 0
-  - lineId: 1121
+  - lineId: 121
     DialogueLineType: 5
     personName: "\u9009\u98791"
     content: "\u8FD9\u662F\u4ECE\u54EA\u6765\u7684\uFF1F"
@@ -1718,8 +1725,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1123
-  - lineId: 1122
+    toLine: 123
+  - lineId: 122
     DialogueLineType: 5
     personName: "\u9009\u98792"
     content: "\u6709\u4EC0\u4E48\u7279\u522B\u4E4B\u5904\u5417\uFF1F"
@@ -1732,8 +1739,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1123
-  - lineId: 1123
+    toLine: 123
+  - lineId: 123
     DialogueLineType: 1
     personName: "\u4E5E\u4E10"
     content: "\u6211\u4ECE\u68A6\u4E2D\u5E26\u51FA\u4E86\u5B83\u3002"
@@ -1746,8 +1753,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1124
-  - lineId: 1124
+    toLine: 124
+  - lineId: 124
     DialogueLineType: 1
     personName: 
     content: "\u53EF\u4EE5\u60F3\u5230\uFF0C\u6B64\u523B\u4F60\u8138\u4E0A\u6709\u88AB\u620F\u5F04\u4E86\u7684\u4E0D\u6EE1\u3002"
@@ -1760,8 +1767,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1125
-  - lineId: 1125
+    toLine: 125
+  - lineId: 125
     DialogueLineType: 1
     personName: "\u4E5E\u4E10"
     content: "\u6211\u4FDD\u6301\u7740\u5F3A\u70C8\u7684\u3001\u6E05\u9192\u7684\u6E34\u671B\uFF0C\u4E8B\u60C5\u5C31\u8FD9\u6837\u53D1\u751F\u4E86\uFF0C\\n\u6211\u4ECE\u6211\u7684\u68A6\u4E2D\u5E26\u51FA\u4E86\u5B83\uFF0C\u4E00\u4E2A\u7EAA\u5FF5\u7269\u3002\u867D\u7136\u548C\u672C\u6765\u7684\u6837\u5B50\u6709\u4E9B\u51FA\u5165\u3002\\n\u6211\u518D\u4E5F\u6CA1\u6709\u56DE\u53BB\u8FC7\u90A3\u4E2A\u4E16\u754C\u3002"
@@ -1774,8 +1781,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1126
-  - lineId: 1126
+    toLine: 126
+  - lineId: 126
     DialogueLineType: 2
     personName: "\u60F3\u6CD5"
     content: "\u4F60\u4E0D\u786E\u5B9A\u662F\u5426\u8BE5\u6536\u4E0B\uFF0C\\n\u5982\u679C\u8FD9\u662F\u771F\u7684\uFF0C\\n\u6C38\u591C\u4F1A\u5BF9\u5B83\u611F\u5174\u8DA3\u7684\u3002\\n\u5F15\u8D77\u6C38\u591C\u7684\u5173\u6CE8\u4ECE\u6765\u4E0D\u662F\u597D\u4E8B\u3002"
@@ -1788,8 +1795,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1127
-  - lineId: 1127
+    toLine: 127
+  - lineId: 127
     DialogueLineType: 2
     personName: "\u60F3\u6CD5"
     content: "\u5373\u4F7F\u662F\u68A6\u4E3B\u4E5F\u65E0\u6CD5\u6A21\u7CCA\u90E8\u5206\u7684\u73B0\u5B9E\u3002\\n\u4ED6\u662F\u7279\u6B8A\u7684\u3002"
@@ -1802,8 +1809,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1128
-  - lineId: 1128
+    toLine: 128
+  - lineId: 128
     DialogueLineType: 2
     personName: "\u60F3\u6CD5"
     content: "\u521B\u9020\u4E86\u4E00\u4E2A\u68A6\u4E2D\u4E16\u754C\u7684\u4EBA\u5982\u4F55\u80FD\u62B5\u6297\u6210\u4E3A\u9020\u7269\u4E3B\u7684\u8BF1\u60D1\uFF1F"
@@ -1816,8 +1823,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1129
-  - lineId: 1129
+    toLine: 129
+  - lineId: 129
     DialogueLineType: 1
     personName: "\u4E5E\u4E10"
     content: "\u6211\u662F\u5982\u6B64\u5BB3\u6015\u5728\u73B0\u5B9E\u65E5\u590D\u4E00\u65E5\u7684\u78E8\u706D\u4E2D\u7EC8\u6709\u4E00\u5929\u5C06\u8FD9\u4E2A\u82B1\u56ED\u5FD8\u8BB0\u3002\\n\u56E0\u6B64\u6211\u51B3\u5B9A\u2014\u2014\\n\u8D81\u6211\u7684\u5FC3\u8FD8\u5E74\u8F7B\u7684\u65F6\u5019\u5931\u53BB\u5B83\uFF0C\u4EE5\u6B64\u6C38\u8FDC\u5730\u4FDD\u7559\u6211\u8FD9\u4E94\u767E\u5E74\u7684\u56DE\u5FC6\u3002"
@@ -1830,8 +1837,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1130
-  - lineId: 1130
+    toLine: 130
+  - lineId: 130
     DialogueLineType: 6
     personName: 
     content: "\u767E\u53F6\u7A97\u5173\u95ED\uFF0C\u9ED1\u5C4F\u6E10\u5165\u68A6\u4E2D"
@@ -1844,8 +1851,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 5
       args: []
-    toLine: 1131
-  - lineId: 1131
+    toLine: 131
+  - lineId: 131
     DialogueLineType: 0
     personName: 
     content: "\u68A6\u4E2D\\n\u9A91\u58EB\u6388\u52CB"
@@ -1853,15 +1860,15 @@ MonoBehaviour:
       eventType: 3
       args:
       - full
-      - Sprites/CG/Coronation.png
+      - Sprites/CG/Coronation
     eventMain:
       eventType: 0
       args: []
     eventAfter:
       eventType: 6
       args: []
-    toLine: 1132
-  - lineId: 1132
+    toLine: 132
+  - lineId: 132
     DialogueLineType: 1
     personName: 
     content: "\u5979\u628A\u5251\u62B5\u5728\u6211\u7684\u80A9\u5934\uFF0C\u6211\u5C06\u5E84\u4E25\u8D77\u8A93\u3002"
@@ -1874,8 +1881,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1133
-  - lineId: 1133
+    toLine: 133
+  - lineId: 133
     DialogueLineType: 1
     personName: 
     content: "\u8F89\u714C\u7684\u6BBF\u5802\u91CC\u5360\u6EE1\u4E86\u4EBA\uFF0C\u5BA3\u79F0\u8981\u6539\u53D8\u897F\u683C\u73E5\u5FB7\u547D\u8FD0\u7684\u4EBA\u4EEC\u3002"
@@ -1888,8 +1895,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1134
-  - lineId: 1134
+    toLine: 134
+  - lineId: 134
     DialogueLineType: 1
     personName: 
     content: "\u6B64\u523B\u8DDD\u79BB\u6211\u79BB\u5F00\u504F\u50FB\u7684\u5BB6\u4E61\uFF0C\u624D\u4EC5\u4EC5\u8FC7\u53BB\u4E86\u4E00\u4E2A\u6708\u3002"
@@ -1902,8 +1909,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1135
-  - lineId: 1135
+    toLine: 135
+  - lineId: 135
     DialogueLineType: 1
     personName: 
     content: "\u5723\u949F\u6572\u54CD\u4E86\u5341\u4E8C\u904D\u3002"
@@ -1916,8 +1923,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1136
-  - lineId: 1136
+    toLine: 136
+  - lineId: 136
     DialogueLineType: 1
     personName: 
     content: "\u201C\u2026\u2026\u6211\u53D1\u8A93\u5584\u5F85\u5F31\u8005\uFF0C\u6211\u53D1\u8A93\u52C7\u6562\u5730\u5BF9\u6297\u66B4\u8650\u3002\u201D"
@@ -1930,8 +1937,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1137
-  - lineId: 1137
+    toLine: 137
+  - lineId: 137
     DialogueLineType: 1
     personName: 
     content: "\u201C\u6211\u53D1\u8A93\u6297\u51FB\u4E00\u5207\u9519\u8BEF\u3002\u201D"
@@ -1944,8 +1951,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1138
-  - lineId: 1138
+    toLine: 138
+  - lineId: 138
     DialogueLineType: 1
     personName: 
     content: "\u6211\u62AC\u8D77\u5934\uFF0C\u6BBF\u4E0B\u96BE\u5F97\u4E00\u89C1\u5730\u7A7F\u4E0A\u4E86\u6B63\u88C5\uFF0C\u5F88\u9002\u5408\u5979\uFF0C\u5374\u4E5F\u6709\u4E9B\u6ED1\u7A3D\u3002\\n\u56E0\u5176\u8FC7\u4E8E\u9686\u91CD\u3002"
@@ -1958,8 +1965,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1139
-  - lineId: 1139
+    toLine: 139
+  - lineId: 139
     DialogueLineType: 1
     personName: 
     content: "\u7136\u800C\u6211\u4EEC\u4E24\u4E2A\u4EBA\u90FD\u4E0D\u6E05\u695A\u6B64\u65F6\u6B64\u523B\uFF0C\u6216\u8005\u6240\u6709\u7684\u4E00\u5207\u662F\u4E3A\u4E86\u4EC0\u4E48\u3002"
@@ -1972,8 +1979,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1140
-  - lineId: 1140
+    toLine: 140
+  - lineId: 140
     DialogueLineType: 1
     personName: 
     content: "\u6211\u4EEC\u77E5\u9053\u4E86\u6240\u8C13\u547D\u8FD0\u7684\u73A9\u7B11\uFF0C\u53EA\u662F\u8FD8\u6CA1\u6709\u4EB2\u8EAB\u4F53\u4F1A\u8352\u8C2C\u4E4B\u5904\u3002"
@@ -1986,8 +1993,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1141
-  - lineId: 1141
+    toLine: 141
+  - lineId: 141
     DialogueLineType: 1
     personName: 
     content: "\u6211\u4EEC\u53EA\u662F\u5404\u81EA\u8D70\u5230\u4E86\u8FD9\u91CC\u3002"
@@ -1999,9 +2006,10 @@ MonoBehaviour:
       args: []
     eventAfter:
       eventType: 5
-      args: []
-    toLine: 1142
-  - lineId: 1142
+      args:
+      - 0.01
+    toLine: 142
+  - lineId: 142
     DialogueLineType: 6
     personName: 
     content: 
@@ -2011,12 +2019,13 @@ MonoBehaviour:
       - 0
     eventMain:
       eventType: 0
-      args: []
+      args:
+      - full
     eventAfter:
-      eventType: 6
+      eventType: 0
       args: []
-    toLine: 1143
-  - lineId: 1143
+    toLine: 143
+  - lineId: 143
     DialogueLineType: 0
     personName: 
     content: "Day 7\\n\u897F\u683C\u73E5\u5FB7"
@@ -2027,10 +2036,11 @@ MonoBehaviour:
       eventType: 0
       args: []
     eventAfter:
-      eventType: 0
-      args: []
-    toLine: 1144
-  - lineId: 1144
+      eventType: 6
+      args:
+      - 0.75
+    toLine: 144
+  - lineId: 144
     DialogueLineType: 1
     personName: 
     content: "\u6709\u4EC0\u4E48\u6539\u53D8\u4E86\uFF0C\u4F60\u611F\u89C9\u5F97\u5230\u3002\u4F60\u7684\u6536\u85CF\u54C1\u6709\u4E9B\u5F02\u6837\u3002"
@@ -2043,8 +2053,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1146
-  - lineId: 1146
+    toLine: 145
+  - lineId: 145
     DialogueLineType: 1
     personName: 
     content: "\u4F60\u6CE8\u610F\u5230\u90A3\u628A\u73A9\u5177\u822C\u7684\u65AD\u5251\u53D8\u56DE\u4E86\u5B83\u672C\u6765\u7684\u6A21\u6837\u3002\\n\u9508\u8FF9\u6591\u9A73\u3001\u4F24\u75D5\u7D2F\u7D2F\u7684\u4F20\u8BF4\u4E4B\u7269\u3002"
@@ -2057,8 +2067,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1147
-  - lineId: 1147
+    toLine: 146
+  - lineId: 146
     DialogueLineType: 1
     personName: "\u6D1B\u5F25\u74E6"
     content: "\u5F00\u95E8\u4E86\u5417\u8001\u677F\uFF01"
@@ -2066,15 +2076,15 @@ MonoBehaviour:
       eventType: 7
       args:
       - 0
-      - Lomiwa_half
+      - lomiva_appear
     eventMain:
       eventType: 0
       args: []
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1148
-  - lineId: 1148
+    toLine: 147
+  - lineId: 147
     DialogueLineType: 2
     personName: "\u60F3\u6CD5"
     content: "\u5582\u2026\u2026\u73B0\u5728\u8FD8\u6CA1\u8FC7\u4E2D\u5348\u3002"
@@ -2087,8 +2097,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1149
-  - lineId: 1149
+    toLine: 148
+  - lineId: 148
     DialogueLineType: 1
     personName: "\u6D1B\u5F25\u74E6"
     content: "\u7ED9\u6211\u4E2A\u8D85\u5927\u676F\u7684\u3010\u706F\u5854\u3011"
@@ -2100,9 +2110,10 @@ MonoBehaviour:
       args: []
     eventAfter:
       eventType: 5
-      args: []
-    toLine: 1150
-  - lineId: 1150
+      args:
+      - 0.9
+    toLine: 149
+  - lineId: 149
     DialogueLineType: 6
     personName: 
     content: "\u9ED1\u5C4F\u8854\u63A5\uFF0C\u73B0\u5B9E\u80CC\u666F"
@@ -2114,13 +2125,13 @@ MonoBehaviour:
       eventType: 7
       args:
       - 0
-      - Dog_idle.png
+      - dog_idle
     eventAfter:
       eventType: 2
       args:
       - Modern
-    toLine: 1151
-  - lineId: 1151
+    toLine: 150
+  - lineId: 150
     DialogueLineType: 6
     personName: 
     content: 
@@ -2128,17 +2139,17 @@ MonoBehaviour:
       eventType: 7
       args:
       - -400
-      - Dorothy_idle.png
+      - dorothy_idle
     eventMain:
       eventType: 7
       args:
       - 400
-      - Augur_idle.png
+      - diviner_idle
     eventAfter:
       eventType: 6
       args: []
-    toLine: 1152
-  - lineId: 1152
+    toLine: 151
+  - lineId: 151
     DialogueLineType: 1
     personName: "\u72D7"
     content: "\u5C31\u662F\u8BF4\u5440\u3002"
@@ -2151,8 +2162,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1153
-  - lineId: 1153
+    toLine: 152
+  - lineId: 152
     DialogueLineType: 1
     personName: "\u591A\u841D\u897F"
     content: "\u72D7\u3001\u72D7\u8BF4\u8BDD\u4E86\u3002"
@@ -2160,15 +2171,15 @@ MonoBehaviour:
       eventType: 9
       args:
       - 1
-      - Dorothy_amazed.png
+      - dorothy_surprise
     eventMain:
       eventType: 0
       args: []
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1154
-  - lineId: 1154
+    toLine: 153
+  - lineId: 153
     DialogueLineType: 1
     personName: "\u5360\u535C\u5E08"
     content: "\u6CA1\u4E8B\uFF0C\u8FD9\u53EA\u662F\u4F60\u538B\u529B\u592A\u5927\u4EA7\u751F\u7684\u5E7B\u89C9\u3002"
@@ -2181,8 +2192,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1155
-  - lineId: 1155
+    toLine: 154
+  - lineId: 154
     DialogueLineType: 1
     personName: "\u72D7"
     content: "\u54C8\u55BD\u5FCD\u4EBA\uFF01"
@@ -2190,15 +2201,15 @@ MonoBehaviour:
       eventType: 9
       args:
       - 0
-      - Dog_tailing.png
+      - dog_tail
     eventMain:
       eventType: 0
       args: []
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1156
-  - lineId: 1156
+    toLine: 155
+  - lineId: 155
     DialogueLineType: 1
     personName: "\u591A\u841D\u897F"
     content: "\u538B\u529B\u592A\u5927\u2026\u2026\u4EA7\u751F\u7684\uFF0C\u5E7B\u89C9\u3002"
@@ -2211,8 +2222,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1157
-  - lineId: 1157
+    toLine: 156
+  - lineId: 156
     DialogueLineType: 2
     personName: "\u60F3\u6CD5"
     content: "\u5979\u770B\u770B\u8EAB\u8FB9\u7684\u670B\u53CB\uFF0C\u53C8\u770B\u770B\u4F60\u3002"
@@ -2225,8 +2236,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1158
-  - lineId: 1158
+    toLine: 157
+  - lineId: 157
     DialogueLineType: 1
     personName: "\u591A\u841D\u897F"
     content: "\u2026\u2026\u6211\u4EEC\u4E09\u4E2A\u4EBA\u4EA7\u751F\u7684\u5E7B\u89C9\u600E\u4E48\u4F1A\u662F\u4E00\u6837\u7684\uFF1F"
@@ -2239,8 +2250,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1159
-  - lineId: 1159
+    toLine: 158
+  - lineId: 158
     DialogueLineType: 2
     personName: "\u60F3\u6CD5"
     content: "\u201CBingo\uFF01\u201D\\n\u4F60\u5E7B\u60F3\u4E2D\u7684\u670B\u53CB\u76F8\u5F53\u6EE1\u610F\uFF0C\\n\u7EC8\u4E8E\u7B49\u6765\u4E86\u4E2A\u660E\u767D\u4E8B\u7406\u7684\u4EBA\u3002"
@@ -2253,8 +2264,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1160
-  - lineId: 1160
+    toLine: 159
+  - lineId: 159
     DialogueLineType: 1
     personName: "\u72D7"
     content: "\u90A3\u60C5\u51B5\u5C31\u6BD4\u8F83\u590D\u6742\u4E86\u3002"
@@ -2262,15 +2273,15 @@ MonoBehaviour:
       eventType: 9
       args:
       - 0
-      - Dog_eee.png
+      - dog_beagle
     eventMain:
       eventType: 0
       args: []
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1161
-  - lineId: 1161
+    toLine: 160
+  - lineId: 160
     DialogueLineType: 1
     personName: "\u72D7"
     content: "\u6BD4\u5982\u8BF4\u73B0\u5B9E\u4E2D\u4F60\u4EEC\u5403\u4E86\u540C\u4E00\u79CD\u7684\u6BD2\u8611\u83C7\uFF0C\u6B64\u523B\u751F\u547D\u5371\u5728\u65E6\u5915\uFF1B\\n\u6216\u8005\u4F60\u4EEC\u662F\u540C\u4E00\u540D\u7CBE\u795E\u75C5\u60A3\u5206\u88C2\u51FA\u7684\u4E0D\u540C\u4EBA\u683C\uFF1B\\n\u518D\u6216\u8005\u8FD9\u6574\u4E2A\u4E16\u754C\u6839\u672C\u5C31\u662F\u5927\u5B66\u751F\u521B\u4F5C\u7ED3\u8BFE\u4F5C\u4E1A\u65F6\u7684\u5E7B\u60F3\u4EA7\u7269\u2026\u2026"
@@ -2278,15 +2289,15 @@ MonoBehaviour:
       eventType: 9
       args:
       - 0
-      - Dog_idle.png
+      - dog_idle
     eventMain:
       eventType: 0
       args: []
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1162
-  - lineId: 1162
+    toLine: 161
+  - lineId: 161
     DialogueLineType: 6
     personName: 
     content: 
@@ -2294,17 +2305,17 @@ MonoBehaviour:
       eventType: 9
       args:
       - 1
-      - Dorothy_idle.png
+      - dorothy_idle
     eventMain:
       eventType: 9
       args:
       - 2
-      - Augur_afraid.png
+      - diviner_ewu
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1163
-  - lineId: 1163
+    toLine: 162
+  - lineId: 162
     DialogueLineType: 1
     personName: 
     content: "\u67D0\u79CD\u4E0D\u5B89\u7684\u6C14\u6C1B\u5728\u4F60\u4EEC\u4E09\u4EBA\u4E4B\u95F4\u8513\u5EF6\u3002"
@@ -2317,8 +2328,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1164
-  - lineId: 1164
+    toLine: 163
+  - lineId: 163
     DialogueLineType: 1
     personName: "\u72D7"
     content: "\u5443\uFF0C\u6211\u7684\u610F\u601D\u662F\u8BF4\uFF0C\u2026\u2026\u6C6A\uFF0C\u6C6A\u6C6A\u3002"
@@ -2326,15 +2337,15 @@ MonoBehaviour:
       eventType: 9
       args:
       - 0
-      - Dog_disappoint.png
+      - dog_sad
     eventMain:
       eventType: 0
       args: []
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1165
-  - lineId: 1165
+    toLine: 164
+  - lineId: 164
     DialogueLineType: 1
     personName: 
     content: "\u4F60\u4EEC\u90FD\u6487\u5F00\u5934\u53BB\uFF0C\u4E0D\u518D\u770B\u90A3\u53EA\u8BE1\u5F02\u7684\u72D7\u3002"
@@ -2347,8 +2358,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1166
-  - lineId: 1166
+    toLine: 165
+  - lineId: 165
     DialogueLineType: 1
     personName: "\u72D7"
     content: "\u5582\uFF01\u5582\uFF01\u6211\u5C31\u5728\u8FD9\u91CC\u554A\uFF01"
@@ -2361,8 +2372,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1167
-  - lineId: 1167
+    toLine: 166
+  - lineId: 166
     DialogueLineType: 1
     personName: "\u72D7"
     content: "\u4E00\u65E6\u4F60\u5DF2\u7ECF\u957F\u5927\u5230\u4E0D\u80FD\u63A5\u53D7\u4E00\u53EA\u4F1A\u8BF4\u8BDD\u7684\u5C0F\u72D7\uFF0C\\n\u4F60\u65E9\u665A\u4F1A\u6000\u7591\u4E00\u5207\u7684\u771F\u5B9E\u6027\u3002\\n\u800C\u4E00\u53EA\u4E0D\u80FD\u653E\u5F03\u8BF4\u8BDD\u7684\u72D7\uFF0C\u5C06\u6C38\u8FDC\u662F\u6D41\u6D6A\u72D7\u3002"
@@ -2375,8 +2386,8 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1168
-  - lineId: 1168
+    toLine: 167
+  - lineId: 167
     DialogueLineType: 6
     personName: 
     content: 
@@ -2389,4 +2400,18 @@ MonoBehaviour:
     eventAfter:
       eventType: 0
       args: []
-    toLine: 1169
+    toLine: 168
+  - lineId: 168
+    DialogueLineType: 6
+    personName: 
+    content: 
+    eventFore:
+      eventType: 0
+      args: []
+    eventMain:
+      eventType: 0
+      args: []
+    eventAfter:
+      eventType: 0
+      args: []
+    toLine: 0

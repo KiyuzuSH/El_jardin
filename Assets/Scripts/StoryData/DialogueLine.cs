@@ -19,14 +19,6 @@ namespace KiyuzuDev.ITGWDO.StoryData
         HumanUnload, // args[0]=ID
         HumanAllClear, // NO args needed
     }
-
-    /// <summary> 事件触发的模型 </summary>
-    [System.Serializable]
-    public class DialogueEvent
-    {
-        public EnumDialogueEventType eventType = EnumDialogueEventType.None;
-        public string[] args;
-    }
     
     public enum EnumDialogueLineType
     {
@@ -38,6 +30,21 @@ namespace KiyuzuDev.ITGWDO.StoryData
         ChoiceLine,
         ControlLine,
         GameLine,
+    }
+    
+    public enum EventPlace
+    {
+        Fore,
+        Main,
+        After,
+    }
+    
+    /// <summary> 事件触发的模型 </summary>
+    [Serializable]
+    public class DialogueEvent
+    {
+        public EnumDialogueEventType eventType = EnumDialogueEventType.None;
+        public string[] args;
     }
     
     [Serializable]
@@ -55,12 +62,4 @@ namespace KiyuzuDev.ITGWDO.StoryData
         public DialogueEvent eventAfter;
         public int toLine;
     }
-
-    public enum EventPlace
-    {
-        Fore,
-        Main,
-        After,
-    }
-
 }

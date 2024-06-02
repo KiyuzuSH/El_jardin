@@ -20,14 +20,14 @@ namespace KiyuzuDev.ITGWDO.Core
 
         private void Start()
         {
-            ScriptManager.Instance.LoadLineByIdPresent(1001);
+            ScriptManager.Instance.LoadLineByIdPresent(1);
             ProcessLine();
         }
         
         public void ProcessLine()
         {
             ScriptManager.Instance.SetPresentLineId();
-            if (ScriptManager.PresentLineID > 1043 && !AVGView.Instance.ismindAva())
+            if (ScriptManager.PresentLineID > 43 && !AVGView.Instance.ismindAva())
                 AVGView.Instance.SetAvailable();
             ProcessEvent(EventPlace.Fore);
             ProcessEvent(EventPlace.Main);
@@ -100,12 +100,12 @@ namespace KiyuzuDev.ITGWDO.Core
                     switch (args[0].ToLower())
                     {
                         case "full":
-                            AVGBackgroundView.Instance.FullCGOn(
+                            AVGView.Instance.FullCGOn(
                                 Resources.Load<Sprite>(args[1])
                                 );
                             break;
                         case "part":
-                            AVGBackgroundView.Instance.PartCGOn(
+                            AVGView.Instance.PartCGOn(
                                 Resources.Load<Sprite>(args[1])
                             );
                             break;
@@ -115,10 +115,10 @@ namespace KiyuzuDev.ITGWDO.Core
                     switch (args[0].ToLower())
                     {
                         case "full":
-                            AVGBackgroundView.Instance.FullCGOff();
+                            AVGView.Instance.FullCGOff();
                             break;
                         case "part":
-                            AVGBackgroundView.Instance.PartCGOff();
+                            AVGView.Instance.PartCGOff();
                             break;
                     }
                     break;

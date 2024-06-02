@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using KiyuzuDev.ITGWDO.StoryData;
+using UnityEditor.Build.Pipeline.Tasks;
 using UnityEngine;
 
 namespace KiyuzuDev.ITGWDO.Core
@@ -18,61 +19,65 @@ namespace KiyuzuDev.ITGWDO.Core
         }
 
         #endregion
-        
-        private List<StorySheet> storyList;
 
-        private StorySheet _presentStory;
-        public StorySheet PresentStory
+        #region StorySheet
+
+        private static List<StorySheet> storyList;
+
+        private static StorySheet _presentStory;
+        public static StorySheet PresentStory
         {
             get => _presentStory;
-            private set => _presentStory = value;
-        }
-
-        public int PresentStoryId { get; set; }
-
-        public int StoryListSize => storyList.Count;
-        
-        private void OnEnable()
-        {
-            storyList = Resources.LoadAll<StorySheet>("StorySO").ToList();
-        }
-
-        private void Start()
-        {
-            PresentStory = storyList[0];
-            PresentStoryId = storyList[0].storyId;
-            LoadIDs();
-        }
-
-        private void LoadIDs(){}
-        
-        private void UpdateStory(int id)
-        {
-            foreach (var sheet in storyList)
+            private set
             {
-                if (sheet.storyId == id)
+                _presentStory = value;
+                if (value != null)
                 {
-                    PresentStory = sheet;
-                    PresentStoryId = id;
+                    idMap = new Dictionary<int, DialogueLine>();
+                    foreach (DialogueLine line in PresentStory.dialogueLines)
+                        idMap.Add(line.lineId, line);
                 }
             }
         }
-        
-        public static DialogueLine PresentLine { get; private set; }
-        public static int PresentLineID { get; private set; }
 
-        public StorySheet LoadStorySheetById(int id)
+        public static string PresentStoryId { get; set; }
+
+        private static Dictionary<int, DialogueLine> idMap;
+        
+        // public StorySheet GetStorySheet(string id)
+        // {
+        //     foreach (StorySheet storySheet in storyList)
+        //         if (storySheet.storyId == id)
+        //             return storySheet;
+        //     return null;
+        // }
+
+        private void SetPresentStorySheet(string id)
         {
             foreach (StorySheet storySheet in storyList)
                 if (storySheet.storyId == id)
-                    return storySheet;
-            return null;
+                {
+                    PresentStory = storySheet;
+                    PresentStoryId = storySheet.storyId;
+                    return;
+                }
+            PresentStory = null;
+            PresentStoryId = null;
         }
 
-        public void LoadLineById(int storyId, int lineId) 
-            => PresentLine = LoadStorySheetById(storyId).dialogueLines[lineId];
+        #endregion
 
-        public void SetPresentLineId() => PresentStoryId = PresentLine.lineId;
+        #region DialogueLine
+
+        public static DialogueLine PresentLine { get; private set; }
+        public static int PresentLineID { get; private set; }
+
+        public DialogueLine GetDialogueLine(int lineId) => idMap[lineId];
+        
+        public void LoadLineById(string storyId, int lineId) 
+            => PresentLine = PresentStory.dialogueLines[lineId];
+
+        public void SetPresentLineId() => PresentLineID = PresentLine.lineId;
         
         public void LoadLineByIdPresent(int lineId) => PresentLine = PresentStory.dialogueLines[lineId];
 
@@ -80,5 +85,12 @@ namespace KiyuzuDev.ITGWDO.Core
 
         public void SetLineDataPresent(int lineId) => PresentLine = PresentStory.dialogueLines[lineId];
 
+        #endregion
+        
+        private void OnEnable()
+        {
+            storyList = Resources.LoadAll<StorySheet>("StorySO").ToList();
+            SetPresentStorySheet("X");
+        }
     }
 }
