@@ -1,4 +1,5 @@
 using System.Collections;
+using KiyuzuDev.ITGWDO.Core;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -40,6 +41,8 @@ namespace KiyuzuDev.ITGWDO.View {
 
             loadingOperation.allowSceneActivation = true;
 			yield return Core.GameManager.Instance.FadeBlackScreenOpacity(0);
+            if(GlobalDataManager.Instance.NextLineID > 1001)
+                GlobalDataManager.Instance.LoadLineOfDialogue(GlobalDataManager.Instance.NextLineID);
 		}
     }
 }

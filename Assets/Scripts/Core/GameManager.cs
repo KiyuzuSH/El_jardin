@@ -23,7 +23,7 @@ namespace KiyuzuDev.ITGWDO.Core
                     DontDestroyOnLoad(handle.Result);
         }
 
-		#region ºÚÆÁ
+		#region ï¿½ï¿½ï¿½ï¿½
         /// <summary>The UI canvas group for showing the black screen.</summary>
 		[SerializeField] private CanvasGroup blackScreen;
 
@@ -55,7 +55,9 @@ namespace KiyuzuDev.ITGWDO.Core
 			}
             BlackScreenOpacity = opacity;
 
-		}
-		#endregion
+            blackScreen.alpha = opacity;
+        }
+
+        #endregion
 	}
 }

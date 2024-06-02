@@ -1,29 +1,29 @@
 {
-    "name": "ITGWDO_Actions",
+    "name": "Collection View Actions",
     "maps": [
         {
-            "name": "Global",
-            "id": "3b66b7c7-6a63-4860-acd5-e6fd6576f613",
+            "name": "Collection Panel",
+            "id": "481d1c9f-8af6-4e81-bd65-a2958a42b4c0",
             "actions": [
                 {
-                    "name": "CollectionPanel",
-                    "type": "Value",
-                    "id": "87aa915c-c21b-4dbc-b4c4-0681341fe65b",
-                    "expectedControlType": "Key",
+                    "name": "Switch Type",
+                    "type": "Button",
+                    "id": "a1e902fc-06bd-4866-bbed-abbc41ec5b6d",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "cd932135-c28c-4dd0-9a2f-dca46e16e335",
+                    "id": "62b0a0bd-b348-4974-b44e-f2290be90f1a",
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "CollectionPanel",
+                    "action": "Switch Type",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

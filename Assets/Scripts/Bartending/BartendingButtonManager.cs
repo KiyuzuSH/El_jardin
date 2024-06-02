@@ -22,7 +22,6 @@ namespace KiyuzuDev.ITGWDO
             btnSubmit.onClick.AddListener(OnSubmit);
         
             btnList.GetComponent<Button>().onClick.AddListener(OnListButtonClick);
-            AtLeft = true;
             btnGin.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Gin); });
             btnWhisky.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Whisky); });
             btnTequila.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Tequila); });
@@ -57,43 +56,25 @@ namespace KiyuzuDev.ITGWDO
             Destroy(Instance);
         }
 
-        public GameObject btnList;
-        public Transform wineList;
-        private bool AtLeft { get; set; }
-
-        
-        public GameObject btnGin;
-        public GameObject btnWhisky;
-        public GameObject btnTequila;
-        public GameObject btnRum;
-        public GameObject btnVodka;
-        public GameObject btnIce;
-        public GameObject btnLemon;
-        public GameObject btnHoney;
-        public GameObject btnBerry;
-        public GameObject btnSpice;
-        public GameObject btnSalt;
-        public GameObject btnRoseOil;
-        public GameObject btnCitrusOil;
+        [SerializeField] private GameObject btnList;
+        [SerializeField] private GameObject btnCollection;
+        [SerializeField] private CanvasGroup ListBox;
+        [SerializeField] private GameObject btnGin;
+        [SerializeField] private GameObject btnWhisky;
+        [SerializeField] private GameObject btnTequila;
+        [SerializeField] private GameObject btnRum;
+        [SerializeField] private GameObject btnVodka;
+        [SerializeField] private GameObject btnIce;
+        [SerializeField] private GameObject btnLemon;
+        [SerializeField] private GameObject btnHoney;
+        [SerializeField] private GameObject btnBerry;
+        [SerializeField] private GameObject btnSpice;
+        [SerializeField] private GameObject btnSalt;
+        [SerializeField] private GameObject btnRoseOil;
+        [SerializeField] private GameObject btnCitrusOil;
 
         private void OnListButtonClick()
-        {
-            if (AtLeft) MoveRight();
-            else MoveLeft();
-        }
-
-        // Animation
-        private void MoveRight()
-        {
-            wineList.localPosition += new Vector3(1000, 0, 0);
-            AtLeft = false;
-        }
-
-        private void MoveLeft()
-        {
-            wineList.localPosition += new Vector3(-1000, 0, 0);
-            AtLeft = true;
-        }
+            => ListBox.alpha = 1 - ListBox.alpha;
 
         private void OnIngredientClick(IngrType _type) => WineManager.Instance.AddType(_type);
         
@@ -106,8 +87,8 @@ namespace KiyuzuDev.ITGWDO
 
         private void OnSubmit()
         {
-            //TODO: wine data
-            // SystemSwitchManager.Instance.ShakeMode();
+            // TODO: Wine DATA
+            BartendingManager.Instance.SwitchToShake();
         }
     }
 }

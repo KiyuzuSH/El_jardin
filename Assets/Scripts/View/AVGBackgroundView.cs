@@ -32,7 +32,7 @@ namespace KiyuzuDev.ITGWDO.View
         private const string pathModernSprites = "Sprites/Theme/modern/";
         private const string pathRPGSprites = "Sprites/Theme/rpg/";
         private const string pathUtopiaSprites = "Sprites/Theme/utopia/";
-        
+
         [SerializeField] private Image outsidePic;
         [SerializeField] private Image interiorPic;
         [SerializeField] private GameObject jalousiePic;
@@ -81,8 +81,8 @@ namespace KiyuzuDev.ITGWDO.View
 
         public void FullCGOn(Sprite img)
         {
-            fullCG.GetComponent<Image>().sprite = img;
             fullCG.GetComponent<CanvasGroup>().alpha = 1;
+            fullCG.GetComponent<Image>().sprite = img;
         }
 
         public void FullCGOff()
@@ -92,10 +92,9 @@ namespace KiyuzuDev.ITGWDO.View
         }
         public void PartCGOn(Sprite img)
         {
-            var tmp = smallCG.GetComponent<Image>();
-            tmp.sprite = img;
-            tmp.SetNativeSize();
             smallCG.GetComponent<CanvasGroup>().alpha = 1;
+            smallCG.GetComponent<Image>().sprite = img;
+            smallCG.GetComponent<Image>().SetNativeSize();
         }
 
         public void PartCGOff()
@@ -111,19 +110,30 @@ namespace KiyuzuDev.ITGWDO.View
         [SerializeField] private Transform ManPicPivot;
         [SerializeField] private GameObject ManPicPrefab;
 
-        public void PlaceManPic(Sprite _sprite, float xPos)
+        public void HumanLoad(string xP, string spr)
+            => PlaceManPic(float.Parse(xP), Resources.Load<Sprite>("Sprites/Characters/" + spr));
+        
+        private void PlaceManPic(float xPos, Sprite _sprite)
         {
             var pic = Instantiate(ManPicPrefab, ManPicPivot);
             pic.GetComponent<Image>().sprite = _sprite;
             pic.GetComponent<Image>().SetNativeSize();
-            pic.transform.position = new Vector3(xPos, 0, 0);
+            pic.transform.localPosition = new Vector3(xPos, 0, 0);
         }
 
-        public void RemoveManPic(int id)
-            => Destroy(ManPicPivot.GetChild(id).gameObject);
-        
+        public void HumanChange(string id, string spr) =>
+            ReplaceManPic(int.Parse(id), Resources.Load<Sprite>("Sprites/Characters/" + spr));
 
-        public void RemoveAllMan()
+        private void ReplaceManPic(int id, Sprite _sprite)
+            => ManPicPivot.GetChild(id).GetComponent<Image>().sprite = _sprite;
+
+        public void HumanUnload(string id) => RemoveManPic(int.Parse(id));
+        
+        private void RemoveManPic(int id) => Destroy(ManPicPivot.GetChild(id).gameObject);
+
+        public void HumanAllClear() => RemoveAllMan();
+        
+        private void RemoveAllMan()
         {
             for (int i = 0; i < ManPicPivot.childCount; i++)
                 Destroy(ManPicPivot.GetChild(i).gameObject);

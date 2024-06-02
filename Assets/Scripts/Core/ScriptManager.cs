@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using KiyuzuDev.ITGWDO.StoryData;
@@ -11,35 +12,54 @@ namespace KiyuzuDev.ITGWDO.Core
 
         public static ScriptManager Instance { get; private set; }
         
-        private void OnDestroy()
+        private void Awake()
         {
-            Destroy(Instance);
+            Instance = this;
         }
 
         #endregion
         
         private List<StorySheet> storyList;
 
-        private void Awake()
+        private StorySheet _presentStory;
+        public StorySheet PresentStory
         {
-            if (Instance == null) Instance = this;
-            else if (Instance != this)
-            {
-                Destroy(gameObject);
-                Instance = this;
-            }
-            
+            get => _presentStory;
+            private set => _presentStory = value;
+        }
+
+        public int PresentStoryId { get; set; }
+
+        public int StoryListSize => storyList.Count;
+        
+        private void OnEnable()
+        {
             storyList = Resources.LoadAll<StorySheet>("StorySO").ToList();
         }
 
-        public int StoryListSize => storyList.Count;
-
-        public List<int> StoryIndexList()
+        private void Start()
         {
-            List<int> res = new List<int>();
-            foreach (StorySheet storySheet in storyList) res.Add(storySheet.storyId);
-            return res;
+            PresentStory = storyList[0];
+            PresentStoryId = storyList[0].storyId;
+            LoadIDs();
         }
+
+        private void LoadIDs(){}
+        
+        private void UpdateStory(int id)
+        {
+            foreach (var sheet in storyList)
+            {
+                if (sheet.storyId == id)
+                {
+                    PresentStory = sheet;
+                    PresentStoryId = id;
+                }
+            }
+        }
+        
+        public static DialogueLine PresentLine { get; private set; }
+        public static int PresentLineID { get; private set; }
 
         public StorySheet LoadStorySheetById(int id)
         {
@@ -48,14 +68,17 @@ namespace KiyuzuDev.ITGWDO.Core
                     return storySheet;
             return null;
         }
+
+        public void LoadLineById(int storyId, int lineId) 
+            => PresentLine = LoadStorySheetById(storyId).dialogueLines[lineId];
+
+        public void SetPresentLineId() => PresentStoryId = PresentLine.lineId;
         
-        public DialogueLine LoadSpecificLine(int storyId, int lineId) 
-            => LoadStorySheetById(storyId).GetSpecificLine(lineId);
+        public void LoadLineByIdPresent(int lineId) => PresentLine = PresentStory.dialogueLines[lineId];
 
-        public DialogueLine LoadSpecificLine(int lineId)
-            => LoadSpecificLine(int.Parse(lineId.ToString().Substring(0, 1)), lineId);
+        public DialogueLine LoadLineDataPresent(int lineId) => PresentStory.dialogueLines[lineId];
 
-
+        public void SetLineDataPresent(int lineId) => PresentLine = PresentStory.dialogueLines[lineId];
 
     }
 }

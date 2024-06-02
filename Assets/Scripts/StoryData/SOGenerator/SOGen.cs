@@ -30,7 +30,7 @@ public class SOGen : MonoBehaviour
 
     private void Start()
     {
-        CreateStoryAsset("Chap1");
+        CreateStoryAsset("0531");
     }
 
     private void CreateStoryAsset(string scriptFileName)
@@ -40,7 +40,7 @@ public class SOGen : MonoBehaviour
         List<DialogueLine> lineList = new List<DialogueLine>();
         foreach (var lineRaw in dialogueRaws)
         {
-            DialogueLine line = ScriptableObject.CreateInstance<DialogueLine>();
+            DialogueLine line = new DialogueLine();
             line.lineId = lineRaw.lineId;
             Enum.TryParse(lineRaw.dialogueLineType, out line.DialogueLineType);
             line.personName = lineRaw.personName;
@@ -49,9 +49,7 @@ public class SOGen : MonoBehaviour
             line.eventMain = ParseEvent(lineRaw.eventMain, lineRaw.eventMainArgs);
             line.eventAfter = ParseEvent(lineRaw.eventAfter, lineRaw.eventAfterArgs);
             int.TryParse(lineRaw.toLine, out line.toLine);
-            AssetDatabase.CreateAsset(line, pathSO + scriptFileName + "/" + line.lineId + ".asset");
             lineList.Add(line);
-            EditorUtility.SetDirty(line);
         }
         StorySheet story = ScriptableObject.CreateInstance<StorySheet>();
         story.storyId = 1;

@@ -7,8 +7,7 @@ namespace KiyuzuDev.ITGWDO.StoryData
     public class StorySheet : ScriptableObject
     {
         public int storyId;
+        [SerializeField]
         public List<DialogueLine> dialogueLines;
-
-        public DialogueLine GetSpecificLine(int id) => dialogueLines[id];
     }
 }

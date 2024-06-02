@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 69461371e5aac0d4b8b1dca5e07c2e15
+guid: e2c79d0eb17ef694cbcf952379dd82a6
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -11,4 +11,4 @@ ScriptedImporter:
   generateWrapperCode: 0
   wrapperCodePath: 
   wrapperClassName: 
-  wrapperCodeNamespace: Kiyuzu.ITGWDO
+  wrapperCodeNamespace: 

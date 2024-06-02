@@ -92,32 +92,37 @@ namespace KiyuzuDev.ITGWDO
 
         public void AddType(IngrType _type)
         {
+            if (TotalVol - 150 > 0)
+            {
+                CheckerManager.Instance.FullWarning();
+                return;
+            }
             switch (_type)
             {
                 case IngrType.Gin:
                     GenerateParticles(_type);
                     wine.lstGin = GameObject.FindGameObjectsWithTag("Gin");
-                    TotalVol += 10;
+                    TotalVol += 5;
                     break;
                 case IngrType.Whisky:
                     GenerateParticles(_type);
                     wine.lstWhisky = GameObject.FindGameObjectsWithTag("Whisky");
-                    TotalVol += 10;
+                    TotalVol += 5;
                     break;
                 case IngrType.Tequila:
                     GenerateParticles(_type);
                     wine.lstTequila = GameObject.FindGameObjectsWithTag("Tequila");
-                    TotalVol += 10;
+                    TotalVol += 5;
                     break;
                 case IngrType.Rum:
                     GenerateParticles(_type);
                     wine.lstRum = GameObject.FindGameObjectsWithTag("Rum");
-                    TotalVol += 10;
+                    TotalVol += 5;
                     break;
                 case IngrType.Vodka:
                     GenerateParticles(_type);
                     wine.lstVodka = GameObject.FindGameObjectsWithTag("Vodka");
-                    TotalVol += 10;
+                    TotalVol += 5;
                     break;
                 case IngrType.Ice:
                     if (wine.iceGO) Destroy(wine.iceGO);
@@ -163,7 +168,7 @@ namespace KiyuzuDev.ITGWDO
 
         private void GenerateParticles(IngrType _type)
         {
-            GameObject item = Resources.Load<GameObject>("Prefabs/WineIngredients/" + _type.ToString());
+            GameObject item = Resources.Load<GameObject>("Prefabs/WineIngredients/" + _type);
             Instantiate(item, CheckerManager.Instance.wineSpawnPoint);
         }
     }
