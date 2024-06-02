@@ -484,5 +484,36 @@ namespace KiyuzuDev.ITGWDO.View
         }
 
         #endregion
+        
+        #region 大小CG显隐
+
+        [SerializeField] private GameObject fullCG;
+        [SerializeField] private GameObject smallCG;
+
+        public void FullCGOn(Sprite img)
+        {
+            fullCG.GetComponent<CanvasGroup>().alpha = 1;
+            fullCG.GetComponent<Image>().sprite = img;
+        }
+
+        public void FullCGOff()
+        {
+            fullCG.GetComponent<Image>().sprite = null;
+            fullCG.GetComponent<CanvasGroup>().alpha = 0;
+        }
+        public void PartCGOn(Sprite img)
+        {
+            smallCG.GetComponent<CanvasGroup>().alpha = 1;
+            smallCG.GetComponent<Image>().sprite = img;
+            smallCG.GetComponent<Image>().SetNativeSize();
+        }
+
+        public void PartCGOff()
+        {
+            smallCG.GetComponent<Image>().sprite = null;
+            smallCG.GetComponent<CanvasGroup>().alpha = 0;
+        }
+
+        #endregion
     }
 }

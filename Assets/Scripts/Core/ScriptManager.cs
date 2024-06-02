@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using KiyuzuDev.ITGWDO.StoryData;
+using UnityEditor.Build.Pipeline.Tasks;
 using UnityEngine;
 
 namespace KiyuzuDev.ITGWDO.Core
@@ -34,8 +35,8 @@ namespace KiyuzuDev.ITGWDO.Core
 		#region Fields
 		private List<StorySheet> storyList;
         private StorySheet _presentStory;
-        /// <summary>Line ID µ½ÆäÔÚ story sheet ÀïµÄË÷ÒıµÄ±í¡£</summary>
-        /// <remarks>½ö½ö×÷ÎªË½ÓĞ³ÉÔ±ÔÚÉèÖÃ <c>PresentStory</c> Ê±¸üĞÂ£¬²»¹«¿ª¡£</remarks>
+        /// <summary>Line ID åˆ°å…¶åœ¨ story sheet é‡Œçš„ç´¢å¼•çš„è¡¨ã€‚</summary>
+        /// <remarks>ä»…ä»…ä½œä¸ºç§æœ‰æˆå‘˜åœ¨è®¾ç½® <c>PresentStory</c> æ—¶æ›´æ–°ï¼Œä¸å…¬å¼€ã€‚</remarks>
         private Dictionary<int, int> lineIdIndexMap;
 		#endregion
 
@@ -69,25 +70,32 @@ namespace KiyuzuDev.ITGWDO.Core
         {
             foreach (var sheet in storyList)
             {
-                if (sheet.storyId == id)
+                _presentStory = value;
+                if (value != null)
                 {
-                    PresentStory = sheet;
-                    PresentStoryId = id;
+                    idMap = new Dictionary<int, DialogueLine>();
+                    foreach (DialogueLine line in PresentStory.dialogueLines)
+                        idMap.Add(line.lineId, line);
                 }
             }
         }
 
-        public StorySheet LoadStorySheetById(int id)
+        private void SetPresentStorySheet(string id)
         {
             foreach (StorySheet storySheet in storyList)
                 if (storySheet.storyId == id)
-                    return storySheet;
-            return null;
+                {
+                    PresentStory = storySheet;
+                    PresentStoryId = storySheet.storyId;
+                    return;
+                }
+            PresentStory = null;
+            PresentStoryId = null;
         }
 
         public DialogueLine GetLineById(int lineId) {
             if(!lineIdIndexMap.ContainsKey(lineId)) {
-                Debug.LogWarning($"ÊÔÍ¼´Ó¹ÊÊÂ\"{PresentStory.name}\"ÖĞ»ñÈ¡ ID Îª\"{lineId}\"µÄ line Ê§°Ü¡£");
+                Debug.LogWarning($"è¯•å›¾ä»æ•…äº‹\"{PresentStory.name}\"ä¸­è·å– ID ä¸º\"{lineId}\"çš„ line å¤±è´¥ã€‚");
                 return null;
             }
             return PresentStory.dialogueLines[lineIdIndexMap[lineId]];
@@ -96,7 +104,12 @@ namespace KiyuzuDev.ITGWDO.Core
         public void LoadLineById(int storyId, int lineId) 
             => PresentLine = LoadStorySheetById(storyId).dialogueLines[lineId];
 
-        public void SetPresentLineId() => PresentStoryId = PresentLine.lineId;
+        public DialogueLine GetDialogueLine(int lineId) => idMap[lineId];
+        
+        public void LoadLineById(string storyId, int lineId) 
+            => PresentLine = PresentStory.dialogueLines[lineId];
+
+        public void SetPresentLineId() => PresentLineID = PresentLine.lineId;
         
         public void LoadLineByIdPresent(int lineId) => PresentLine = PresentStory.dialogueLines[lineId];
 
@@ -104,5 +117,12 @@ namespace KiyuzuDev.ITGWDO.Core
 
         public void SetLineDataPresent(int lineId) => PresentLine = PresentStory.dialogueLines[lineId];
 
+        #endregion
+        
+        private void OnEnable()
+        {
+            storyList = Resources.LoadAll<StorySheet>("StorySO").ToList();
+            SetPresentStorySheet("X");
+        }
     }
 }
