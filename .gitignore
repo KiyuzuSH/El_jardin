@@ -84,4 +84,5 @@ crashlytics-build.properties
 /[Aa]ssets/DOTween Examples/
 /[Aa]ssets/DOTween Examples.meta
 
-/[Bb]uild/
+/[Dd]evBuild
+/[Bb]uild
