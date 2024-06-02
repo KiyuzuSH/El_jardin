@@ -9,30 +9,16 @@ namespace KiyuzuDev.ITGWDO.Core
     public class ScriptManager : MonoBehaviour
     {
         #region Singleton
-
         public static ScriptManager Instance { get; private set; }
         
         private void Awake()
         {
             Instance = this;
         }
+		#endregion
 
-        #endregion
-        
-        private List<StorySheet> storyList;
-
-        private StorySheet _presentStory;
-        public StorySheet PresentStory
-        {
-            get => _presentStory;
-            private set => _presentStory = value;
-        }
-
-        public int PresentStoryId { get; set; }
-
-        public int StoryListSize => storyList.Count;
-        
-        private void OnEnable()
+		#region Life cycle
+		private void OnEnable()
         {
             storyList = Resources.LoadAll<StorySheet>("StorySO").ToList();
         }
@@ -43,8 +29,41 @@ namespace KiyuzuDev.ITGWDO.Core
             PresentStoryId = storyList[0].storyId;
             LoadIDs();
         }
+		#endregion
 
-        private void LoadIDs(){}
+		#region Fields
+		private List<StorySheet> storyList;
+        private StorySheet _presentStory;
+        /// <summary>Line ID 到其在 story sheet 里的索引的表。</summary>
+        /// <remarks>仅仅作为私有成员在设置 <c>PresentStory</c> 时更新，不公开。</remarks>
+        private Dictionary<int, int> lineIdIndexMap;
+		#endregion
+
+		#region Properties
+		public StorySheet PresentStory
+        {
+            get => _presentStory;
+            private set {
+                _presentStory = value;
+
+                // Update `lineIdIndexMap` here.
+                lineIdIndexMap = new();
+                for(int index = 0; index < _presentStory.dialogueLines.Count; ++index) {
+					var line = _presentStory.dialogueLines[index];
+                    lineIdIndexMap.Add(line.lineId, index);
+				}
+            }
+        }
+
+		public static DialogueLine PresentLine { get; private set; }
+        public static int PresentLineID { get; private set; }
+
+        public int PresentStoryId { get; set; }
+
+        public int StoryListSize => storyList.Count;
+		#endregion
+
+		private void LoadIDs(){}
         
         private void UpdateStory(int id)
         {
@@ -57,9 +76,6 @@ namespace KiyuzuDev.ITGWDO.Core
                 }
             }
         }
-        
-        public static DialogueLine PresentLine { get; private set; }
-        public static int PresentLineID { get; private set; }
 
         public StorySheet LoadStorySheetById(int id)
         {
@@ -67,6 +83,14 @@ namespace KiyuzuDev.ITGWDO.Core
                 if (storySheet.storyId == id)
                     return storySheet;
             return null;
+        }
+
+        public DialogueLine GetLineById(int lineId) {
+            if(!lineIdIndexMap.ContainsKey(lineId)) {
+                Debug.LogWarning($"试图从故事\"{PresentStory.name}\"中获取 ID 为\"{lineId}\"的 line 失败。");
+                return null;
+            }
+            return PresentStory.dialogueLines[lineIdIndexMap[lineId]];
         }
 
         public void LoadLineById(int storyId, int lineId) 
