@@ -13,50 +13,35 @@ namespace KiyuzuDev.ITGWDO.Core
         
         private void Awake()
         {
-            if (Instance == null) Instance = this;
-            else if (Instance != this)
-            {
-                Destroy(gameObject);
-                Instance = this;
-            }
-        }
-        
-        private void OnDestroy()
-        {
-            Destroy(Instance);
+            Instance = this;
         }
         
         #endregion
-        
-        public static DialogueLine PresentLine { get; private set; }
-        public static int PresentLineID { get; set; }
 
         private void Start()
         {
-            LoadLineById(110001);
+            ScriptManager.Instance.LoadLineByIdPresent(1);
             ProcessLine();
-        }
-
-        public void LoadLineById(int id)
-        {
-            PresentLine = ScriptManager.Instance.LoadSpecificLine(id);
         }
         
         public void ProcessLine()
         {
-            PresentLineID = PresentLine.lineId;
-            // Deal Event Fore
-            // Deal Event Main
-            switch (PresentLine.DialogueLineType)
+            ScriptManager.Instance.SetPresentLineId();
+            if (ScriptManager.PresentLineID > 43 && !AVGView.Instance.ismindAva())
+                AVGView.Instance.SetAvailable();
+            ProcessEvent(EventPlace.Fore);
+            ProcessEvent(EventPlace.Main);
+            switch (ScriptManager.PresentLine.DialogueLineType)
             {
                 case EnumDialogueLineType.TitleLine:
-                    AVGView.Instance.UpdateAnnouncementTitle(PresentLine.content);
-                    break;
+                    AVGView.Instance.UpdateText("","");
+                    AVGView.Instance.UpdateAnnouncementTitle(ScriptManager.PresentLine.content);
+                    return;
                 case EnumDialogueLineType.NarrationLine:
-                    AVGView.Instance.UpdateText(PresentLine.personName,PresentLine.content);
+                    AVGView.Instance.UpdateText(ScriptManager.PresentLine.personName,ScriptManager.PresentLine.content);
                     break;
                 case EnumDialogueLineType.MindLine:
-                    AVGView.Instance.UpdateMind(PresentLine.content);
+                    AVGView.Instance.UpdateMind(ScriptManager.PresentLine.content);
                     break;
                 case EnumDialogueLineType.ChooseLine:
                     AVGView.Instance.GenerateChoices();
@@ -65,25 +50,42 @@ namespace KiyuzuDev.ITGWDO.Core
                     AVGView.Instance.GenerateMindChoices();
                     return;
                 case EnumDialogueLineType.ControlLine:
-                    Debug.Log(PresentLine.personName + "\n" + PresentLine.content);
-                    // Process event After
-                    LoadLineById(PresentLine.toLine);
+                    AVGView.Instance.UpdateText("","");
+                    Debug.Log("This is a control Line. ");
                     return;
                 case EnumDialogueLineType.GameLine:
-                    // TODO: Turn to Game Scene
+                    GlobalDataManager.Instance.NextLineID = ScriptManager.PresentLine.toLine;
+                    LegacySceneLoader.Instance.LoadScene("CocktailScene");
                     break;
             }
         }
 
         public void MoveNextLine()
         {
-            // Deal eventAfter
-            LoadLineById(PresentLine.toLine);
+            ProcessEvent(EventPlace.After);
+            ScriptManager.Instance.SetLineDataPresent(ScriptManager.PresentLine.toLine);
         }
 
-        private void ProcessEventFore() {
-			var args = PresentLine.eventFore.args;
-			switch (PresentLine.eventFore.eventType)
+        private void ProcessEvent(EventPlace evtPlc)
+        {
+            string[] args = { };
+            EnumDialogueEventType type = EnumDialogueEventType.None;
+            switch (evtPlc)
+            {
+                case EventPlace.Fore:
+                    args = ScriptManager.PresentLine.eventFore.args;
+                    type = ScriptManager.PresentLine.eventFore.eventType;
+                    break;
+                case EventPlace.Main:
+                    args = ScriptManager.PresentLine.eventMain.args;
+                    type = ScriptManager.PresentLine.eventMain.eventType;
+                    break;
+                case EventPlace.After:
+                    args = ScriptManager.PresentLine.eventAfter.args;
+                    type = ScriptManager.PresentLine.eventAfter.eventType;
+                    break;
+            }
+			switch (type)
             {
                 case EnumDialogueEventType.None:
                     return;
@@ -98,39 +100,54 @@ namespace KiyuzuDev.ITGWDO.Core
                     switch (args[0].ToLower())
                     {
                         case "full":
-                            AVGBackgroundView.Instance.FullCGOn(
+                            AVGView.Instance.FullCGOn(
                                 Resources.Load<Sprite>(args[1])
                                 );
                             break;
                         case "part":
-                            AVGBackgroundView.Instance.PartCGOn(
+                            AVGView.Instance.PartCGOn(
                                 Resources.Load<Sprite>(args[1])
                             );
                             break;
                     }
                     break;
                 case EnumDialogueEventType.CGUnLoad:
-                    AVGBackgroundView.Instance.FullCGOff();
-                    AVGBackgroundView.Instance.PartCGOff();
-                    break;
-                case EnumDialogueEventType.BlackOn: {
-                        int duration = args.Length >= 1 ? int.Parse(args[0]) : 2;
-                        GameManager.Instance.FadeBlackScreenOpacity(1, duration);
-                        break;
+                    switch (args[0].ToLower())
+                    {
+                        case "full":
+                            AVGView.Instance.FullCGOff();
+                            break;
+                        case "part":
+                            AVGView.Instance.PartCGOff();
+                            break;
                     }
-                case EnumDialogueEventType.BlackOff: {
-                        int duration = args.Length >= 1 ? int.Parse(args[0]) : 2;
-                        GameManager.Instance.FadeBlackScreenOpacity(0, duration);
-					    break;
-					}
-				case EnumDialogueEventType.HumanLoad:
-
                     break;
-                case EnumDialogueEventType.HumanChangePos:
+                case EnumDialogueEventType.BlackOn:
+                {
+                    float duration = args.Length >= 1 ? float.Parse(args[0]) : 2;
+                    GameManager.Instance.FadeBlackScreenOpacity(1, duration);
+                    break;
+                }
+                case EnumDialogueEventType.BlackOff: 
+                {
+                    float duration = args.Length >= 1 ? float.Parse(args[0]) : 2;
+                    GameManager.Instance.FadeBlackScreenOpacity(0, duration);
+                    break;
+                }
+				case EnumDialogueEventType.HumanLoad:
+                    AVGBackgroundView.Instance.HumanLoad(args[0],args[1]);
+                    break;
+                case EnumDialogueEventType.HumanPosChange:
                     // TODO: not used, write if used
                     break;
+                case EnumDialogueEventType.HumanChange:
+                    AVGBackgroundView.Instance.HumanChange(args[0],args[1]);
+                    break;
                 case EnumDialogueEventType.HumanUnload:
-
+                    AVGBackgroundView.Instance.HumanUnload(args[0]);
+                    break;
+                case EnumDialogueEventType.HumanAllClear:
+                    AVGBackgroundView.Instance.HumanAllClear();
                     break;
             }
             

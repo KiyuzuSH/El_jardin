@@ -1,3 +1,5 @@
+using KiyuzuDev.ITGWDO.Core;
+using KiyuzuDev.ITGWDO.View;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -94,7 +96,7 @@ namespace KiyuzuDev.ITGWDO
         private void TmpChangePic()
         {
             btnPourOut.SetActive(false);
-            shakeCup.sprite = Resources.Load<Sprite>("Sprites/Wine/LinBieZengYan");
+            shakeCup.sprite = Resources.Load<Sprite>("Sprites/Wine/Risei");
             box.SetActive(true);
             shakeCup.SetNativeSize();
             Invoke(nameof(MoveNext),3);
@@ -102,10 +104,8 @@ namespace KiyuzuDev.ITGWDO
 
         private void MoveNext()
         {
-            //TODO: wine data
-            // AVG.ScriptManager.Instance.CurrentLine = 50;
-            // SystemSwitchManager.Instance.AVGMode();
-            // AVGEngine.DialogueManager.Instance.CheckCurrentLine();
+            // TODO: wine DATA
+            LegacySceneLoader.Instance.LoadScene("AVGScene");
         }
     }
 }

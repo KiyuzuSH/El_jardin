@@ -1,0 +1,34 @@
+{
+    "name": "Collection View Actions",
+    "maps": [
+        {
+            "name": "Collection Panel",
+            "id": "481d1c9f-8af6-4e81-bd65-a2958a42b4c0",
+            "actions": [
+                {
+                    "name": "Switch Type",
+                    "type": "Button",
+                    "id": "a1e902fc-06bd-4866-bbed-abbc41ec5b6d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "62b0a0bd-b348-4974-b44e-f2290be90f1a",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch Type",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

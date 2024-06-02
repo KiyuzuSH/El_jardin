@@ -27,6 +27,9 @@
 .vs/
 /.vsconfig
 
+# Visual Studio Code
+/.vscode
+
 # IDEA
 /.idea
 
@@ -79,3 +82,4 @@ crashlytics-build.properties
 /[Aa]ssets/Resources/Audio/SFXs
 
 /[Aa]ssets/DOTween Examples/
+/[Aa]ssets/DOTween Examples.meta
