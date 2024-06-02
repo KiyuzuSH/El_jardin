@@ -170,7 +170,7 @@ MonoBehaviour:
       eventType: 0
       args: []
     eventAfter:
-      eventType: 0
+      eventType: 4
       args:
       - full
     toLine: 12
@@ -1397,7 +1397,8 @@ MonoBehaviour:
       args: []
     eventAfter:
       eventType: 6
-      args: []
+      args:
+      - 0.01
     toLine: 99
   - lineId: 99
     DialogueLineType: 3
@@ -1569,7 +1570,7 @@ MonoBehaviour:
     toLine: 112
   - lineId: 111
     DialogueLineType: 1
-    personName: 1a
+    personName: 
     content: "\u4F60\u62A5\u4EE5\u4E00\u4E2A\u516C\u5F0F\u5316\u7684\u5FAE\u7B11\uFF0C\u4FDD\u6301\u4E86\u9002\u5EA6\u7684\u795E\u79D8\u611F\u3002"
     eventFore:
       eventType: 0
@@ -1583,7 +1584,7 @@ MonoBehaviour:
     toLine: 113
   - lineId: 112
     DialogueLineType: 1
-    personName: 1b
+    personName: 
     content: "\u4ED6\u6123\u4E86\u4E00\u4E0B\uFF0C\u8FD8\u662F\u6BEB\u65E0\u82A5\u8482\u5730\u7EE7\u7EED\u559D\u4E0B\u4E00\u53E3\u9152\uFF0C\u81F3\u5C11\u4ED6\u8868\u73B0\u5F97\u5F88\u9547\u5B9A\u3002"
     eventFore:
       eventType: 0
@@ -1645,7 +1646,8 @@ MonoBehaviour:
     content: "\u591A\u8C22\u4F60\u7684\u597D\u610F\u2026\u2026\u4F46\u6211\u8FDE\u8D4A\u8D26\u90FD\u5FEB\u8FD8\u4E0D\u6E05\u4E86\u3002"
     eventFore:
       eventType: 6
-      args: []
+      args:
+      - 0.01
     eventMain:
       eventType: 0
       args: []
@@ -1694,7 +1696,7 @@ MonoBehaviour:
       eventType: 0
       args: []
     eventAfter:
-      eventType: 0
+      eventType: 4
       args:
       - part
     toLine: 120
@@ -2018,7 +2020,7 @@ MonoBehaviour:
       args:
       - 0
     eventMain:
-      eventType: 0
+      eventType: 4
       args:
       - full
     eventAfter:
@@ -2111,7 +2113,7 @@ MonoBehaviour:
     eventAfter:
       eventType: 5
       args:
-      - 0.9
+      - 0.01
     toLine: 149
   - lineId: 149
     DialogueLineType: 6

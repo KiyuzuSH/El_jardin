@@ -20,13 +20,11 @@ namespace KiyuzuDev.ITGWDO.Core
 
         private void Start()
         {
-            ScriptManager.Instance.LoadLineByIdPresent(1);
-            ProcessLine();
+            // ProcessLine();
         }
         
         public void ProcessLine()
         {
-            ScriptManager.Instance.SetPresentLineId();
             if (ScriptManager.PresentLineID > 43 && !AVGView.Instance.ismindAva())
                 AVGView.Instance.SetAvailable();
             ProcessEvent(EventPlace.Fore);
@@ -55,15 +53,16 @@ namespace KiyuzuDev.ITGWDO.Core
                     return;
                 case EnumDialogueLineType.GameLine:
                     GlobalDataManager.Instance.NextLineID = ScriptManager.PresentLine.toLine;
-                    LegacySceneLoader.Instance.LoadScene("CocktailScene");
+                    LegacySceneLoader.Instance.LoadScene(2);
                     break;
             }
         }
 
         public void MoveNextLine()
         {
+            if (ScriptManager.PresentLineID == 1) ProcessLine();
             ProcessEvent(EventPlace.After);
-            ScriptManager.Instance.SetLineDataPresent(ScriptManager.PresentLine.toLine);
+            ScriptManager.Instance.SetLineById(ScriptManager.PresentLine.toLine);
         }
 
         private void ProcessEvent(EventPlace evtPlc)
@@ -111,7 +110,7 @@ namespace KiyuzuDev.ITGWDO.Core
                             break;
                     }
                     break;
-                case EnumDialogueEventType.CGUnLoad:
+                case EnumDialogueEventType.CGUnload:
                     switch (args[0].ToLower())
                     {
                         case "full":
@@ -150,7 +149,12 @@ namespace KiyuzuDev.ITGWDO.Core
                     AVGBackgroundView.Instance.HumanAllClear();
                     break;
             }
-            
+        }
+        
+        public void SetLineOfDialogue(int id)
+        {
+            ScriptManager.Instance.SetLineById(id);
+            ProcessLine();
         }
     }
 }

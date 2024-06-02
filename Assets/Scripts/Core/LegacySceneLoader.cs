@@ -1,9 +1,9 @@
 using System.Collections;
-using KiyuzuDev.ITGWDO.Core;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace KiyuzuDev.ITGWDO.View {
+namespace KiyuzuDev.ITGWDO.Core
+{
 	public class LegacySceneLoader : MonoBehaviour
     {
         #region Singleton
@@ -27,22 +27,22 @@ namespace KiyuzuDev.ITGWDO.View {
 
         #endregion
 
-        public void LoadScene(string sceneKey)
+        public void LoadScene(int sceneKey)
         {
             Instance.StartCoroutine(LoadSceneCoroutine(sceneKey));
         }
         
-        IEnumerator LoadSceneCoroutine(string sceneKey)
+        IEnumerator LoadSceneCoroutine(int sceneKey)
         {
             var loadingOperation = SceneManager.LoadSceneAsync(sceneKey);
 
             loadingOperation.allowSceneActivation = false;
-			yield return Core.GameManager.Instance.FadeBlackScreenOpacity(1);
+			yield return GameManager.Instance.FadeBlackScreenOpacity(1);
 
             loadingOperation.allowSceneActivation = true;
-			yield return Core.GameManager.Instance.FadeBlackScreenOpacity(0);
+			yield return GameManager.Instance.FadeBlackScreenOpacity(0);
             if(GlobalDataManager.Instance.NextLineID > 1001)
-                GlobalDataManager.Instance.LoadLineOfDialogue(GlobalDataManager.Instance.NextLineID);
+                DialogueManager.Instance.SetLineOfDialogue(GlobalDataManager.Instance.NextLineID);
 		}
     }
 }

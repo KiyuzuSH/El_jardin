@@ -10,7 +10,7 @@ namespace KiyuzuDev.ITGWDO.StoryData
         Wait, // NOT USED NOW 0531 args[0]=secondInt
         Style, // args[0]=WorldStyle.XXX
         CGLoad, // args[0]=Full/Part, args[1]=Resources/..
-        CGUnLoad, // args[0]=Full/Part/All
+        CGUnload, // args[0]=Full/Part/All
         BlackOn, // args[0]=durationSecondInt
         BlackOff, // args[0]=durationSecondInt
         HumanLoad, // args[0]=xPos, args[1]=Resources/..
