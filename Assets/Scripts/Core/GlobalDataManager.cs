@@ -60,11 +60,5 @@ namespace KiyuzuDev.ITGWDO.Core
         {
             SetWorldStyle(PresentWorldStyle);
         }
-
-        public void LoadLineOfDialogue(int id)
-        {
-            ScriptManager.Instance.LoadLineByIdPresent(id);
-            DialogueManager.Instance.ProcessLine();
-        }
     }
 }

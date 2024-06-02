@@ -105,7 +105,7 @@ namespace KiyuzuDev.ITGWDO
         private void MoveNext()
         {
             // TODO: wine DATA
-            LegacySceneLoader.Instance.LoadScene("AVGScene");
+            LegacySceneLoader.Instance.LoadScene(1);
         }
     }
 }

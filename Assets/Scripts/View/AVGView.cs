@@ -401,7 +401,7 @@ namespace KiyuzuDev.ITGWDO.View
         {
             for (int id = ScriptManager.PresentLineID + 1;; id++)
             {
-                var dLine = ScriptManager.Instance.LoadLineDataPresent(id);
+                var dLine = ScriptManager.Instance.GetLineById(id);
                 var btn = Instantiate(buttonChoicePrefab, gridButton);
                 btn.GetComponentInChildren<TMP_Text>().text = dLine.content;
                 btn.GetComponent<Button>().onClick.AddListener(
@@ -426,15 +426,14 @@ namespace KiyuzuDev.ITGWDO.View
                         break;
                 }
 
-                if (ScriptManager.Instance.LoadLineDataPresent(id + 1).DialogueLineType != EnumDialogueLineType.ChoiceLine) break;
+                if (ScriptManager.Instance.GetLineById(id + 1).DialogueLineType != EnumDialogueLineType.ChoiceLine) break;
             }
         }
         
         private void OnChoiceClick(int toId)
         {
             Debug.Log("Clicked");
-            ScriptManager.Instance.SetLineDataPresent(toId);
-            DialogueManager.Instance.ProcessLine();
+            ScriptManager.Instance.SetLineById(toId);
             for (int i = 0; i < gridButton.childCount; i++) Destroy(gridButton.GetChild(i).gameObject);
             DialogueManager.Instance.ProcessLine();
         }
@@ -449,6 +448,7 @@ namespace KiyuzuDev.ITGWDO.View
         {
             for (int id = ScriptManager.PresentLineID + 1;; id++)
             {
+                var dLine = ScriptManager.Instance.GetLineById(id);
                 var btn = Instantiate(buttonMindChoicePrefab, gridMindButton);
                 switch (GlobalDataManager.Instance.PresentWorldStyle)
                 {
@@ -465,20 +465,20 @@ namespace KiyuzuDev.ITGWDO.View
                             Resources.Load<Sprite>(pathUtopiaSprites + "gui/utopia_choicebutton");
                         break;
                 }
-                btn.GetComponentInChildren<TMP_Text>().text = ScriptManager.Instance.LoadLineDataPresent(id).content;
+                btn.GetComponentInChildren<TMP_Text>().text = dLine.content;
                 btn.GetComponent<Button>().onClick.AddListener(
                     delegate
                     {
-                        OnMindChoiceClick(ScriptManager.Instance.LoadLineDataPresent(id).toLine);
+                        OnMindChoiceClick(dLine.toLine);
                     });
-                if (ScriptManager.Instance.LoadLineDataPresent(id + 1).DialogueLineType != EnumDialogueLineType.ChoiceLine) break;
+                if (ScriptManager.Instance.GetLineById(id + 1).DialogueLineType != EnumDialogueLineType.ChoiceLine) break;
             }
         }
         
         private void OnMindChoiceClick(int toId)
         {
             Debug.Log("Clicked");
-            ScriptManager.Instance.SetLineDataPresent(toId);
+            ScriptManager.Instance.SetLineById(toId);
             for (int i = 0; i < gridMindButton.childCount; i++) Destroy(gridMindButton.GetChild(i).gameObject);
             DialogueManager.Instance.ProcessLine();
         }
