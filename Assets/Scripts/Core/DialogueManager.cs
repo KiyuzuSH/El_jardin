@@ -2,6 +2,7 @@ using System;
 using KiyuzuDev.ITGWDO.StoryData;
 using KiyuzuDev.ITGWDO.View;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace KiyuzuDev.ITGWDO.Core
 {
@@ -18,10 +19,7 @@ namespace KiyuzuDev.ITGWDO.Core
         
         #endregion
 
-        private void Start()
-        {
-            // ProcessLine();
-        }
+        [SerializeField] private Button continueButton;
         
         public void ProcessLine()
         {
@@ -42,9 +40,11 @@ namespace KiyuzuDev.ITGWDO.Core
                     AVGView.Instance.UpdateMind(ScriptManager.PresentLine.content);
                     break;
                 case EnumDialogueLineType.ChooseLine:
+                    continueButton.interactable = false;
                     AVGView.Instance.GenerateChoices();
                     return;
                 case EnumDialogueLineType.MindChooseLine:
+                    continueButton.interactable = false;
                     AVGView.Instance.GenerateMindChoices();
                     return;
                 case EnumDialogueLineType.ControlLine:
