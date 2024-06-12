@@ -31,6 +31,8 @@ namespace KiyuzuDev.ITGWDO.View
 
         #endregion
         
+        [SerializeField] private Button continueButton;
+        
         private void OnEnable()
         {
             haveTextTypewriter = false;
@@ -432,7 +434,8 @@ namespace KiyuzuDev.ITGWDO.View
         
         private void OnChoiceClick(int toId)
         {
-            Debug.Log("Clicked");
+            continueButton.interactable = true;
+            // Debug.Log("Clicked");
             ScriptManager.Instance.SetLineById(toId);
             for (int i = 0; i < gridButton.childCount; i++) Destroy(gridButton.GetChild(i).gameObject);
             DialogueManager.Instance.ProcessLine();
@@ -477,7 +480,8 @@ namespace KiyuzuDev.ITGWDO.View
         
         private void OnMindChoiceClick(int toId)
         {
-            Debug.Log("Clicked");
+            continueButton.interactable = true;
+            // Debug.Log("Clicked");
             ScriptManager.Instance.SetLineById(toId);
             for (int i = 0; i < gridMindButton.childCount; i++) Destroy(gridMindButton.GetChild(i).gameObject);
             DialogueManager.Instance.ProcessLine();

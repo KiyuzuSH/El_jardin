@@ -7,10 +7,10 @@ namespace KiyuzuDev.ITGWDO.StoryData
     public enum EnumDialogueEventType
     {
         None = 0,
-        Wait, // NOT USED NOW 0531 args[0]=secondInt
+        Wait, // NOT USED NOW 0531 args[0]=secondfloat
         Style, // args[0]=WorldStyle.XXX
         CGLoad, // args[0]=Full/Part, args[1]=Resources/..
-        CGUnload, // args[0]=Full/Part/All
+        CGUnload, // args[0]=Full/Part
         BlackOn, // args[0]=durationSecondInt
         BlackOff, // args[0]=durationSecondInt
         HumanLoad, // args[0]=xPos, args[1]=Resources/..
