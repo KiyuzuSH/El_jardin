@@ -24,7 +24,7 @@ namespace KiyuzuDev.ITGWDO.Core
         private void OnEnable()
         {
             storyList = Resources.LoadAll<StorySheet>("StorySO").ToList();
-            SetPresentStorySheet("X");
+            SetPresentStorySheet("A");
         }
 
         private void Start()

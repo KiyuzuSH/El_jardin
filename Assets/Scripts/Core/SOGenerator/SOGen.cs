@@ -94,7 +94,7 @@ namespace KiyuzuDev.ITGWDO.StoryData
 
         private void Start()
         {
-            CreateStoryAsset("0531");
+            CreateStoryAsset("Chap01");
         }
     }
 

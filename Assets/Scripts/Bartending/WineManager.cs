@@ -29,24 +29,9 @@ namespace KiyuzuDev.ITGWDO
 
         public static WineIngr wine;
         
+        public Transform wineSpawnPoint;
+        
         public int TotalVol { get; set; }
-
-        private void RefreshWholeList()
-        {
-            wine.lstGin = GameObject.FindGameObjectsWithTag("Gin");
-            wine.lstWhisky = GameObject.FindGameObjectsWithTag("Whisky");
-            wine.lstTequila = GameObject.FindGameObjectsWithTag("Tequila");
-            wine.lstRum = GameObject.FindGameObjectsWithTag("Rum");
-            wine.lstVodka = GameObject.FindGameObjectsWithTag("Vodka");
-            wine.iceGO = GameObject.FindGameObjectWithTag("Ice");
-            wine.lstHoney = GameObject.FindGameObjectsWithTag("Honey");
-            wine.lstSpice = GameObject.FindGameObjectsWithTag("Spice");
-            wine.lstSalt = GameObject.FindGameObjectsWithTag("Salt");
-            wine.lstRose = GameObject.FindGameObjectsWithTag("Rose");
-            wine.lstCitrus = GameObject.FindGameObjectsWithTag("Citrus");
-            wine.lemonAdded = false;
-            wine.berryAdded = false;
-        }
 
         public void ClearAllItem()
         {
@@ -130,8 +115,7 @@ namespace KiyuzuDev.ITGWDO
                         wine.iceGO = Instantiate(
                             Resources.Load<GameObject>(
                                 "Prefabs/WineIngredients/Ice"
-                            ),
-                            CheckerManager.Instance.wineSpawnPoint
+                            ), wineSpawnPoint
                         );
                     break;
                 case IngrType.Honey:
@@ -169,7 +153,7 @@ namespace KiyuzuDev.ITGWDO
         private void GenerateParticles(IngrType _type)
         {
             GameObject item = Resources.Load<GameObject>("Prefabs/WineIngredients/" + _type);
-            Instantiate(item, CheckerManager.Instance.wineSpawnPoint);
+            Instantiate(item, wineSpawnPoint);
         }
     }
 }
