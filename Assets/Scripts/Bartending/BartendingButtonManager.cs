@@ -20,6 +20,7 @@ namespace KiyuzuDev.ITGWDO
         private void Start()
         {
             btnSubmit.onClick.AddListener(OnSubmit);
+            btnClear.onClick.AddListener(OnClearCup);
         
             btnList.GetComponent<Button>().onClick.AddListener(OnListButtonClick);
             btnGin.GetComponent<Button>().onClick.AddListener(delegate { OnIngredientClick(IngrType.Gin); });
@@ -53,6 +54,7 @@ namespace KiyuzuDev.ITGWDO
             btnSalt.GetComponent<Button>().onClick.RemoveAllListeners();
             btnRoseOil.GetComponent<Button>().onClick.RemoveAllListeners();
             btnCitrusOil.GetComponent<Button>().onClick.RemoveAllListeners();
+            btnClear.GetComponent<Button>().onClick.RemoveAllListeners();
             Destroy(Instance);
         }
 
@@ -73,6 +75,7 @@ namespace KiyuzuDev.ITGWDO
         [SerializeField] private GameObject btnRoseOil;
         [SerializeField] private GameObject btnCitrusOil;
 
+
         private void OnListButtonClick()
             => ListBox.alpha = 1 - ListBox.alpha;
 
@@ -83,12 +86,20 @@ namespace KiyuzuDev.ITGWDO
 
         private void OnAfterAdded(IngrType _type) => WineManager.Instance.AddType(_type);
         
-        public Button btnSubmit;
+        [SerializeField] private Button btnSubmit;
+        [SerializeField] private Button btnClear;
 
         private void OnSubmit()
         {
             // TODO: Wine DATA
             BartendingManager.Instance.SwitchToShake();
+        }
+
+        private void OnClearCup()
+        {
+            CheckerManager.Instance.ClearTxt();
+            WineManager.Instance.ClearAllItem();
+            CheckerManager.Instance.CheckThings();
         }
     }
 }

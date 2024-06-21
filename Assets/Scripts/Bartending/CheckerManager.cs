@@ -30,8 +30,6 @@ namespace KiyuzuDev.ITGWDO
         public TMP_Text typeAmountR;
         
         public GameObject warningPanel;
-        
-        public Transform wineSpawnPoint;
 
         private void Start()
         {
@@ -39,10 +37,15 @@ namespace KiyuzuDev.ITGWDO
             warningPanel.GetComponent<CanvasGroup>().alpha = 0;
         }
 
-        private void CheckThings()
+        public void ClearTxt()
         {
+            totalAmount.text = "0";
             typeAmountL.text = "";
             typeAmountR.text = "";
+        }
+
+        public void CheckThings()
+        {
             if (WineManager.wine.lstGin != null)
                 typeAmountL.text += "金酒 "+ WineManager.wine.lstGin.Length * 5 +" mL\n";
             if (WineManager.wine.lstWhisky != null)
@@ -76,6 +79,7 @@ namespace KiyuzuDev.ITGWDO
         private void OnMouseEnter()
         {
             totalAmount.text = WineManager.Instance.TotalVol.ToString();
+            ClearTxt();
             CheckThings();
             if (Mathf.Approximately(Time.timeScale, 1.0f)) 
                 infoPanel.GetComponent<CanvasGroup>().alpha = 1;
@@ -84,6 +88,7 @@ namespace KiyuzuDev.ITGWDO
         private void OnMouseExit()
         {
             totalAmount.text = WineManager.Instance.TotalVol.ToString();
+            ClearTxt();
             CheckThings();
             infoPanel.GetComponent<CanvasGroup>().alpha = 0;
         }
