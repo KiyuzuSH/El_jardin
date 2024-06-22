@@ -1,6 +1,8 @@
+using System;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 namespace KiyuzuDev.ITGWDO.Core
 {
@@ -23,7 +25,7 @@ namespace KiyuzuDev.ITGWDO.Core
                     DontDestroyOnLoad(handle.Result);
         }
 
-		#region ����
+		#region BlackScreen
         /// <summary>The UI canvas group for showing the black screen.</summary>
 		[SerializeField] private CanvasGroup blackScreen;
 
@@ -56,6 +58,14 @@ namespace KiyuzuDev.ITGWDO.Core
             BlackScreenOpacity = opacity;
 
             blackScreen.alpha = opacity;
+        }
+
+        private void Update()
+        {
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(2))
+                blackScreen.transform.parent.gameObject.SetActive(false);
+            else blackScreen.transform.parent.gameObject.SetActive(true);
+            ;
         }
 
         #endregion

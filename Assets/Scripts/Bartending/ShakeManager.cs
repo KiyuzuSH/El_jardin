@@ -1,12 +1,13 @@
 using KiyuzuDev.ITGWDO.Core;
-using KiyuzuDev.ITGWDO.View;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace KiyuzuDev.ITGWDO
+namespace KiyuzuDev.ITGWDO.Bartending
 {
     public class ShakeManager : MonoBehaviour
     {
+        #region Singleton
+
         public static ShakeManager Instance { get; private set; }
         
         private void Awake()
@@ -24,12 +25,14 @@ namespace KiyuzuDev.ITGWDO
             Destroy(Instance);
         }
 
+        #endregion
+
         public Image shakeCup;
         public Slider progress;
 
         [Range(1,150)]
         public int expectedTimes = 10;
-        private float timePerPress;
+        private float durationTimePerPress;
         
         private bool LeftPressing;
         private bool RightPressing;
@@ -40,11 +43,13 @@ namespace KiyuzuDev.ITGWDO
         
         private void Start()
         {
-            timePerPress = 1.0f / expectedTimes;
+            durationTimePerPress = 1.0f / expectedTimes;
             btnPourOut.GetComponent<Button>().onClick.AddListener(ShakeComplete);
             btnPourOut.SetActive(false);
             box.SetActive(false);
             shakeCup.sprite = Resources.Load<Sprite>("Sprites/Items/Shaker/shaker_close");
+            LeftPressing = false;
+            RightPressing = false;
         }
 
         private void Update()
@@ -59,7 +64,7 @@ namespace KiyuzuDev.ITGWDO
                 {
                     LeftPressing = true;
                     shakeCup.rectTransform.rotation = Quaternion.Euler(0,0,15);
-                    progress.value += timePerPress;
+                    progress.value += durationTimePerPress;
                 }
 
             if (Input.GetKeyUp(KeyCode.LeftArrow))
@@ -73,7 +78,7 @@ namespace KiyuzuDev.ITGWDO
                 {
                     RightPressing = true;
                     shakeCup.rectTransform.rotation = Quaternion.Euler(0,0,-15);
-                    progress.value += timePerPress;
+                    progress.value += durationTimePerPress;
                 }
         
             if (Input.GetKeyUp(KeyCode.RightArrow))
@@ -85,6 +90,7 @@ namespace KiyuzuDev.ITGWDO
 
         private void ShakeComplete()
         {
+            btnPourOut.GetComponent<Button>().interactable = false;
             // TODO: 提交酒水数据
             shakeCup.sprite = Resources.Load<Sprite>("Sprites/Items/Shaker/shaker_open");
             shakeCup.SetNativeSize();
@@ -99,7 +105,7 @@ namespace KiyuzuDev.ITGWDO
             shakeCup.sprite = Resources.Load<Sprite>("Sprites/Wine/Risei");
             box.SetActive(true);
             shakeCup.SetNativeSize();
-            Invoke(nameof(MoveNext),3);
+            Invoke(nameof(MoveNext),2);
         }
 
         private void MoveNext()

@@ -2,11 +2,13 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
-namespace KiyuzuDev.ITGWDO
+namespace KiyuzuDev.ITGWDO.Bartending
 {
-    public class CheckerManager : MonoBehaviour
+    public class CheckerInfoManager : MonoBehaviour
     {
-        public static CheckerManager Instance { get; private set; }
+        #region Singleton
+
+        public static CheckerInfoManager Instance { get; private set; }
         
         private void Awake()
         {
@@ -22,6 +24,8 @@ namespace KiyuzuDev.ITGWDO
         {
             Destroy(Instance);
         }
+
+        #endregion
         
         public GameObject infoPanel;
         
@@ -37,15 +41,10 @@ namespace KiyuzuDev.ITGWDO
             warningPanel.GetComponent<CanvasGroup>().alpha = 0;
         }
 
-        public void ClearTxt()
+        public void WritePanel()
         {
-            totalAmount.text = "0";
             typeAmountL.text = "";
             typeAmountR.text = "";
-        }
-
-        public void CheckThings()
-        {
             if (WineManager.wine.lstGin != null)
                 typeAmountL.text += "金酒 "+ WineManager.wine.lstGin.Length * 5 +" mL\n";
             if (WineManager.wine.lstWhisky != null)
@@ -74,22 +73,18 @@ namespace KiyuzuDev.ITGWDO
                 typeAmountR.text += "柠檬装饰";
             if (WineManager.wine.berryAdded)
                 typeAmountR.text += " 树莓装饰";
+            totalAmount.text = WineManager.Instance.TotalVol.ToString();
         }
         
         private void OnMouseEnter()
         {
-            totalAmount.text = WineManager.Instance.TotalVol.ToString();
-            ClearTxt();
-            CheckThings();
-            if (Mathf.Approximately(Time.timeScale, 1.0f)) 
-                infoPanel.GetComponent<CanvasGroup>().alpha = 1;
+            WritePanel();
+            infoPanel.GetComponent<CanvasGroup>().alpha = 1;
         }
 
         private void OnMouseExit()
         {
-            totalAmount.text = WineManager.Instance.TotalVol.ToString();
-            ClearTxt();
-            CheckThings();
+            WritePanel();
             infoPanel.GetComponent<CanvasGroup>().alpha = 0;
         }
         

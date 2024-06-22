@@ -1,0 +1,34 @@
+{
+    "name": "Game Actions",
+    "maps": [
+        {
+            "name": "Game",
+            "id": "9d1b6a15-b40c-470d-93b1-8facdd0a56ef",
+            "actions": [
+                {
+                    "name": "Return Home",
+                    "type": "PassThrough",
+                    "id": "46a11c9a-f07e-40dd-a63a-e53bde172776",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "05ecea4a-ea49-426c-9147-c44cf9996142",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Return Home",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

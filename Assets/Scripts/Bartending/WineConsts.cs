@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace KiyuzuDev.ITGWDO
+namespace KiyuzuDev.ITGWDO.Bartending
 {
     public struct WineIngr
     {
@@ -27,9 +27,9 @@ namespace KiyuzuDev.ITGWDO
         Rum = 3,
         Vodka = 4,
         Ice = -1,
-        Lemon = -2,//??
+        Lemon = -2,
         Honey = 5,
-        Berry = -3,//??
+        Berry = -3,
         Spice = 16,
         Salt = 17,
         Rose = 6,
