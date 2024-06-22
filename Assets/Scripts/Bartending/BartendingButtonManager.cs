@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace KiyuzuDev.ITGWDO
+namespace KiyuzuDev.ITGWDO.Bartending
 {
     public class BartendingButtonManager : MonoBehaviour
     {
+        #region Singleton
+
         public static BartendingButtonManager Instance { get; private set; }
         
         private void Awake()
@@ -16,6 +18,8 @@ namespace KiyuzuDev.ITGWDO
                 Instance = this;
             }
         }
+
+        #endregion
 
         private void Start()
         {
@@ -92,14 +96,10 @@ namespace KiyuzuDev.ITGWDO
         private void OnSubmit()
         {
             // TODO: Wine DATA
-            BartendingManager.Instance.SwitchToShake();
+            BartendingSceneManager.Instance.SwitchToShake();
         }
 
-        private void OnClearCup()
-        {
-            CheckerManager.Instance.ClearTxt();
-            WineManager.Instance.ClearAllItem();
-            CheckerManager.Instance.CheckThings();
-        }
+        private void OnClearCup() => WineManager.Instance.ClearAllItem();
+        
     }
 }

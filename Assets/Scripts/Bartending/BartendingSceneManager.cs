@@ -1,12 +1,12 @@
 using UnityEngine;
 
-namespace KiyuzuDev.ITGWDO
+namespace KiyuzuDev.ITGWDO.Bartending
 {
-    public class BartendingManager : MonoBehaviour
+    public class BartendingSceneManager : MonoBehaviour
     {
         #region Singleton
 
-        public static BartendingManager Instance { get; private set; }
+        public static BartendingSceneManager Instance { get; private set; }
         
         private void Awake()
         {
@@ -28,12 +28,14 @@ namespace KiyuzuDev.ITGWDO
         [SerializeField] private GameObject ShakingPanel;
         [SerializeField] private GameObject AddingPanel;
         [SerializeField] private GameObject ShakeCupBox;
+        [SerializeField] private GameObject TooltipView;
 
         public void SwitchToShake()
         {
             ShakingPanel.SetActive(true);
             AddingPanel.SetActive(false);
             ShakeCupBox.SetActive(false);
+            TooltipView.SetActive(false);
         }
 
     }

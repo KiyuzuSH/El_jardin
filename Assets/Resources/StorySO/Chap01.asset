@@ -5959,11 +5959,14 @@ MonoBehaviour:
     personName: 
     content: "\u6B63\u786E\u8C03\u9152->A424, \u9519\u8BEF\u8C03\u9152->A499"
     eventFore:
-      eventType: 0
-      args: []
+      eventType: 2
+      args:
+      - Utopia
     eventMain:
-      eventType: 0
-      args: []
+      eventType: 7
+      args:
+      - 0
+      - thalen
     eventAfter:
       eventType: 0
       args: []
@@ -7213,8 +7216,9 @@ MonoBehaviour:
     personName: "\u8111\u6D77\u4E2D\u7684\u58F0\u97F3"
     content: "\u4ED6\u662F\u5982\u6B64\u5584\u89E3\u4EBA\u610F\u3002"
     eventFore:
-      eventType: 0
-      args: []
+      eventType: 10
+      args:
+      - 0
     eventMain:
       eventType: 0
       args: []

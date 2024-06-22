@@ -1,9 +1,11 @@
 using UnityEngine;
 
-namespace KiyuzuDev.ITGWDO
+namespace KiyuzuDev.ITGWDO.Bartending
 {
     public class WineManager : MonoBehaviour
     {
+        #region Singleton
+
         public static WineManager Instance { get; private set; }
         
         private void Awake()
@@ -15,71 +17,108 @@ namespace KiyuzuDev.ITGWDO
                 Instance = this;
             }
         }
-
-        private void Start()
-        {
-            TotalVol = 0;
-            CupInit();
-        }
-
+        
         private void OnDestroy()
         {
             Destroy(Instance);
         }
 
+        #endregion
+        
+        private void Start()
+        {
+            TotalVol = 0;
+            CupInit();
+        }
+        
         public static WineIngr wine;
         
         public Transform wineSpawnPoint;
         
         public int TotalVol { get; set; }
-
-        public void ClearAllItem()
-        {
-            if (wine.lstGin != null)
-                foreach (GameObject _item in wine.lstGin)
-                    Destroy(_item);
-            if (wine.lstWhisky != null)
-                foreach (GameObject _item in wine.lstWhisky)
-                    Destroy(_item);
-            if (wine.lstTequila != null)
-                foreach (GameObject _item in wine.lstTequila)
-                    Destroy(_item);
-            if (wine.lstRum != null)
-                foreach (GameObject _item in wine.lstRum)
-                    Destroy(_item);
-            if (wine.lstVodka != null)
-                foreach (GameObject _item in wine.lstVodka)
-                    Destroy(_item);
-            if (wine.iceGO)
-                Destroy(wine.iceGO);
-            if (wine.lstHoney != null)
-                foreach (GameObject _item in wine.lstHoney)
-                    Destroy(_item);
-            if (wine.lstSpice != null)
-                foreach (GameObject _item in wine.lstSpice)
-                    Destroy(_item);
-            if (wine.lstSalt != null)
-                foreach (GameObject _item in wine.lstSalt)
-                    Destroy(_item);
-            if (wine.lstRose != null)
-                foreach (GameObject _item in wine.lstRose)
-                    Destroy(_item);
-            if (wine.lstCitrus != null)
-                foreach (GameObject _item in wine.lstCitrus)
-                    Destroy(_item);
-            TotalVol = 0;
-        }
-
+        
         private void CupInit()
         {
             ClearAllItem();
         }
-
+        
+        public void ClearAllItem()
+        {
+            if (wine.lstGin != null)
+            {
+                foreach (GameObject _item in wine.lstGin)
+                    Destroy(_item);
+                wine.lstGin = null;
+            }
+            if (wine.lstWhisky != null)
+            {
+                foreach (GameObject _item in wine.lstWhisky)
+                    Destroy(_item);
+                wine.lstWhisky = null;
+            }
+            if (wine.lstTequila != null)
+            {
+                foreach (GameObject _item in wine.lstTequila)
+                    Destroy(_item);
+                wine.lstTequila = null;
+            }
+            if (wine.lstRum != null)
+            {
+                foreach (GameObject _item in wine.lstRum)
+                    Destroy(_item);
+                wine.lstRum = null;
+            }
+            if (wine.lstVodka != null)
+            {
+                foreach (GameObject _item in wine.lstVodka)
+                    Destroy(_item);
+                wine.lstVodka = null;
+            }
+            if (wine.iceGO)
+            {
+                Destroy(wine.iceGO);
+                wine.iceGO = null;
+            }
+            if (wine.lstHoney != null)
+            {
+                foreach (GameObject _item in wine.lstHoney)
+                    Destroy(_item);
+                wine.lstHoney = null;
+            }
+            if (wine.lstSpice != null)
+            {
+                foreach (GameObject _item in wine.lstSpice)
+                    Destroy(_item);
+                wine.lstSpice = null;
+            }
+            if (wine.lstSalt != null)
+            {
+                foreach (GameObject _item in wine.lstSalt)
+                    Destroy(_item);
+                wine.lstSalt = null;
+            }
+            if (wine.lstRose != null)
+            {
+                foreach (GameObject _item in wine.lstRose)
+                    Destroy(_item);
+                wine.lstRose = null;
+            }
+            if (wine.lstCitrus != null)
+            {
+                foreach (GameObject _item in wine.lstCitrus)
+                    Destroy(_item);
+                wine.lstCitrus = null;
+            }
+            if (wine.lemonAdded) wine.lemonAdded = false;
+            if (wine.berryAdded) wine.berryAdded = false;
+            TotalVol = 0;
+        }
+        
         public void AddType(IngrType _type)
         {
             if (TotalVol - 150 > 0)
             {
-                CheckerManager.Instance.FullWarning();
+                CheckerInfoManager.Instance.FullWarning();
                 return;
             }
             switch (_type)
@@ -142,10 +181,10 @@ namespace KiyuzuDev.ITGWDO
                     TotalVol++;
                     break;
                 case IngrType.Lemon:
-                    CheckerManager.Instance.ShowWarning(_type);
+                    CheckerInfoManager.Instance.ShowWarning(_type);
                     break;
                 case IngrType.Berry:
-                    CheckerManager.Instance.ShowWarning(_type);
+                    CheckerInfoManager.Instance.ShowWarning(_type);
                     break;
             }
         }

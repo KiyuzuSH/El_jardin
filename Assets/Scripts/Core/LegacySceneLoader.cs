@@ -41,8 +41,8 @@ namespace KiyuzuDev.ITGWDO.Core
 
             loadingOperation.allowSceneActivation = true;
 			yield return GameManager.Instance.FadeBlackScreenOpacity(0);
-            if(GlobalDataManager.Instance.NextLineID > 1001)
-                DialogueManager.Instance.SetLineOfDialogue(GlobalDataManager.Instance.NextLineID);
+            // if(GlobalDataManager.Instance.NextLineID > 1001)
+            //     DialogueManager.Instance.SetLineOfDialogue(GlobalDataManager.Instance.NextLineID);
 		}
     }
 }
